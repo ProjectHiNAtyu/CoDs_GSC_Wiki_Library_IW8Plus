@@ -47,7 +47,7 @@ Data for the following game titles is available:
 - [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PS4 Build - Version 1.67
 
 - [ 2021 / S4 ] ( CoD:VG ) Call of Duty : Vanguard - PC Build - Version Public Beta
-- [ 2021 / S4 ] ( CoD:VG ) Call of Duty : Vanguard - PC Build - Version 1.22
+- [ 2021 / S4 ] ( CoD:VG ) Call of Duty : Vanguard - PC Build - Version Season 5
 
 - [ 2022 / IW9 ] ( CoD:MWII ) Call of Duty : Modern Warfare II - PC Build - Version Public Beta
 - [ 2022 / IW9 ] ( CoD:MWII ) Call of Duty : Modern Warfare II - PC Build - Version Initial Release
