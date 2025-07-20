@@ -42,7 +42,6 @@ Data for the following game titles is available:
 - [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PC Build - Version Public Beta
 - [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PC Build - Version 1.38
 - [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PC Build - Version 1.44
-- [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PC Build - Version 1.57
 - [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PC Build - Version 1.67
 - [ 2019 / IW8 ] ( CoD:MW19 ) Call of Duty : Modern Warfare - PS4 Build - Version 1.67
 
@@ -84,6 +83,15 @@ This repository contains the following data:
 - Official GSCBIN / GSCC Dumped Data
 - Official GSC Decompiled Sourcecode Data
 - PHA Custom GSC Template / Sample Sourcecode / Compiled
+
+
+----------
+
+
+[ Video ]
+
+
+If you’d like to learn more about this GSC Mod Menu, please check out the YouTube video below.
 
 
 ----------
