@@ -30,7 +30,7 @@ Thank you as always, I support you all.
 ----------
 
 
-[ Game ttles ]
+[ Game tiles ]
 
 
 This repository is a CoD GSC Wiki library that compiles information on GSC for recent Call of Duty series titles since MW2019.
@@ -58,3 +58,73 @@ Data for the following game titles is available:
 - [ 2023 / JUP ] ( CoD:MWIII ) Call of Duty : Modern Warfare III - PS4 Build - Version Season 6
 
 - [ 2024 / T10 ] ( CoD:BO6 ) Call of Duty : Black Ops 6 - PC Build - Version Season 5
+
+
+IW8 / CoD16 / MW19 / MW2019 / CoD2019 / CoD:MW
+
+T9 / CoD17 / CW / BOCW / CoD2020 / CoD:BOCW
+
+S4 / CoD18 / VG / VD / CoD2021 / CoD:V
+
+IW9 / CoD19 / MW22 / MWII / MW2022 / CoD:MWII / Cortez
+
+JUP / CoD20 / MW23 / MWIII / MW2023 / CoD:MWIII / Jupiter
+
+T10 / CoD21 / BO6 / CoD2024 / CoD:BO6 / Cerberus
+
+
+----------
+
+
+[ Include ]
+
+
+This repository contains the following data:
+
+- Official GSCBIN / GSCC Dumped Data
+- Official GSC Decompiled Sourcecode Data
+- PHA Custom GSC Template / Sample Sourcecode / Compiled
+
+
+----------
+
+
+< gsc-tool / Atian Tools >
+
+
+This app is a command-line tool operated via cmd.
+
+HiNAtyu does not accept questions regarding the tool.
+
+Please direct your questions to xensik / ATR47.
+
+Please download and use the latest version of the release file for gsc-tool from xensik / ATE47 official repository.
+
+
+https://github.com/xensik/gsc-tool
+
+https://github.com/ate47/atian-cod-tools
+
+
+----------
+
+
+[ Promotion ]
+
+
+- Discord : hinatapoko
+- Twitter 1 (Main) : https://x.com/KonataGIF
+- Twitter 2 (Sub) : https://x.com/H1NAtyu
+- YouTube : HiNAtyu Studio ( https://www.youtube.com/@hinatyuproject/featured )
+
+
+I’d be very happy if you could follow, subscribe, like, or comment on my various SNS accounts. 
+
+If you like my work, I'd be happy if you could sponsor or donate.
+
+This will help facilitate the development of new features and fixes.
+
+
+- Ko-fi : https://ko-fi.com/hinatyustudio
+- BTC : 32J66dfWi9dqqWHS2RYR9rFCUNBL88vgUR
+- ETH : 0xaE5D5b3e8E865B2bA676a24eF41d5f4CBD315978.
