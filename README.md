@@ -109,6 +109,43 @@ https://github.com/ate47/atian-cod-tools
 ----------
 
 
+[ Custom GSC ( gsc-tool ) ]
+
+
+< dump >
+
+* A "GSCBIN" folder containing the gscbin for gamecode needs to be placed in the same directory hierarchy as gsc-tool.exe.
+
+gsc-tool -m decomp -g gamecode -s pc YourGSCBINFolder
+
+
+< compile >
+
+* A folder containing the custom GSC source for gamecode needs to be placed in the same directory hierarchy as gsc-tool.exe.
+
+gsc-tool -m comp -g gamecode -s pc YourCustomGSCFolder
+
+
+gamecode:
+
+- iw8
+- s4
+- iw9
+
+
+For Atian Tools commands, see the Atian Tools GitHub.
+
+
+You are free to modify the GSC Mod Menu source code I released.
+
+However, I will not provide explanations on how to modify GSC, coding methods, or basic coding knowledge.
+
+Please figure it out on your own.
+
+
+----------
+
+
 [ Promotion ]
 
 
