@@ -11,7 +11,7 @@ _hasperk( var_0 )
     return isdefined( self.perks ) && isdefined( self.perks[var_0] );
 }
 
-_id_6FC2( var_0 )
+giveperk( var_0 )
 {
     scripts\mp\perks\perks::_setperk( var_0 );
     scripts\mp\perks\perks::_id_0CE9( var_0 );

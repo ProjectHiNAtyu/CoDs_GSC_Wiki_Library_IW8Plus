@@ -32,15 +32,15 @@ init()
     level.sonyxpscale = var_4;
     level.ranktable = [];
     level._id_10DC3 = [];
-    level.maxrank = int( _func_0222( "mp/rankTable.csv", 0, "maxrank", 1 ) );
-    level._id_9C68 = int( _func_0222( "mp/rankTable.csv", 0, "maxelder", 1 ) );
+    level.maxrank = int( tablelookup( "mp/rankTable.csv", 0, "maxrank", 1 ) );
+    level._id_9C68 = int( tablelookup( "mp/rankTable.csv", 0, "maxelder", 1 ) );
 
     for ( var_5 = 0; var_5 <= level.maxrank; var_5++ )
     {
-        level.ranktable[var_5][0] = int( _func_0222( "mp/rankTable.csv", 0, var_5, 2 ) );
-        level.ranktable[var_5][1] = int( _func_0222( "mp/rankTable.csv", 0, var_5, 3 ) );
-        level.ranktable[var_5][2] = int( _func_0222( "mp/rankTable.csv", 0, var_5, 7 ) );
-        level.ranktable[var_5][3] = _func_0222( "mp/rankTable.csv", 0, var_5, 15 );
+        level.ranktable[var_5][0] = int( tablelookup( "mp/rankTable.csv", 0, var_5, 2 ) );
+        level.ranktable[var_5][1] = int( tablelookup( "mp/rankTable.csv", 0, var_5, 3 ) );
+        level.ranktable[var_5][2] = int( tablelookup( "mp/rankTable.csv", 0, var_5, 7 ) );
+        level.ranktable[var_5][3] = tablelookup( "mp/rankTable.csv", 0, var_5, 15 );
     }
 
     _id_0826::init();
@@ -119,12 +119,12 @@ _id_6CD9( var_0 )
 
 _id_6CDA( var_0, var_1 )
 {
-    return _func_0222( "mp/rankIconTable.csv", 0, var_0, var_1 + 1 );
+    return tablelookup( "mp/rankIconTable.csv", 0, var_0, var_1 + 1 );
 }
 
 _id_6CDB( var_0 )
 {
-    return int( _func_0222( "mp/rankTable.csv", 0, var_0, 13 ) );
+    return int( tablelookup( "mp/rankTable.csv", 0, var_0, 13 ) );
 }
 
 _id_411C( var_0 )
@@ -812,9 +812,9 @@ incrankxp( var_0, var_1, var_2 )
     if ( isdefined( var_1 ) && _id_0826::_id_10DD2( var_1.basename ) )
     {
         var_4 = scripts\mp\utility\weapon::_id_69D8( var_1.basename );
-        var_7 = _func_0222( "mp/statstable.csv", 5, var_4, 4 );
+        var_7 = tablelookup( "mp/statstable.csv", 5, var_4, 4 );
         var_8 = var_7 + "_variant_0";
-        var_5 = int( _func_0222( "loot/weapon_ids.csv", 9, var_8, 0 ) );
+        var_5 = int( tablelookup( "loot/weapon_ids.csv", 9, var_8, 0 ) );
         var_6 = var_0;
 
         if ( istrue( var_3 ) )
@@ -864,7 +864,7 @@ incrankxp( var_0, var_1, var_2 )
     var_18 = self._id_AC3D._id_AC41;
 
     if ( isdefined( var_18 ) )
-        var_17 = int( _func_0222( "loot/operator_ids.csv", 1, var_18, 0 ) );
+        var_17 = int( tablelookup( "loot/operator_ids.csv", 1, var_18, 0 ) );
 
     var_19 = var_0;
 
@@ -886,7 +886,7 @@ incrankxp( var_0, var_1, var_2 )
 
     if ( var_17 != -1 && isdefined( var_18 ) && var_5 != -1 && var_4 != "" )
     {
-        var_23 = _func_0222( "operators.csv", 1, var_18, 28 );
+        var_23 = tablelookup( "operators.csv", 1, var_18, 28 );
 
         if ( var_4 == var_23 + "_mp" )
         {
@@ -1003,7 +1003,7 @@ _id_6A68()
         if ( var_0 != 1.0 )
             level._id_60FC = var_0;
         else
-            level._id_60FC = float( _func_0222( "mp/gametypesTable.csv", 0, scripts\mp\utility\game::getgametype(), 17 ) );
+            level._id_60FC = float( tablelookup( "mp/gametypesTable.csv", 0, scripts\mp\utility\game::getgametype(), 17 ) );
     }
 
     return level._id_60FC;

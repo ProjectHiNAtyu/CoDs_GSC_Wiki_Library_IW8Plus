@@ -829,13 +829,13 @@ _id_C715()
     }
 
     var_5 = "primary";
-    var_6 = scripts\mp\equipment::_id_69A4( var_5 );
+    var_6 = scripts\mp\equipment::getcurrentequipment( var_5 );
 
     if ( isdefined( var_6 ) )
         scripts\mp\equipment::giveequipment( var_6, var_5 );
 
     var_5 = "secondary";
-    var_6 = scripts\mp\equipment::_id_69A4( var_5 );
+    var_6 = scripts\mp\equipment::getcurrentequipment( var_5 );
 
     if ( isdefined( var_6 ) )
         scripts\mp\equipment::giveequipment( var_6, var_5 );
@@ -858,7 +858,7 @@ _id_32E5()
     scripts\common\utility::_id_1570( 0 );
     scripts\common\utility::_id_1553( 0 );
     scripts\mp\utility\player::_id_0CF0( "iw8_hvtcarry_mp" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_sprintfire" );
+    scripts\mp\utility\perk::giveperk( "specialty_sprintfire" );
     self._id_AD6C = 0.75;
     scripts\mp\weapons::_id_FCCC();
     var_0 = "s4_pi_mike1911";

@@ -1585,7 +1585,7 @@ _id_D69B( var_0 )
     self._id_B7AB _meth_83CA( self.owner );
     self._id_B7AB linkto( self );
     self._id_B7AB playloopsound( "recon_drone_overlay" );
-    self.owner _meth_867F( "mp_recon_drone", 1 );
+    self.owner setsoundsubmix( "mp_recon_drone", 1 );
 
     if ( !isdefined( self._id_5377 ) )
         self._id_5377 = [];

@@ -404,8 +404,8 @@ _id_6FA9()
     var_0 = scripts\mp\class::buildweapon( "s4_pi_mike1911", [], "none", "none", -1 );
     self giveweapon( var_0 );
     self givemaxammo( var_0 );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_stun_resistance" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_sharp_focus" );
+    scripts\mp\utility\perk::giveperk( "specialty_stun_resistance" );
+    scripts\mp\utility\perk::giveperk( "specialty_sharp_focus" );
     scripts\mp\utility\player::_id_0CF0( "iw8_juggernaut_mp" );
     self._id_B7E4 = -0.2;
     scripts\mp\weapons::_id_FCCC();

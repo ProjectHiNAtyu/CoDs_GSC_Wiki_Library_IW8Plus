@@ -30,7 +30,7 @@ _id_D5DC( var_0, var_1 )
         var_2 = var_2 - 4;
 
     var_3 = tolower( getdvar( "#x376847958d67972ef" ) );
-    var_4 = _func_0222( var_1, 0, var_3, var_2 * 2 + 1 );
+    var_4 = tablelookup( var_1, 0, var_3, var_2 * 2 + 1 );
 
     if ( var_4 != "" )
     {
@@ -41,7 +41,7 @@ _id_D5DC( var_0, var_1 )
 
         level._id_3098[var_0] = _id_4015( "compass_icon_codcaster_cam", 1 );
         level._id_A773[var_0] = _id_4015( "compass_icon_codcaster_num" + var_5, 0 );
-        var_6 = _func_0222( var_1, 0, var_3, var_2 * 2 + 2 );
+        var_6 = tablelookup( var_1, 0, var_3, var_2 * 2 + 2 );
         level._id_309F[var_0] = _id_6945( var_4 );
         level._id_3083[var_0] = _id_6945( var_6 );
         level._id_308F = var_0;
@@ -79,7 +79,7 @@ _id_6945( var_0 )
 
 _id_AB05( var_0 )
 {
-    var_0 _id_D6E2();
+    var_0 setspectatepermissions();
 }
 
 _id_AB04( var_0 )
@@ -89,7 +89,7 @@ _id_AB04( var_0 )
 
     var_0 thread _id_ABA9();
     var_0 thread _id_ABAA();
-    var_0 _id_D6E2();
+    var_0 setspectatepermissions();
     var_0 _id_C639();
     var_0 setclientomnvar( "ui_callout_area_id", -1 );
 
@@ -159,7 +159,7 @@ _id_FD35()
     level endon( "game_ended" );
 
     for ( var_0 = 0; var_0 < level.players.size; var_0++ )
-        level.players[var_0] _id_D6E2();
+        level.players[var_0] setspectatepermissions();
 }
 
 _id_94F9( var_0 )
@@ -344,7 +344,7 @@ _id_CB4F()
     game["lastSpectatedPlayer"] = level._id_9051;
 }
 
-_id_D6E2( var_0 )
+setspectatepermissions( var_0 )
 {
     if ( level.gameended && gettime() - level._id_60BD >= 2000 && !istrue( level._id_BA49 ) )
     {
@@ -442,7 +442,7 @@ _id_10805()
     self endon( "waitForGameStartSpectate" );
     self endon( "disconnect" );
     level waittill( "prematch_over" );
-    thread _id_D6E2();
+    thread setspectatepermissions();
 }
 
 _id_D512()

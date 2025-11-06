@@ -276,7 +276,7 @@ _id_C43B()
 
 _id_C172()
 {
-    scripts\cp\utility::_id_6FC2( "specialty_bulletaccuracy" );
+    scripts\cp\utility::giveperk( "specialty_bulletaccuracy" );
     self _meth_82D3( 0.1 );
 }
 
@@ -1435,7 +1435,7 @@ _id_CA79()
             while ( scripts\cp\utility::_id_8ACE() )
                 waitframe();
 
-            scripts\cp\utility::_id_6FC2( "specialty_tracker" );
+            scripts\cp\utility::giveperk( "specialty_tracker" );
             break;
         }
 
@@ -1774,10 +1774,10 @@ _id_66BB( var_0, var_1 )
 
 _id_6EC4()
 {
-    scripts\cp\utility::_id_6FC2( "specialty_quickdraw" );
-    scripts\cp\utility::_id_6FC2( "specialty_quickswap" );
-    scripts\cp\utility::_id_6FC2( "specialty_fastoffhand" );
-    scripts\cp\utility::_id_6FC2( "specialty_fastsprintrecovery" );
+    scripts\cp\utility::giveperk( "specialty_quickdraw" );
+    scripts\cp\utility::giveperk( "specialty_quickswap" );
+    scripts\cp\utility::giveperk( "specialty_fastoffhand" );
+    scripts\cp\utility::giveperk( "specialty_fastsprintrecovery" );
 }
 
 _id_ED81()

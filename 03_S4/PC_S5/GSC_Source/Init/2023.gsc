@@ -274,7 +274,7 @@ _id_99F7( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9, 
     var_16.attackerhealthratio = int( var_10.health / var_10.maxhealth * 127 );
 
     if ( var_12 == "MOD_EXECUTION" )
-        var_16._id_5705 = _id_0790::_id_56FC( var_10 );
+        var_16._id_5705 = scripts\cp_mp\execution::_id_56FC( var_10 );
 
     return var_16;
 }
@@ -643,7 +643,7 @@ _id_BA8A( var_0, var_1, var_2, var_3 )
 _id_BA8E()
 {
     self.killcam = undefined;
-    _id_081A::_id_D6E2();
+    scripts\mp\spectating::setspectatepermissions();
     scripts\mp\utility\player::_id_FD26( "dead" );
     scripts\mp\utility\player::_id_394E();
     self notify( "killcam_ended" );
@@ -836,7 +836,7 @@ _id_8D61( var_0, var_1, var_2 )
     _id_394D();
     self.killcam = undefined;
     _id_D4C0( "unknown", -1, -1 );
-    _id_081A::_id_D6E2( var_1 );
+    scripts\mp\spectating::setspectatepermissions( var_1 );
     scripts\mp\utility\player::_id_394E();
     self setclientomnvar( "ui_killcam_prestream_vanity_index", 0 );
 
@@ -977,7 +977,7 @@ _id_D5C9( var_0 )
     if ( !isdefined( var_0 ) )
         var_1 = 0;
     else
-        var_1 = _id_0790::_id_56FA( var_0 );
+        var_1 = scripts\cp_mp\execution::_id_56FA( var_0 );
 
     _id_D5CA( 4, var_1 );
     _id_3957();

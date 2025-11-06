@@ -173,7 +173,7 @@ _id_1082A()
 _id_CA75( var_0 )
 {
     scripts\mp\utility\player::_id_FD26( "spectator" );
-    _id_081A::_id_D512();
+    scripts\mp\spectating::_id_D512();
     _id_0A99::_id_D5EA( 0 );
 
     if ( isdefined( self._id_8FB8 ) )
@@ -531,7 +531,7 @@ _id_E705()
 
     var_0 = spawn( "script_origin", ( 0, 0, 0 ) );
     var_0 _meth_83CA( self );
-    self _meth_867F( "mp_spawn_camera" );
+    self setsoundsubmix( "mp_spawn_camera" );
     var_1 = scripts\mp\utility\teams::_id_6DDF( self.team );
     var_2 = "dx_mpo_" + var_1 + "op_drone_deathchatter";
     self._id_E373 = 1;

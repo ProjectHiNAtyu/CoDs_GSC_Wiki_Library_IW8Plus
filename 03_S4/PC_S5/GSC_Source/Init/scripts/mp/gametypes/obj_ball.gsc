@@ -443,11 +443,11 @@ _id_2137( var_0, var_1 )
         self._id_10430[0] unlink();
 
     if ( !istrue( level._id_48DF ) )
-        var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_ballcarrier" );
+        var_0 scripts\mp\utility\perk::giveperk( "specialty_ballcarrier" );
 
     var_0._id_2110 = self;
     var_0._id_A863 = 1;
-    self._id_32D5 scripts\mp\utility\perk::_id_6FC2( "specialty_sprintfire" );
+    self._id_32D5 scripts\mp\utility\perk::giveperk( "specialty_sprintfire" );
     self._id_32D5._id_7593 = 1;
 
     if ( !istrue( level._id_48DF ) )

@@ -364,7 +364,7 @@ _id_0CCB( var_0 )
     var_1._id_1B85 = 1;
     scripts\mp\gametypes\br_analytics::_id_2AF8( var_1, "menu_open" );
     var_1 thread _id_0DD6( var_0 );
-    var_1 _meth_867F( "iw8_br_plunder_kiosk_menu" );
+    var_1 setsoundsubmix( "iw8_br_plunder_kiosk_menu" );
 }
 
 _id_0BA1( var_0 )
@@ -438,7 +438,7 @@ _id_0C60( var_0 )
     var_3 = var_1 scripts\mp\equipment::_id_6A12( var_0 );
 
     if ( var_2 < var_3 )
-        var_1 scripts\mp\equipment::_id_D543( var_0, var_3 );
+        var_1 scripts\mp\equipment::setequipmentammo( var_0, var_3 );
 }
 
 _id_0BE1( var_0 )

@@ -198,7 +198,7 @@ _id_9D19()
                 if ( var_4 == self.owner )
                     var_4.health = int( min( var_4.maxhealth, var_4.health + var_1 ) );
 
-                var_4 scripts\mp\utility\perk::_id_6FC2( "specialty_regen_delay_reduced" );
+                var_4 scripts\mp\utility\perk::giveperk( "specialty_regen_delay_reduced" );
                 var_4 setclientomnvar( "ui_health_regen_hud", 1 );
                 continue;
             }
@@ -322,12 +322,12 @@ _id_9D1B( var_0 )
         var_0 setweaponammostock( var_3, var_8 );
     }
 
-    var_11 = var_0 scripts\mp\equipment::_id_69A4( "primary" );
+    var_11 = var_0 scripts\mp\equipment::getcurrentequipment( "primary" );
 
     if ( isdefined( var_11 ) )
         var_0 scripts\mp\equipment::incrementequipmentammo( var_11 );
 
-    var_12 = var_0 scripts\mp\equipment::_id_69A4( "secondary" );
+    var_12 = var_0 scripts\mp\equipment::getcurrentequipment( "secondary" );
 
     if ( isdefined( var_12 ) )
         var_0 scripts\mp\equipment::incrementequipmentammo( var_12 );

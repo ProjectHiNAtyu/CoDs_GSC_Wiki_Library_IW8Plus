@@ -4,5 +4,5 @@
 _id_56FF()
 {
     if ( !scripts\mp\utility\game::_id_CA4B() )
-        _id_0A9E::_id_C29C( _id_0790::_id_56F4 );
+        _id_0A9E::_id_C29C( scripts\cp_mp\execution::_id_56F4 );
 }

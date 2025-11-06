@@ -236,11 +236,11 @@ _id_ED12( var_0 )
 _id_6FF4()
 {
     self._id_ED21 = 1;
-    scripts\mp\utility\perk::_id_6FC2( "specialty_coldblooded" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_tracker_jammer" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_blindeye" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_engineer" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_ghost" );
+    scripts\mp\utility\perk::giveperk( "specialty_coldblooded" );
+    scripts\mp\utility\perk::giveperk( "specialty_tracker_jammer" );
+    scripts\mp\utility\perk::giveperk( "specialty_blindeye" );
+    scripts\mp\utility\perk::giveperk( "specialty_engineer" );
+    scripts\mp\utility\perk::giveperk( "specialty_ghost" );
 }
 
 _id_480C( var_0 )

@@ -393,7 +393,7 @@ _id_3008( var_0, var_1 )
 
                 if ( var_5 < 1 )
                 {
-                    var_2 = _func_025E( var_2, var_11, var_5 );
+                    var_2 = vectorlerp( var_2, var_11, var_5 );
                     var_12 = _id_080C::_id_1798( self.angles, var_0.angles, var_5 );
                     var_5 = var_5 + 0.05;
                 }
@@ -424,7 +424,7 @@ _id_3008( var_0, var_1 )
                     playfxontag( scripts\engine\utility::getfx( "fritz_streamers" ), var_0, "tag_tip_fx" );
                     _func_019D( scripts\engine\utility::getfx( "fritz_flying_1P" ), var_0, "tag_tip_fx", var_1 );
                     var_11 = var_10 * ( -1 * var_7 );
-                    var_2 = _func_025E( var_2, var_11, var_5 );
+                    var_2 = vectorlerp( var_2, var_11, var_5 );
                     self.origin = var_0.origin + var_2;
                     self.angles = _id_080C::_id_1798( self.angles, var_0.angles, var_5 );
                     var_5 = var_5 + 0.05;

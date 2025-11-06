@@ -426,7 +426,7 @@ reflectprojectile( var_0, var_1, var_2, var_3 )
     }
 
     var_7 = scripts\engine\math::_id_FFDD( var_1, var_0 );
-    var_7 = _func_025E( var_7, var_0, 0.2 );
+    var_7 = vectorlerp( var_7, var_0, 0.2 );
     var_8 = abs( vectordot( var_1, var_0 ) );
 
     if ( var_8 < 0.2 )

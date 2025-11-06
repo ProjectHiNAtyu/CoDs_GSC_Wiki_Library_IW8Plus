@@ -323,8 +323,8 @@ _id_65BF( var_0, var_1, var_2, var_3, var_4 )
 get_customization_indicies_from_skin( var_0, var_1 )
 {
     [var_3, var_4] = get_models_for_skin( var_0 );
-    var_5 = int( _func_0222( "mp/cac/bodies.csv", 1, var_3, 0 ) );
-    var_6 = int( _func_0222( "mp/cac/heads.csv", 1, var_4, 0 ) );
+    var_5 = int( tablelookup( "mp/cac/bodies.csv", 1, var_3, 0 ) );
+    var_6 = int( tablelookup( "mp/cac/heads.csv", 1, var_4, 0 ) );
     return [ var_5, var_6 ];
 }
 
@@ -332,8 +332,8 @@ get_indicies_from_customization( var_0 )
 {
     var_1 = var_0._id_75DA;
     var_2 = var_0._id_25CA;
-    var_3 = int( _func_0222( "mp/cac/bodies.csv", 1, var_2, 0 ) );
-    var_4 = int( _func_0222( "mp/cac/heads.csv", 1, var_1, 0 ) );
+    var_3 = int( tablelookup( "mp/cac/bodies.csv", 1, var_2, 0 ) );
+    var_4 = int( tablelookup( "mp/cac/heads.csv", 1, var_1, 0 ) );
     return [ var_3, var_4 ];
 }
 
@@ -341,13 +341,13 @@ get_models_for_skin( var_0 )
 {
     if ( getdvarint( "#x3d26e55a89fd9c8fd", 1 ) )
     {
-        var_1 = _func_0222( "loot/operator_skin_ids.csv", 1, var_0, 13 );
-        var_2 = _func_0222( "loot/operator_skin_ids.csv", 1, var_0, 12 );
+        var_1 = tablelookup( "loot/operator_skin_ids.csv", 1, var_0, 13 );
+        var_2 = tablelookup( "loot/operator_skin_ids.csv", 1, var_0, 12 );
     }
     else
     {
-        var_1 = _func_0222( "operatorskins.csv", 1, var_0, 4 );
-        var_2 = _func_0222( "operatorskins.csv", 1, var_0, 5 );
+        var_1 = tablelookup( "operatorskins.csv", 1, var_0, 4 );
+        var_2 = tablelookup( "operatorskins.csv", 1, var_0, 5 );
     }
 
     return [ var_1, var_2 ];

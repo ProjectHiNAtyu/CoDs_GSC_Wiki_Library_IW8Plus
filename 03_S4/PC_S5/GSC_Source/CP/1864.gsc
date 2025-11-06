@@ -142,32 +142,32 @@ _id_AE73( var_0 )
 
         var_4 = spawnstruct();
         var_4.index = int( var_3 );
-        var_4._id_C189 = _func_0222( var_0, 0, var_3, 1 );
-        var_4._id_0F01 = _func_0222( var_0, 0, var_3, 2 );
-        var_4.label = _func_0222( var_0, 0, var_3, 3 );
-        var_4._id_BEBD = _func_0222( var_0, 0, var_3, 5 );
-        var_4._id_A902 = _func_0222( var_0, 0, var_3, 6 );
-        var_4._id_DCCF = int( _func_0222( var_0, 0, var_3, 8 ) );
-        var_4._id_F246 = int( _func_0222( var_0, 0, var_3, 9 ) );
-        var_4._id_F247 = int( _func_0222( var_0, 0, var_3, 10 ) );
-        var_4._id_F248 = int( _func_0222( var_0, 0, var_3, 11 ) );
-        var_4._id_2506 = int( _func_0222( var_0, 0, var_3, 25 ) );
-        var_4._id_58D9 = _func_0222( var_0, 0, var_3, 24 );
-        var_4._id_FFC1 = int( _func_0222( var_0, 0, var_3, 12 ) );
-        var_4._id_FFC2 = int( _func_0222( var_0, 0, var_3, 13 ) );
-        var_4._id_FFC3 = int( _func_0222( var_0, 0, var_3, 14 ) );
-        var_4._id_DDAA = int( _func_0222( var_0, 0, var_3, 15 ) );
-        var_4._id_B9BE = int( _func_0222( var_0, 0, var_3, 16 ) );
-        var_4._id_56DA = int( _func_0222( var_0, 0, var_3, 17 ) );
-        var_4._id_A582 = int( _func_0222( var_0, 0, var_3, 18 ) );
-        var_4._id_40F0 = _func_0222( var_0, 0, var_3, 26 );
+        var_4._id_C189 = tablelookup( var_0, 0, var_3, 1 );
+        var_4._id_0F01 = tablelookup( var_0, 0, var_3, 2 );
+        var_4.label = tablelookup( var_0, 0, var_3, 3 );
+        var_4._id_BEBD = tablelookup( var_0, 0, var_3, 5 );
+        var_4._id_A902 = tablelookup( var_0, 0, var_3, 6 );
+        var_4._id_DCCF = int( tablelookup( var_0, 0, var_3, 8 ) );
+        var_4._id_F246 = int( tablelookup( var_0, 0, var_3, 9 ) );
+        var_4._id_F247 = int( tablelookup( var_0, 0, var_3, 10 ) );
+        var_4._id_F248 = int( tablelookup( var_0, 0, var_3, 11 ) );
+        var_4._id_2506 = int( tablelookup( var_0, 0, var_3, 25 ) );
+        var_4._id_58D9 = tablelookup( var_0, 0, var_3, 24 );
+        var_4._id_FFC1 = int( tablelookup( var_0, 0, var_3, 12 ) );
+        var_4._id_FFC2 = int( tablelookup( var_0, 0, var_3, 13 ) );
+        var_4._id_FFC3 = int( tablelookup( var_0, 0, var_3, 14 ) );
+        var_4._id_DDAA = int( tablelookup( var_0, 0, var_3, 15 ) );
+        var_4._id_B9BE = int( tablelookup( var_0, 0, var_3, 16 ) );
+        var_4._id_56DA = int( tablelookup( var_0, 0, var_3, 17 ) );
+        var_4._id_A582 = int( tablelookup( var_0, 0, var_3, 18 ) );
+        var_4._id_40F0 = tablelookup( var_0, 0, var_3, 26 );
 
         if ( isdefined( var_4._id_40F0 ) && var_4._id_40F0 == "" )
             var_4._id_40F0 = undefined;
 
-        var_4._id_7C7C = _func_0222( var_0, 0, var_3, 7 );
-        var_4._id_4AB7 = int( _func_0222( var_0, 0, var_3, 27 ) ) >= 1;
-        var_4._id_56B7 = _func_0222( var_0, 0, var_3, 31 );
+        var_4._id_7C7C = tablelookup( var_0, 0, var_3, 7 );
+        var_4._id_4AB7 = int( tablelookup( var_0, 0, var_3, 27 ) ) >= 1;
+        var_4._id_56B7 = tablelookup( var_0, 0, var_3, 31 );
         var_4._id_A8E3 = [];
 
         if ( isdefined( var_4._id_56DA ) && var_4._id_56DA >= 1 )
@@ -199,7 +199,7 @@ _id_AE73( var_0 )
 
             for (;;)
             {
-                var_7 = _func_0222( var_1, var_5, var_4._id_C189, var_6 );
+                var_7 = tablelookup( var_1, var_5, var_4._id_C189, var_6 );
 
                 if ( var_7 == "" )
                     break;
@@ -369,7 +369,7 @@ _id_A8D2( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7 )
             return;
         }
 
-        var_8 = int( _func_0222( level._id_A8EB, 1, var_0, 0 ) );
+        var_8 = int( tablelookup( level._id_A8EB, 1, var_0, 0 ) );
         var_9 = _id_349B( var_0 );
 
         if ( istrue( var_9 ) )
@@ -382,7 +382,7 @@ _id_A8D2( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7 )
     }
 
     if ( !isdefined( level._id_A8EB ) )
-        var_8 = int( _func_0222( "cp/cp_default_objectives.csv", 1, var_0, 0 ) );
+        var_8 = int( tablelookup( "cp/cp_default_objectives.csv", 1, var_0, 0 ) );
 
     if ( !isdefined( var_8 ) )
         return;
@@ -494,7 +494,7 @@ _id_56B0( var_0, var_1, var_2, var_3, var_4, var_5 )
 
     if ( isdefined( level._id_A8EB ) )
     {
-        var_6 = int( _func_0222( level._id_A8EB, 1, var_0, 0 ) );
+        var_6 = int( tablelookup( level._id_A8EB, 1, var_0, 0 ) );
         var_7 = _id_349B( var_0 );
 
         if ( istrue( var_7 ) )
@@ -504,7 +504,7 @@ _id_56B0( var_0, var_1, var_2, var_3, var_4, var_5 )
     }
 
     if ( !isdefined( level._id_A8EB ) )
-        var_6 = int( _func_0222( "cp/cp_default_objectives.csv", 1, var_0, 0 ) );
+        var_6 = int( tablelookup( "cp/cp_default_objectives.csv", 1, var_0, 0 ) );
 
     if ( !isdefined( var_6 ) )
         return;
@@ -582,7 +582,7 @@ _id_660C( var_0 )
     var_1 = undefined;
 
     if ( isdefined( level._id_A8EB ) )
-        var_1 = _func_0222( level._id_A8EB, 1, var_0, 29 );
+        var_1 = tablelookup( level._id_A8EB, 1, var_0, 29 );
 
     if ( isdefined( var_1 ) && var_1 != "" )
         return int( var_1 );
@@ -595,7 +595,7 @@ _id_349B( var_0 )
     var_1 = undefined;
 
     if ( isdefined( level._id_A8EB ) )
-        var_1 = _func_0222( level._id_A8EB, 1, var_0, 30 );
+        var_1 = tablelookup( level._id_A8EB, 1, var_0, 30 );
 
     if ( isdefined( var_1 ) && var_1 != "" )
         return 1;
@@ -773,7 +773,7 @@ _id_9906( var_0, var_1 )
 
 _id_3461( var_0 )
 {
-    var_1 = int( _func_0222( level._id_A8EB, 1, var_0, 9 ) );
+    var_1 = int( tablelookup( level._id_A8EB, 1, var_0, 9 ) );
 
     if ( isdefined( var_1 ) && var_1 > 0 )
         return 1;
@@ -816,7 +816,7 @@ _id_C5EC( var_0 )
 
 _id_3448( var_0 )
 {
-    var_1 = int( _func_0222( level._id_A8EB, 1, var_0, 31 ) );
+    var_1 = int( tablelookup( level._id_A8EB, 1, var_0, 31 ) );
 
     if ( isdefined( var_1 ) && var_1 == 1 )
         return 1;

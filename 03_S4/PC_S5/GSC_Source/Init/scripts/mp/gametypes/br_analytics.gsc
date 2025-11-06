@@ -176,7 +176,7 @@ _id_2AEB( var_0, var_1, var_2, var_3 )
     if ( !isdefined( var_14 ) )
         var_15 = "none";
     else
-        var_15 = _func_0222( "mp/brmissions.csv", 0, var_14, 1 );
+        var_15 = tablelookup( "mp/brmissions.csv", 0, var_14, 1 );
 
     var_9[var_9.size] = "attacker_active_mission";
     var_9[var_9.size] = var_15;
@@ -192,7 +192,7 @@ _id_2AEB( var_0, var_1, var_2, var_3 )
     if ( !isdefined( var_14 ) )
         var_15 = "NONE";
     else
-        var_15 = _func_0222( "mp/brmissions.csv", 0, var_14, 1 );
+        var_15 = tablelookup( "mp/brmissions.csv", 0, var_14, 1 );
 
     var_9[var_9.size] = "victim_active_mission";
     var_9[var_9.size] = var_15;

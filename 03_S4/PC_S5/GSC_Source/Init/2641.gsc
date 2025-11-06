@@ -1650,11 +1650,11 @@ _id_EA0A( var_0 )
 
         if ( scripts\mp\utility\game::_id_8932() )
         {
-            var_4 = int( _func_0222( "mp/killstreaktable.csv", 1, var_0.streakname, 4 ) );
+            var_4 = int( tablelookup( "mp/killstreaktable.csv", 1, var_0.streakname, 4 ) );
 
             if ( var_4 >= 1000 )
             {
-                var_5 = _func_0222( "mp/killstreaktable.csv", 1, var_0.streakname, 0 );
+                var_5 = tablelookup( "mp/killstreaktable.csv", 1, var_0.streakname, 0 );
 
                 if ( var_5 != "" )
                     var_6 = int( var_5 );

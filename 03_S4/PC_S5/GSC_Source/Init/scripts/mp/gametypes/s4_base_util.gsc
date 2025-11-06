@@ -253,7 +253,7 @@ s4_base_set_player_allows( var_0 )
         case "arena_evo_player_state_playing":
             var_1._id_B928 = 0;
             var_1._id_0480 = 0;
-            var_1 _meth_86C5();
+            var_1 enableexecutionattack();
             var_1 allowfire( 1 );
             var_1 s4_baset_set_weapon_level_omnvars();
             var_1 s4_base_allow( 1 );

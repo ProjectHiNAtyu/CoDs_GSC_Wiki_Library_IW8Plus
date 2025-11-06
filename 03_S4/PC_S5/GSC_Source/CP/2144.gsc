@@ -265,7 +265,7 @@ _id_D24D( var_0, var_1, var_2, var_3, var_4, var_5 )
         var_6._id_F0E8 = var_0;
 
         if ( _func_02B7( var_0 ) )
-            var_6 _meth_83A3( var_0 );
+            var_6 setvalue( var_0 );
         else
             var_6 _meth_8076();
     }
@@ -497,7 +497,7 @@ _id_9DC9()
                     if ( isdefined( level._id_9DCF["current_menu"]._id_AC59[var_8]._id_8A1B ) )
                         level._id_9DCF["current_menu"]._id_AC59[var_8]._id_F0E8 = var_11;
                     else if ( _func_02B7( var_11 ) )
-                        level._id_9DCF["current_menu"]._id_AC59[var_8] _meth_83A3( var_11 );
+                        level._id_9DCF["current_menu"]._id_AC59[var_8] setvalue( var_11 );
                     else
                         level._id_9DCF["current_menu"]._id_AC59[var_8] _meth_8076();
                 }

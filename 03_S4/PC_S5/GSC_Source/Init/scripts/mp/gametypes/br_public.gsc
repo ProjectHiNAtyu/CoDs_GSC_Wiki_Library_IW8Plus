@@ -740,7 +740,7 @@ _id_BBAC( var_0 )
             var_5 = game["music"]["br_lobby_outro"].size - 1;
             var_6 = randomint( var_5 );
             var_4 setplayermusicstate( game["music"]["br_lobby_outro"][var_6] );
-            var_4 _meth_867F( "mp_br_lobby_fade", 8 );
+            var_4 setsoundsubmix( "mp_br_lobby_fade", 8 );
         }
 
         wait( level._id_9BAA );

@@ -15,7 +15,7 @@ init()
     level thread onconnect();
     _id_0A8E::_id_C285( ::_id_AAB6 );
     level thread ongameplaying();
-    var_1 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPointsPlacement", 1 ) );
+    var_1 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPointsPlacement", 1 ) );
     level.leagueplayseason = _func_048A();
     _func_047C( var_1 );
 
@@ -75,21 +75,21 @@ _id_AAB6( var_0 )
 
     var_1 = 0;
     var_2 = 0;
-    var_3 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPointsLoss", 1 ) );
+    var_3 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPointsLoss", 1 ) );
     var_4 = 0;
     var_5 = scripts\mp\teams::_id_3DA8();
     var_6 = var_0 getxuid();
 
     if ( isdefined( var_5 ) && isdefined( var_5[var_0.team] ) && var_5[var_0.team] == 3 )
     {
-        var_2 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPenaltyFirstLeave", 1 ) );
+        var_2 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPenaltyFirstLeave", 1 ) );
         var_4 = 1;
         _func_048F( var_6, "first_quit" );
         var_1 = _func_0492( "first_quit" );
     }
     else
     {
-        var_2 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPenaltyAdditionalLeave", 1 ) );
+        var_2 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPenaltyAdditionalLeave", 1 ) );
         var_4 = 2;
         _func_048F( var_6, "additional_quit" );
         var_1 = _func_0492( "additional_quit" );
@@ -259,9 +259,9 @@ match_end( var_0 )
 {
     level.leagueplaymatchcompleted = 1;
     var_1 = istrue( level.leagueplaymatchcancelled );
-    var_2 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPointsWin", 1 ) );
-    var_3 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPointsLoss", 1 ) );
-    var_4 = int( _func_0222( "mp/leagueplay_config.csv", 0, "ladderPointsBonusPoolStep", 1 ) );
+    var_2 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPointsWin", 1 ) );
+    var_3 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPointsLoss", 1 ) );
+    var_4 = int( tablelookup( "mp/leagueplay_config.csv", 0, "ladderPointsBonusPoolStep", 1 ) );
     var_5 = get_league_season_for_match();
 
     foreach ( var_7 in level.players )

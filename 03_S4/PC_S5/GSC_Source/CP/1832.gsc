@@ -134,7 +134,7 @@ giveequipment( var_0 )
 {
     var_1 = self;
     var_2 = scripts\cp\utility::_id_459B( var_0._id_DDEF, _id_69D6( var_0._id_5556 ) );
-    var_3 = var_1 _id_69A4( var_2 );
+    var_3 = var_1 getcurrentequipment( var_2 );
     var_4 = 0;
     var_5 = 0;
     var_6 = scripts\cp\utility::_id_459B( var_0._id_C558, var_1.origin );
@@ -180,7 +180,7 @@ giveequipment( var_0 )
     else
     {
         var_1 _id_6F94( var_0._id_5556, var_2 );
-        var_1 _id_D543( var_0._id_5556, var_9 );
+        var_1 setequipmentammo( var_0._id_5556, var_9 );
         var_1 setequipmentmotherlodetracking( var_0._id_5556, var_10 );
     }
 }
@@ -230,7 +230,7 @@ _id_6F94( var_0, var_1 )
 
 _id_EDBD( var_0 )
 {
-    var_1 = _id_69A4( var_0 );
+    var_1 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_1 ) )
         return;
@@ -327,7 +327,7 @@ _id_526C( var_0 )
     if ( !isdefined( self ) )
         return;
 
-    var_1 = _id_69A4( var_0 );
+    var_1 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_1 ) )
         return;
@@ -345,7 +345,7 @@ _id_526C( var_0 )
     }
 }
 
-_id_69A4( var_0 )
+getcurrentequipment( var_0 )
 {
     if ( !isdefined( self.equipment ) )
         return undefined;
@@ -355,7 +355,7 @@ _id_69A4( var_0 )
 
 _id_6A15( var_0 )
 {
-    var_1 = _id_69A4( var_0 );
+    var_1 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_1 ) )
         return undefined;
@@ -365,12 +365,12 @@ _id_6A15( var_0 )
 
 _id_D545( var_0, var_1 )
 {
-    var_2 = _id_69A4( var_0 );
+    var_2 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         return undefined;
 
-    return _id_D543( var_2, var_1 );
+    return setequipmentammo( var_2, var_1 );
 }
 
 incrementequipmentammo( var_0, var_1 )
@@ -384,7 +384,7 @@ incrementequipmentammo( var_0, var_1 )
     var_2 = _id_6A0F( var_0 );
     var_3 = int( min( var_2 + var_1, _id_6A12( var_0 ) ) );
     waitframe();
-    _id_D543( var_0, var_3 );
+    setequipmentammo( var_0, var_3 );
 }
 
 _id_4558( var_0, var_1 )
@@ -398,7 +398,7 @@ _id_4558( var_0, var_1 )
     if ( var_1 > 0 )
     {
         var_3 = int( min( var_2 - var_1, _id_6A12( var_0 ) ) );
-        _id_D543( var_0, var_3 );
+        setequipmentammo( var_0, var_3 );
     }
 }
 
@@ -463,7 +463,7 @@ getexcessmotherlodetracking( var_0 )
 
 _id_7DEE( var_0, var_1 )
 {
-    var_2 = _id_69A4( var_0 );
+    var_2 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         return undefined;
@@ -473,12 +473,12 @@ _id_7DEE( var_0, var_1 )
 
     var_3 = _id_6A0F( var_2 );
     var_4 = int( min( var_3 + var_1, _id_6A12( var_2 ) ) );
-    _id_D543( var_2, var_4 );
+    setequipmentammo( var_2, var_4 );
 }
 
 _id_4559( var_0, var_1 )
 {
-    var_2 = _id_69A4( var_0 );
+    var_2 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         return undefined;
@@ -488,7 +488,7 @@ _id_4559( var_0, var_1 )
 
     var_3 = _id_6A0F( var_2 );
     var_4 = int( min( var_3 - var_1, _id_6A12( var_2 ) ) );
-    _id_D543( var_2, var_4 );
+    setequipmentammo( var_2, var_4 );
 }
 
 _id_6A12( var_0 )
@@ -580,7 +580,7 @@ _id_56EF( var_0 )
 
                 var_8 = _id_6A0F( var_2 );
                 var_9 = int( min( var_8 + var_6, _id_6A12( var_2 ) ) );
-                _id_D543( var_2, var_9 );
+                setequipmentammo( var_2, var_9 );
                 var_10 = var_9 - var_8;
 
                 if ( var_10 > 0 )
@@ -1123,7 +1123,7 @@ _id_6A0F( var_0 )
     return self _meth_8109( var_0 );
 }
 
-_id_D543( var_0, var_1 )
+setequipmentammo( var_0, var_1 )
 {
     if ( !isdefined( var_0 ) )
         return;
@@ -1141,7 +1141,7 @@ _id_0DB0( var_0 )
 
     var_1 = 0;
     var_2 = 0;
-    var_3 = _id_69A4( var_0 );
+    var_3 = getcurrentequipment( var_0 );
 
     if ( isdefined( var_3 ) )
     {
@@ -1274,7 +1274,7 @@ force_end_offhand()
             self takeweapon( var_0 );
             self giveweapon( var_0 );
             _id_526C( var_2 );
-            _id_D543( var_1, var_3 );
+            setequipmentammo( var_1, var_3 );
         }
     }
 }

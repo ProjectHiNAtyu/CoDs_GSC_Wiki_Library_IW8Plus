@@ -267,7 +267,7 @@ _id_10059()
             {
                 foreach ( var_7, var_19 in var_17 )
                 {
-                    var_20 = _func_0222( var_1, 0, var_15, var_19 );
+                    var_20 = tablelookup( var_1, 0, var_15, var_19 );
 
                     if ( isdefined( var_20 ) && var_20 != "" )
                         _id_1005A( var_20, var_11, var_8, var_7, var_4 );

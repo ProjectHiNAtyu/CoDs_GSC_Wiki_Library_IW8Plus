@@ -71,7 +71,7 @@ _id_D879()
     self._id_5E7C = 0;
     self._id_0229 = 1;
     _id_0015::_id_D132( 250 );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_melee_resist_finisher" );
+    scripts\mp\utility\perk::giveperk( "specialty_melee_resist_finisher" );
 }
 
 _id_D84A()

@@ -2642,7 +2642,7 @@ _id_1A8A( var_0 )
             var_1 _id_1AFD( 1 );
             var_1 _id_1AF7();
             var_1 thread scripts\mp\gametypes\arena_evo_tourney::_id_1ADB();
-            var_1 _meth_86C4();
+            var_1 disableexecutionattack();
             var_1 thread _id_1A89( 0 );
             var_1 scripts\mp\battlechatter_mp::_id_4A81( var_1 );
 
@@ -2659,7 +2659,7 @@ _id_1A8A( var_0 )
         case "arena_evo_player_state_playing":
             var_1._id_B928 = 0;
             var_1._id_0480 = 0;
-            var_1 _meth_86C5();
+            var_1 enableexecutionattack();
             var_1 allowfire( 1 );
             var_1 _id_1AF7();
             var_1 _id_1AFD( 1 );

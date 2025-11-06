@@ -177,7 +177,7 @@ _id_1084D()
     if ( level.gameended && self._id_72AD == level._id_7297.size )
         self._id_72AD = self._id_72AE;
 
-    scripts\mp\utility\perk::_id_6FC2( "specialty_bling" );
+    scripts\mp\utility\perk::giveperk( "specialty_bling" );
     thread _id_6FBE( 1 );
 }
 
@@ -686,7 +686,7 @@ gun_remove_invalid_variants( var_0, var_1 )
 
     foreach ( var_5 in var_0 )
     {
-        var_6 = _func_0222( var_3, 0, var_5, 1 );
+        var_6 = tablelookup( var_3, 0, var_5, 1 );
 
         if ( is_weapon_disabled_by_visibility( var_6 ) )
             continue;
@@ -716,8 +716,8 @@ variant_is_plateform_specific( var_0 )
 
 is_weapon_disabled_by_visibility( var_0 )
 {
-    var_1 = _func_0222( "loot/weapon_ids.csv", 9, var_0, 10 );
-    var_2 = int( _func_0222( "release_tags.csv", 0, var_1, 1 ) );
+    var_1 = tablelookup( "loot/weapon_ids.csv", 9, var_0, 10 );
+    var_2 = int( tablelookup( "release_tags.csv", 0, var_1, 1 ) );
 
     if ( isdefined( var_2 ) && getdvarint( "visibility_level" ) < var_2 )
         return 1;
@@ -834,11 +834,11 @@ _id_7291( var_0 )
 
 _id_1D90( var_0, var_1, var_2, var_3 )
 {
-    var_4 = _func_0222( var_2, 0, var_0, 1 );
+    var_4 = tablelookup( var_2, 0, var_0, 1 );
 
     for ( var_5 = 0; var_5 < var_1.size; var_5++ )
     {
-        var_6 = _func_0222( var_2, 0, var_1[var_5], 1 );
+        var_6 = tablelookup( var_2, 0, var_1[var_5], 1 );
 
         if ( var_0 == var_1[var_5] || scripts\mp\utility\weapon::_id_1DB2( var_0, var_1[var_5], var_3 ) != "" || var_4 == var_6 )
             return 0;
@@ -855,9 +855,9 @@ _id_6E2D( var_0, var_1, var_2, var_3, var_4 )
 
     if ( istrue( var_1 ) && var_4 != "" )
     {
-        var_6 = _func_0222( var_3, 0, int( var_4 ), 17 );
+        var_6 = tablelookup( var_3, 0, int( var_4 ), 17 );
         var_6 = strtok( var_6, "+" );
-        var_7 = _func_0222( var_3, 0, int( var_4 ), 18 );
+        var_7 = tablelookup( var_3, 0, int( var_4 ), 18 );
         var_7 = strtok( var_7, "+" );
 
         for ( var_8 = 0; var_8 < var_6.size; var_8++ )
@@ -901,8 +901,8 @@ _id_6FC1( var_0 )
 
     if ( scripts\mp\utility\weapon::_id_88F9( var_0 ) || scripts\mp\utility\weapon::_id_8774( var_0 ) || scripts\mp\utility\weapon::getweaponrootname( var_0 ) == "s4_me_knife" )
     {
-        scripts\mp\utility\perk::_id_6FC2( "specialty_scavenger" );
-        scripts\mp\utility\perk::_id_6FC2( "specialty_pitcher" );
+        scripts\mp\utility\perk::giveperk( "specialty_scavenger" );
+        scripts\mp\utility\perk::giveperk( "specialty_pitcher" );
         scripts\mp\equipment::giveequipment( "equip_throwing_knife", "primary" );
         thread scripts\mp\equipment::incrementequipmentammo( "equip_throwing_knife" );
     }

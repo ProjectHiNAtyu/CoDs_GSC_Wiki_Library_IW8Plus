@@ -45,7 +45,7 @@ _id_C474( var_0 )
 _id_0B26( var_0 )
 {
     if ( var_0 )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_battleslide" );
+        scripts\mp\utility\perk::giveperk( "specialty_battleslide" );
     else
         self notify( "battleslide_unset" );
 }

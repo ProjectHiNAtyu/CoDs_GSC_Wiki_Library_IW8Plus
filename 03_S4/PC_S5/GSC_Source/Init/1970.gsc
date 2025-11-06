@@ -1546,7 +1546,7 @@ _id_F161()
         if ( var_3 )
             var_2 = 9000000;
 
-        var_4 = self getcurrentweapon() _meth_8624( "torch", 1 );
+        var_4 = self getcurrentweapon() hasattachment( "torch", 1 );
 
         if ( var_4 )
             var_2 = var_2 * 2.25;

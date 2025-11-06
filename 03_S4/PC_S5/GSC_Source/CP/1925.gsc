@@ -21,7 +21,7 @@ _giveweapon( var_0, var_1, var_2, var_3 )
     else
         var_4 = scripts\cp\cp_weapon::buildweapon( var_0 );
 
-    if ( var_4 _meth_8624( "akimbo", 1 ) || var_4 _meth_8624( "g18pap2", 1 ) || isdefined( var_2 ) && var_2 == 1 )
+    if ( var_4 hasattachment( "akimbo", 1 ) || var_4 hasattachment( "g18pap2", 1 ) || isdefined( var_2 ) && var_2 == 1 )
         self giveweapon( var_4, var_1, 1, -1, var_3 );
     else
         self giveweapon( var_4, var_1, 0, -1, var_3 );
@@ -231,7 +231,7 @@ _id_3552( var_0 )
         _id_FC9F( undefined );
 }
 
-_id_6FC2( var_0 )
+giveperk( var_0 )
 {
     if ( issubstr( var_0, "specialty_weapon_" ) )
     {
@@ -1098,7 +1098,7 @@ _id_0CE1( var_0, var_1, var_2 )
 
 _id_6AED( var_0 )
 {
-    return _func_0222( level._id_7043["killstreakTable"]._id_AEC7, level._id_7043["killstreakTable"]._id_C18A, var_0, level._id_7043["killstreakTable"]._id_10CEF );
+    return tablelookup( level._id_7043["killstreakTable"]._id_AEC7, level._id_7043["killstreakTable"]._id_C18A, var_0, level._id_7043["killstreakTable"]._id_10CEF );
 }
 
 _id_0C71( var_0 )
@@ -1236,14 +1236,14 @@ _id_68E5( var_0 )
     if ( !isdefined( var_0 ) )
         return "none";
 
-    var_1 = _func_0222( "mp/attachmenttable.csv", 4, var_0, 2 );
+    var_1 = tablelookup( "mp/attachmenttable.csv", 4, var_0, 2 );
 
     if ( !isdefined( var_1 ) || var_1 == "" )
     {
         var_2 = getdvar( "#x315af23e89f368200" );
 
         if ( var_2 == "zombie" )
-            var_1 = _func_0222( "cp/zombies/zombie_attachmentTable.csv", 4, var_0, 2 );
+            var_1 = tablelookup( "cp/zombies/zombie_attachmentTable.csv", 4, var_0, 2 );
     }
 
     return var_1;
@@ -3146,14 +3146,14 @@ _id_3D17( var_0 )
         return "none";
 
     var_1 = _id_6902( var_0 );
-    var_2 = _func_0222( "mp/statstable.csv", 4, var_1, 1 );
+    var_2 = tablelookup( "mp/statstable.csv", 4, var_1, 1 );
 
     if ( var_2 == "" && isdefined( level._id_60AE ) )
     {
         if ( isdefined( var_0 ) )
         {
             var_1 = _id_6902( var_0 );
-            var_2 = _func_0222( level._id_60AE, 4, var_1, 2 );
+            var_2 = tablelookup( level._id_60AE, 4, var_1, 2 );
         }
     }
 
@@ -3482,12 +3482,12 @@ _id_F934( var_0 )
 _id_6E6D( var_0 )
 {
     var_1 = getweaponrootname( var_0 );
-    var_2 = _func_0222( "mp/statstable.csv", 4, var_1, 1 );
+    var_2 = tablelookup( "mp/statstable.csv", 4, var_1, 1 );
 
     if ( var_2 == "" )
     {
         var_3 = _id_EA63( var_0.basename, "_zm" );
-        var_2 = _func_0222( "mp/statstable.csv", 4, var_3, 1 );
+        var_2 = tablelookup( "mp/statstable.csv", 4, var_3, 1 );
     }
 
     if ( _id_8834( var_0.basename ) )
@@ -4745,7 +4745,7 @@ _id_6E68( var_0 )
 
         for ( var_3 = 0; var_3 < 10; var_3++ )
         {
-            var_4 = _func_0222( "mp/statstable.csv", 4, var_1, 10 + var_3 );
+            var_4 = tablelookup( "mp/statstable.csv", 4, var_1, 10 + var_3 );
 
             if ( var_4 == "" )
                 break;
@@ -5122,7 +5122,7 @@ _id_2D16( var_0, var_1 )
 _id_6E66( var_0, var_1 )
 {
     var_2 = "mp/loot/weapon/" + var_0 + ".csv";
-    var_3 = _func_0222( var_2, 0, var_1, 3 );
+    var_3 = tablelookup( var_2, 0, var_1, 3 );
     return var_3;
 }
 
@@ -5615,7 +5615,7 @@ _id_6E81( var_0, var_1 )
         return 0;
 
     var_2 = _func_02F6( var_0 );
-    var_3 = int( _func_0222( var_2, 0, var_1, 4 ) );
+    var_3 = int( tablelookup( var_2, 0, var_1, 4 ) );
     return var_3;
 }
 
@@ -5624,7 +5624,7 @@ _id_2D1C( var_0, var_1 )
     if ( !isdefined( var_1 ) )
         return var_0;
 
-    var_2 = int( _func_0222( "mp/reticleTable.csv", 1, var_1, 5 ) );
+    var_2 = int( tablelookup( "mp/reticleTable.csv", 1, var_1, 5 ) );
 
     if ( !isdefined( var_2 ) || var_2 == 0 )
         return var_0;
@@ -6534,7 +6534,7 @@ _id_C6FE()
 {
     if ( isdefined( self._id_C70D ) )
     {
-        _id_6FC2( self._id_C70D );
+        giveperk( self._id_C70D );
         self._id_C70D = undefined;
     }
 }
@@ -7591,7 +7591,7 @@ _id_A86C( var_0 )
 _id_7970( var_0, var_1, var_2 )
 {
     if ( istrue( var_1 ) )
-        var_3 = int( _func_0222( "cp/cp_hints.csv", 1, var_0, 0 ) );
+        var_3 = int( tablelookup( "cp/cp_hints.csv", 1, var_0, 0 ) );
     else
         var_3 = 0;
 
@@ -7608,7 +7608,7 @@ _id_7970( var_0, var_1, var_2 )
 
 _id_63B7( var_0 )
 {
-    var_1 = _func_0222( "cp/carry_items.csv", 1, var_0, 0 );
+    var_1 = tablelookup( "cp/carry_items.csv", 1, var_0, 0 );
 
     if ( isdefined( var_1 ) )
         return var_1;

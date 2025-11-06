@@ -69,7 +69,7 @@ _id_B535( var_0, var_1 )
 
     if ( isdefined( self.team ) && self.team != "spectator" )
     {
-        self _meth_867F( "iw8_cp_intro_outro" );
+        self setsoundsubmix( "iw8_cp_intro_outro" );
         self setplayermusicstate( "cp_lbravo_infil" );
     }
 

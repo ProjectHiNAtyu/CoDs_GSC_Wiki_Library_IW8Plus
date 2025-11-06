@@ -206,7 +206,7 @@ giveequipment( var_0, var_1 )
 
 _id_EDBD( var_0 )
 {
-    var_1 = _id_69A4( var_0 );
+    var_1 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_1 ) )
         return;
@@ -293,7 +293,7 @@ _id_4AE5( var_0 )
 
 _id_526C( var_0 )
 {
-    var_1 = _id_69A4( var_0 );
+    var_1 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_1 ) )
         return;
@@ -343,7 +343,7 @@ _id_D5AA( var_0, var_1 )
         self setclientomnvar( "ui_perk_package_super1", var_1 );
 }
 
-_id_69A4( var_0 )
+getcurrentequipment( var_0 )
 {
     if ( !isdefined( self.equipment ) )
         return undefined;
@@ -438,7 +438,7 @@ _id_6A0F( var_0 )
     return self _meth_8109( var_1.objweapon );
 }
 
-_id_D543( var_0, var_1 )
+setequipmentammo( var_0, var_1 )
 {
     var_2 = _id_6A17( var_0 );
 
@@ -460,7 +460,7 @@ incrementequipmentammo( var_0, var_1 )
     var_2 = _id_6A0F( var_0 );
     var_3 = int( min( var_2 + var_1, _id_6A12( var_0 ) ) );
     waitframe();
-    _id_D543( var_0, var_3 );
+    setequipmentammo( var_0, var_3 );
 }
 
 _id_4558( var_0, var_1 )
@@ -474,13 +474,13 @@ _id_4558( var_0, var_1 )
     if ( var_1 > 0 )
     {
         var_3 = int( min( var_2 - var_1, _id_6A12( var_0 ) ) );
-        _id_D543( var_0, var_3 );
+        setequipmentammo( var_0, var_3 );
     }
 }
 
 _id_7DEE( var_0, var_1 )
 {
-    var_2 = _id_69A4( var_0 );
+    var_2 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         return undefined;
@@ -490,12 +490,12 @@ _id_7DEE( var_0, var_1 )
 
     var_3 = _id_6A0F( var_2 );
     var_4 = int( min( var_3 + var_1, _id_6A12( var_2 ) ) );
-    _id_D543( var_2, var_4 );
+    setequipmentammo( var_2, var_4 );
 }
 
 _id_4559( var_0, var_1 )
 {
-    var_2 = _id_69A4( var_0 );
+    var_2 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         return undefined;
@@ -505,12 +505,12 @@ _id_4559( var_0, var_1 )
 
     var_3 = _id_6A0F( var_2 );
     var_4 = int( min( var_3 - var_1, _id_6A12( var_2 ) ) );
-    _id_D543( var_2, var_4 );
+    setequipmentammo( var_2, var_4 );
 }
 
 _id_6A15( var_0 )
 {
-    var_1 = _id_69A4( var_0 );
+    var_1 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_1 ) )
         return undefined;
@@ -520,12 +520,12 @@ _id_6A15( var_0 )
 
 _id_D545( var_0, var_1 )
 {
-    var_2 = _id_69A4( var_0 );
+    var_2 = getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         return undefined;
 
-    return _id_D543( var_2, var_1 );
+    return setequipmentammo( var_2, var_1 );
 }
 
 _id_9AB6( var_0 )
@@ -643,7 +643,7 @@ _id_FD74( var_0 )
 
     var_1 = 0;
     var_2 = 0;
-    var_3 = _id_69A4( var_0 );
+    var_3 = getcurrentequipment( var_0 );
 
     if ( isdefined( var_3 ) )
     {

@@ -279,13 +279,13 @@ _id_99E2( var_0 )
     thread scripts\mp\rank::_id_CC00( var_0 );
     _id_D4EC( "kill" );
     self._id_3E59 = 1;
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickdraw" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastoffhand" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastsprintrecovery" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_marathon" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickswap" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_stalker" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickdraw" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastoffhand" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastsprintrecovery" );
+    scripts\mp\utility\perk::giveperk( "specialty_marathon" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickswap" );
+    scripts\mp\utility\perk::giveperk( "specialty_stalker" );
     self._id_A25F = 1.2;
     scripts\mp\weapons::_id_FCCC();
 }

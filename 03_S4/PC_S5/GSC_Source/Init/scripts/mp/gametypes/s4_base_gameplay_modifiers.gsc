@@ -4,7 +4,7 @@
 _id_6F2A( var_0 )
 {
     if ( !var_0 scripts\mp\utility\perk::_hasperk( "specialty_extra_deadly" ) )
-        var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_extra_deadly" );
+        var_0 scripts\mp\utility\perk::giveperk( "specialty_extra_deadly" );
 }
 
 _id_ED94( var_0 )
@@ -33,7 +33,7 @@ _id_F711( var_0 )
     var_1 = self;
 
     if ( !var_1 scripts\mp\utility\perk::_hasperk( var_0 ) )
-        var_1 scripts\mp\utility\perk::_id_6FC2( var_0 );
+        var_1 scripts\mp\utility\perk::giveperk( var_0 );
 }
 
 _id_F724( var_0 )

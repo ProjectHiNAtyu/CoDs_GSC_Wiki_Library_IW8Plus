@@ -38,7 +38,7 @@ _id_6F26( var_0 )
                 var_6 = self getplayerdata( level.loadoutsgroup, "squadMembers", "loadouts", var_2, "loadoutPerks", var_5 );
 
             if ( isdefined( var_6 ) )
-                scripts\cp\utility::_id_6FC2( var_6 );
+                scripts\cp\utility::giveperk( var_6 );
         }
     }
 
@@ -48,7 +48,7 @@ _id_6F26( var_0 )
 _id_6ECB()
 {
     self.class = "assault";
-    scripts\cp\utility::_id_6FC2( "specialty_fastreload" );
+    scripts\cp\utility::giveperk( "specialty_fastreload" );
 }
 
 _id_C37C()
@@ -69,7 +69,7 @@ _id_C39B()
 _id_106C8( var_0, var_1 )
 {
     wait( var_1 );
-    scripts\cp\utility::_id_6FC2( var_0 );
+    scripts\cp\utility::giveperk( var_0 );
 }
 
 _id_6F5C()

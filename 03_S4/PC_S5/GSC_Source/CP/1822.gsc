@@ -47,16 +47,16 @@ _id_68C7()
 
     for ( var_1 = 1; var_1 <= 2; var_1++ )
     {
-        var_2 = _func_0222( var_0, 0, var_1, 1 );
+        var_2 = tablelookup( var_0, 0, var_1, 1 );
         level._id_3E49[var_2] = spawnstruct();
         level._id_3E49[var_2]._id_3E46 = var_1;
         level._id_3E49[var_2]._id_3E45 = var_2;
         level._id_3E49[var_2]._id_B5BD = _id_6C41( var_2 );
-        level._id_3E49[var_2]._id_B5BE = _func_0222( var_0, 0, var_1, 3 );
-        level._id_3E49[var_2]._id_B5BF = _func_0222( var_0, 0, var_1, 4 );
-        level._id_3E49[var_2]._id_B5C0 = _func_0222( var_0, 0, var_1, 5 );
+        level._id_3E49[var_2]._id_B5BE = tablelookup( var_0, 0, var_1, 3 );
+        level._id_3E49[var_2]._id_B5BF = tablelookup( var_0, 0, var_1, 4 );
+        level._id_3E49[var_2]._id_B5C0 = tablelookup( var_0, 0, var_1, 5 );
         level._id_3E49[var_2]._id_A84E = _id_6BBB( var_2 );
-        level._id_3E49[var_2]._id_A84F = _func_0222( var_0, 0, var_1, 7 );
+        level._id_3E49[var_2]._id_A84F = tablelookup( var_0, 0, var_1, 7 );
     }
 
     level._id_6016["scriptModelPlayAnim"] = ::_meth_82CB;

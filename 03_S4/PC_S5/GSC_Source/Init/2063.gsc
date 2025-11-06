@@ -63,7 +63,7 @@ _id_A213()
 
 _id_ED9C( var_0 )
 {
-    var_1 = _func_0222( "mp/weaponScreenshotList.csv", 0, var_0, 1 );
+    var_1 = tablelookup( "mp/weaponScreenshotList.csv", 0, var_0, 1 );
     _id_A20D();
     wait 2;
     wait 2;

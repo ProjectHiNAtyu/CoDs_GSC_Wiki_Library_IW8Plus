@@ -397,7 +397,7 @@ _id_6197()
             else if ( var_1 == "secondary" )
                 self _meth_849D( self._id_61DC );
 
-            _id_0728::_id_D543( var_0, self._id_61DB );
+            _id_0728::setequipmentammo( var_0, self._id_61DB );
             self._id_61DC = undefined;
             self._id_61DB = undefined;
         }

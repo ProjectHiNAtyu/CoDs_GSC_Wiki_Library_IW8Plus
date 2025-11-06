@@ -34,7 +34,7 @@ getquipid( var_0 )
 
 getalias( var_0 )
 {
-    var_1 = _func_0222( "loot/operator_quip_ids.csv", 0, var_0, 13 );
+    var_1 = tablelookup( "loot/operator_quip_ids.csv", 0, var_0, 13 );
     return var_1;
 }
 

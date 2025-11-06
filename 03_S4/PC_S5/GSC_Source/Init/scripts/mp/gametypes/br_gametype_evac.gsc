@@ -281,7 +281,7 @@ _id_3FF3( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7 )
         var_9.label = var_0;
 
     if ( isdefined( var_1 ) )
-        var_9 _meth_83A3( var_1 );
+        var_9 setvalue( var_1 );
 
     if ( isdefined( var_6 ) )
         var_9.color = var_6;

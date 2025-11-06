@@ -84,7 +84,7 @@ _id_2F39( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9, 
     {
         var_4 = var_4 | level._id_7C9D;
 
-        if ( _id_8A5B( var_6 ) || isbuckslugweapon( var_1, var_6 ) || var_6 _meth_8624( "ammo_incendiary", 1 ) )
+        if ( _id_8A5B( var_6 ) || isbuckslugweapon( var_1, var_6 ) || var_6 hasattachment( "ammo_incendiary", 1 ) )
         {
             if ( _id_078C::_id_880F( var_6 ) && _id_0A8B::_id_FF64( var_6, var_5, var_1 ) )
                 var_2 thread _id_4EE1( var_9, var_1, var_6 );
@@ -522,7 +522,7 @@ _id_BA58( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9, 
         if ( var_1 scripts\mp\utility\perk::_hasperk( "specialty_delayhealing" ) )
             var_1 thread _id_0A6A::_id_9B89( var_2, var_5 );
 
-        if ( var_19 && ( var_6 _meth_8624( "ammomod_slow" ) || var_6 _meth_8624( "ammo_frangible", 1 ) ) && _id_0A8B::_id_891A( var_6, var_9, var_5, var_1 ) && !var_2 scripts\mp\utility\perk::_hasperk( "specialty_dauntless" ) )
+        if ( var_19 && ( var_6 hasattachment( "ammomod_slow" ) || var_6 hasattachment( "ammo_frangible", 1 ) ) && _id_0A8B::_id_891A( var_6, var_9, var_5, var_1 ) && !var_2 scripts\mp\utility\perk::_hasperk( "specialty_dauntless" ) )
             var_1 thread _id_0A6B::_id_1718( var_2 );
 
         if ( isplayer( var_2 ) && var_1 scripts\mp\utility\perk::_hasperk( "specialty_shrapnel" ) && _id_8A31( var_6, var_5 ) )
@@ -1045,7 +1045,7 @@ _id_87DC( var_0 )
 
 _id_DB1A( var_0 )
 {
-    if ( var_0 _meth_8624( "boltexplo_crossbow" ) )
+    if ( var_0 hasattachment( "boltexplo_crossbow" ) )
         return 1;
 
     return 0;
@@ -1145,10 +1145,10 @@ _id_6D74( var_0, var_1 )
             return;
         }
 
-        if ( var_1 _meth_8624( "gunperk_akimbo" ) )
+        if ( var_1 hasattachment( "gunperk_akimbo" ) )
             return 3;
 
-        if ( var_1 _meth_8624( "bar_sh_fluted_lindia98" ) )
+        if ( var_1 hasattachment( "bar_sh_fluted_lindia98" ) )
             return 4;
 
         return 3;
@@ -1166,7 +1166,7 @@ _id_6D74( var_0, var_1 )
             return;
         }
 
-        if ( var_1 _meth_8624( "bar_sh_fluted_mike97" ) )
+        if ( var_1 hasattachment( "bar_sh_fluted_mike97" ) )
             return 3;
 
         return 2;
@@ -1174,12 +1174,12 @@ _id_6D74( var_0, var_1 )
     }
     else if ( var_2 == "s4_sh_bromeo5" )
     {
-        if ( var_1 _meth_8624( "bar_xs_sawed_bromeo5" ) )
+        if ( var_1 hasattachment( "bar_xs_sawed_bromeo5" ) )
             return 1;
         else
             return 2;
     }
-    else if ( var_2 == "s4_pi_wecho" && var_1 _meth_8624( "bird_wecho" ) )
+    else if ( var_2 == "s4_pi_wecho" && var_1 hasattachment( "bird_wecho" ) )
     {
         var_3 = var_0 playerads() > 0.5;
 
@@ -1189,7 +1189,7 @@ _id_6D74( var_0, var_1 )
             return;
         }
 
-        if ( var_1 _meth_8624( "bar_sh_fluted_wecho" ) )
+        if ( var_1 hasattachment( "bar_sh_fluted_wecho" ) )
             return 4;
 
         return 3;
@@ -1973,7 +1973,7 @@ _id_B6F6( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9, 
     var_12._id_8852 = var_11;
 
     if ( var_5 == "MOD_EXECUTION" )
-        var_12._id_5705 = _id_0790::_id_56FC( var_1 );
+        var_12._id_5705 = scripts\cp_mp\execution::_id_56FC( var_1 );
 
     var_12._id_4D02 = 0;
     var_12._id_4CAC = 1;
@@ -2409,7 +2409,7 @@ _id_B6FD( var_0 )
 
             if ( isplayer( var_1 ) )
             {
-                if ( var_4 _meth_8624( "gunperk_driller" ) )
+                if ( var_4 hasattachment( "gunperk_driller" ) )
                 {
                     var_18 = scripts\mp\rank::getscoreinfovalue( "penetration_kill" ) * 2;
                     var_1 thread _id_0A9F::_id_700C( "penetration_kill", var_18 );
@@ -2665,7 +2665,7 @@ _id_B6F4( var_0 )
         if ( var_0._id_8852 )
         {
             var_2 playerhide();
-            var_2 _meth_852B( 0 );
+            var_2 setsolid( 0 );
         }
 
         if ( !isdefined( var_2._id_EC33 ) )
@@ -3664,10 +3664,10 @@ _id_7474( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8 )
     if ( var_1 scripts\mp\utility\perk::_hasperk( "specialty_brawler" ) && var_4 == "MOD_MELEE" )
         var_1 notify( "begin_regeneration" );
 
-    if ( var_1._id_0133 _meth_8624( "gunperk_frenzy" ) )
+    if ( var_1._id_0133 hasattachment( "gunperk_frenzy" ) )
         var_1 notify( "begin_regeneration" );
 
-    if ( var_1._id_0133 _meth_8624( "gunperk_unmarked" ) )
+    if ( var_1._id_0133 hasattachment( "gunperk_unmarked" ) )
     {
         var_18 = 0;
 
@@ -4262,7 +4262,7 @@ _id_5B1C( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9, 
             if ( !isdefined( var_12 ) )
                 var_12 = 0;
 
-            if ( var_5 _meth_8624( "gunperk_silentfocus" ) )
+            if ( var_5 hasattachment( "gunperk_silentfocus" ) )
                 var_16 = 1;
             else
                 var_16 = 0;

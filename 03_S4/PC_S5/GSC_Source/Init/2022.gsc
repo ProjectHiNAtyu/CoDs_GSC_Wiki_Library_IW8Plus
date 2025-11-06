@@ -32,9 +32,9 @@ _id_8C08( var_0, var_1 )
     var_2._id_8C2A = var_0;
     var_2._id_BC24 = self.health;
     var_2._id_BC4C = self.maxhealth;
-    var_2._id_BC11 = self _meth_8128();
-    var_2._id_BC23 = self _meth_8129();
-    var_2._id_BC6A = self _meth_812C();
+    var_2._id_BC11 = self getcustomizationbody();
+    var_2._id_BC23 = self getcustomizationhead();
+    var_2._id_BC6A = self getcustomizationviewmodel();
     var_2._id_BC62 = self._id_B7E4;
     var_2._id_BC65 = self._id_EAF7;
     var_2._id_BC16 = self._id_39FC;
@@ -79,7 +79,7 @@ _id_8C08( var_0, var_1 )
     }
 
     foreach ( var_9, var_8 in var_0.perks )
-        scripts\mp\utility\perk::_id_6FC2( var_9 );
+        scripts\mp\utility\perk::giveperk( var_9 );
 
     _id_8C1C( var_0._id_15D1, 0 );
     self _meth_86B3( 0 );
@@ -374,7 +374,7 @@ _id_8C15()
     var_1 = var_0["body"];
     var_2 = var_0["view"];
     self setmodel( var_1 );
-    self _meth_83AB( var_2 );
+    self setviewmodel( var_2 );
 }
 
 _id_8C14( var_0 )
@@ -383,7 +383,7 @@ _id_8C14( var_0 )
 
     if ( scripts\cp_mp\utility\player_utility::_isalive() )
     {
-        self _meth_8526( var_0._id_BC11, var_0._id_BC23 );
+        self setcustomization( var_0._id_BC11, var_0._id_BC23 );
         scripts\mp\teams::_id_D4BE( var_0._id_BC11, var_0._id_BC23, var_0._id_BC6A );
     }
 }

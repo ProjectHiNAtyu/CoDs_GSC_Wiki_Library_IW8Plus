@@ -36,11 +36,11 @@ init()
 
         var_4 = tablelookuprownum( "mp/splashTable.csv", 0, var_2 );
         scripts\mp\rank::_id_C2AC( var_2, "eventID", var_4 );
-        var_4 = _func_0222( "mp/splashTable.csv", 0, var_2, 2 );
+        var_4 = tablelookup( "mp/splashTable.csv", 0, var_2, 2 );
         scripts\mp\rank::_id_C2AC( var_2, "text", var_4 );
-        var_4 = int( _func_0222( "mp/splashTable.csv", 0, var_2, 13 ) );
+        var_4 = int( tablelookup( "mp/splashTable.csv", 0, var_2, 13 ) );
         scripts\mp\rank::_id_C2AC( var_2, "priority", var_4 );
-        var_4 = int( _func_0222( "mp/splashTable.csv", 0, var_2, 14 ) );
+        var_4 = int( tablelookup( "mp/splashTable.csv", 0, var_2, 14 ) );
         scripts\mp\rank::_id_C2AC( var_2, "alwaysShowSplash", var_4 );
         var_5 = tablelookuprownum( "mp/splashTable.csv", 0, var_2 );
 
@@ -610,7 +610,7 @@ _id_8D7C( var_0, var_1, var_2, var_3, var_4, var_5 )
             if ( self _meth_8271() == "mount_top" || self _meth_8271() == "mount_left" || self _meth_8271() == "mount_right" )
                 self._id_9FFB["blindfire"] = 1;
 
-            if ( var_2 _meth_8624( "akimbo", 1 ) )
+            if ( var_2 hasattachment( "akimbo", 1 ) )
                 self._id_9FFB["akimbo_kill"] = 1;
 
             if ( var_21 )
@@ -1538,7 +1538,7 @@ _id_97CE( var_0 )
     thread _id_8D83( "longshot", 1 );
     thread _id_07B1::_id_6FB9( "longshot" );
 
-    if ( self._id_0133 _meth_8624( "gunperk_acquisition" ) )
+    if ( self._id_0133 hasattachment( "gunperk_acquisition" ) )
         thread _id_0A6B::_id_D45C();
 }
 

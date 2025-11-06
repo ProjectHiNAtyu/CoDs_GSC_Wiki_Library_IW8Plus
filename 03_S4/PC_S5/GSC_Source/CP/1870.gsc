@@ -327,7 +327,7 @@ _id_AE68()
         if ( var_2 == "" )
             break;
 
-        level._id_5538[var_1] = _func_0222( var_0, 0, var_1, 1 );
+        level._id_5538[var_1] = tablelookup( var_0, 0, var_1, 1 );
         var_1++;
     }
 }
@@ -427,7 +427,7 @@ _id_38CF()
 
 _id_6484( var_0 )
 {
-    return _func_0222( "cp/cp_eog_tracking_types.csv", 1, var_0, 0 );
+    return tablelookup( "cp/cp_eog_tracking_types.csv", 1, var_0, 0 );
 }
 
 _id_5534( var_0 )
@@ -694,7 +694,7 @@ _id_C022()
         level._id_11045 = "cp/zombies/rankTable.csv";
 
     level._id_11044 = [];
-    level._id_11031 = int( _func_0222( level._id_11045, 0, "maxrank", 1 ) );
+    level._id_11031 = int( tablelookup( level._id_11045, 0, "maxrank", 1 ) );
 
     for ( var_0 = 0; var_0 <= level._id_11031; var_0++ )
     {
@@ -726,57 +726,57 @@ _id_C022()
 
 _id_66F7( var_0 )
 {
-    return _func_0222( level._id_11045, 0, var_0, 1 );
+    return tablelookup( level._id_11045, 0, var_0, 1 );
 }
 
 _id_65AA( var_0 )
 {
-    return int( _func_0222( level._id_11045, 0, var_0, 2 ) );
+    return int( tablelookup( level._id_11045, 0, var_0, 2 ) );
 }
 
 _id_6598( var_0 )
 {
-    return int( _func_0222( level._id_11045, 0, var_0, 7 ) );
+    return int( tablelookup( level._id_11045, 0, var_0, 7 ) );
 }
 
 _id_65E9( var_0 )
 {
-    return int( _func_0222( level._id_11045, 0, var_0, 3 ) );
+    return int( tablelookup( level._id_11045, 0, var_0, 3 ) );
 }
 
 _id_654F( var_0 )
 {
-    return int( _func_0222( level._id_11045, 0, var_0, 14 ) );
+    return int( tablelookup( level._id_11045, 0, var_0, 14 ) );
 }
 
 _id_6757( var_0 )
 {
-    return _func_0222( level._id_11045, 0, var_0, 4 );
+    return tablelookup( level._id_11045, 0, var_0, 4 );
 }
 
 _id_64BA( var_0 )
 {
-    return _func_0222( level._id_11045, 0, var_0, 5 );
+    return tablelookup( level._id_11045, 0, var_0, 5 );
 }
 
 _id_6512( var_0 )
 {
-    return _func_0222( level._id_11045, 0, var_0, 17 );
+    return tablelookup( level._id_11045, 0, var_0, 17 );
 }
 
 _id_6500( var_0 )
 {
-    return _func_0222( level._id_11045, 0, var_0, 6 );
+    return tablelookup( level._id_11045, 0, var_0, 6 );
 }
 
 _id_67D3( var_0 )
 {
-    return int( _func_0222( level._id_11045, 0, var_0, 19 ) );
+    return int( tablelookup( level._id_11045, 0, var_0, 19 ) );
 }
 
 _id_6779( var_0 )
 {
-    return _func_0222( level._id_11045, 0, var_0, 8 );
+    return tablelookup( level._id_11045, 0, var_0, 8 );
 }
 
 _id_6689()

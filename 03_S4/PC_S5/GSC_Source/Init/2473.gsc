@@ -2522,7 +2522,7 @@ flipcrate( var_0 )
 
     while ( var_9 < 1 )
     {
-        var_2.origin = _func_025E( var_6, var_7, var_9 ) + ( 0, 0, sin( var_9 * 180 ) * var_8 );
+        var_2.origin = vectorlerp( var_6, var_7, var_9 ) + ( 0, 0, sin( var_9 * 180 ) * var_8 );
         var_2.angles = _func_031A( var_4, var_5, var_9 );
         var_9 = ( gettime() - var_11 ) / var_10;
         waitframe();

@@ -349,7 +349,7 @@ getweaponclassweaponxpmultiplier( var_0 )
 _id_6A67()
 {
     if ( !isdefined( level._id_60FB ) )
-        level._id_60FB = float( _func_0222( "mp/gametypesTable.csv", 0, scripts\mp\utility\game::getgametype(), 19 ) );
+        level._id_60FB = float( tablelookup( "mp/gametypesTable.csv", 0, scripts\mp\utility\game::getgametype(), 19 ) );
 
     return level._id_60FB;
 }
@@ -357,7 +357,7 @@ _id_6A67()
 _id_6A63()
 {
     if ( !isdefined( level._id_60F4 ) )
-        level._id_60F4 = int( _func_0222( "mp/gametypesTable.csv", 0, scripts\mp\utility\game::getgametype(), 20 ) );
+        level._id_60F4 = int( tablelookup( "mp/gametypesTable.csv", 0, scripts\mp\utility\game::getgametype(), 20 ) );
 
     return level._id_60F4;
 }

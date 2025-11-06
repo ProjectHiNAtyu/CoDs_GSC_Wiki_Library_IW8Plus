@@ -47,8 +47,8 @@ _id_BF18()
 
                     var_2._id_762A = self;
                     self._id_EF87[var_3] = 1;
-                    var_2 scripts\mp\utility\perk::_id_6FC2( "specialty_regenfaster" );
-                    var_2 scripts\mp\utility\perk::_id_6FC2( "specialty_regen_delay_reduced" );
+                    var_2 scripts\mp\utility\perk::giveperk( "specialty_regenfaster" );
+                    var_2 scripts\mp\utility\perk::giveperk( "specialty_regen_delay_reduced" );
                     var_2 scripts\mp\hud_message::_id_DCC6( "in_healing_range" );
                     _id_6FA2( var_2 );
                     thread _id_762C( var_2 );
@@ -288,10 +288,10 @@ _id_A94D()
                 var_3 = var_2 _id_C195();
 
                 for ( var_4 = 0; var_4 < var_3["primary"]; var_4++ )
-                    var_2 thread _id_A9E2( self.name, var_2 scripts\mp\equipment::_id_69A4( "primary" ) );
+                    var_2 thread _id_A9E2( self.name, var_2 scripts\mp\equipment::getcurrentequipment( "primary" ) );
 
                 for ( var_4 = 0; var_4 < var_3["secondary"]; var_4++ )
-                    var_2 thread _id_A9E2( self.name, var_2 scripts\mp\equipment::_id_69A4( "secondary" ) );
+                    var_2 thread _id_A9E2( self.name, var_2 scripts\mp\equipment::getcurrentequipment( "secondary" ) );
 
                 thread _id_A9E0( var_2 );
                 var_2 playsoundtoplayer( "scavenger_pack_pickup", var_2 );
@@ -329,7 +329,7 @@ _id_558C( var_0, var_1 )
     if ( !isdefined( var_1 ) )
         var_1 = 0;
 
-    var_2 = scripts\mp\equipment::_id_69A4( var_0 );
+    var_2 = scripts\mp\equipment::getcurrentequipment( var_0 );
     var_3 = _id_6A16( var_0 );
     var_4 = scripts\mp\equipment::_id_6A0F( var_2 );
 
@@ -341,7 +341,7 @@ _id_558C( var_0, var_1 )
 
 _id_6A16( var_0 )
 {
-    var_1 = scripts\mp\equipment::_id_69A4( var_0 );
+    var_1 = scripts\mp\equipment::getcurrentequipment( var_0 );
     var_2 = scripts\mp\equipment::_id_6A16( var_1 );
 
     if ( var_0 == "primary" && scripts\mp\utility\perk::_hasperk( "specialty_extra_deadly" ) )
@@ -433,7 +433,7 @@ _id_D8D6()
     if ( self._id_6DF0 )
         self waittill( "giveLoadout" );
 
-    var_0 = scripts\mp\equipment::_id_69A4( "primary" );
+    var_0 = scripts\mp\equipment::getcurrentequipment( "primary" );
 
     if ( isdefined( var_0 ) && var_0 != "none" )
     {
@@ -465,7 +465,7 @@ _id_A103()
 
     if ( !istrue( self._id_47BD ) )
     {
-        scripts\mp\utility\perk::_id_6FC2( "specialty_lightweight" );
+        scripts\mp\utility\perk::giveperk( "specialty_lightweight" );
         self._id_47BD = 1;
     }
 
@@ -580,8 +580,8 @@ perkfalloff_ghost()
 
 _id_19CD()
 {
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quieter" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_no_battle_chatter" );
+    scripts\mp\utility\perk::giveperk( "specialty_quieter" );
+    scripts\mp\utility\perk::giveperk( "specialty_no_battle_chatter" );
     _id_07C4::_id_7B6B( "scout" );
     self.unmarkedactive = 1;
     thread _id_A13C();
@@ -690,7 +690,7 @@ _id_D55B()
     for (;;)
     {
         self waittill( "weapon_change" );
-        scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
+        scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
         self waittill( "reload" );
         waitframe();
         scripts\mp\utility\perk::removeperk( "specialty_fastreload" );
@@ -755,7 +755,7 @@ _id_C319()
             {
                 var_11 = 0;
 
-                if ( var_10 _meth_8624( "akimbo", 1 ) )
+                if ( var_10 hasattachment( "akimbo", 1 ) )
                     var_11 = 1;
 
                 if ( issameweapon( var_10, var_3, 0 ) )
@@ -889,7 +889,7 @@ _id_ED34( var_0, var_1 )
 
 _id_ED33()
 {
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickdraw" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickdraw" );
     wait 6.0;
     scripts\mp\utility\perk::removeperk( "specialty_quickdraw" );
 }
@@ -1074,7 +1074,7 @@ _id_D554()
     if ( self._id_6DF0 )
         self waittill( "giveLoadout" );
 
-    var_0 = scripts\mp\equipment::_id_69A4( "secondary" );
+    var_0 = scripts\mp\equipment::getcurrentequipment( "secondary" );
 
     if ( isdefined( var_0 ) && var_0 != "none" )
     {
@@ -1550,7 +1550,7 @@ _id_72C4( var_0 )
 {
     if ( var_0 == "sprint_begin" )
     {
-        if ( self._id_90CB _meth_8624( "gunperk_quick" ) )
+        if ( self._id_90CB hasattachment( "gunperk_quick" ) )
             self setmovespeedscale( 1.04 );
     }
     else if ( var_0 == "sprint_end" || var_0 == "death" )
@@ -1559,7 +1559,7 @@ _id_72C4( var_0 )
     {
         waitframe();
 
-        if ( !self._id_90CB _meth_8624( "gunperk_quick" ) )
+        if ( !self._id_90CB hasattachment( "gunperk_quick" ) )
             self setmovespeedscale( 1 );
         else
             self setmovespeedscale( 1.04 );
@@ -1574,7 +1574,7 @@ _id_D4A4()
     {
         self._id_A25F = self._id_A25F + 0.05;
         scripts\mp\weapons::_id_FCCC();
-        scripts\mp\utility\perk::_id_6FC2( "specialty_extendedmelee" );
+        scripts\mp\utility\perk::giveperk( "specialty_extendedmelee" );
         var_0 = 1;
     }
 
@@ -1587,14 +1587,14 @@ _id_D4A4()
         {
             self._id_A25F = self._id_A25F + 0.05;
             scripts\mp\weapons::_id_FCCC();
-            scripts\mp\utility\perk::_id_6FC2( "specialty_extendedmelee" );
+            scripts\mp\utility\perk::giveperk( "specialty_extendedmelee" );
         }
         else if ( var_0 && !scripts\mp\utility\weapon::_id_8929( self._id_0133 ) )
         {
             self._id_A25F = self._id_A25F - 0.05;
             scripts\mp\weapons::_id_FCCC();
 
-            if ( !self._id_0133 _meth_8624( "gunperk_reach" ) )
+            if ( !self._id_0133 hasattachment( "gunperk_reach" ) )
                 scripts\mp\utility\perk::removeperk( "specialty_extendedmelee" );
         }
 
@@ -1905,10 +1905,10 @@ _id_A0F4()
     {
         self waittill( "tightgrip_fire" );
 
-        if ( self._id_0133 _meth_8624( "gunperk_tightgrip" ) )
+        if ( self._id_0133 hasattachment( "gunperk_tightgrip" ) )
         {
             if ( !scripts\mp\utility\perk::_hasperk( "specialty_tightgrip" ) )
-                scripts\mp\utility\perk::_id_6FC2( "specialty_tightgrip" );
+                scripts\mp\utility\perk::giveperk( "specialty_tightgrip" );
             else
                 self notify( "tightgrip_continue" );
 
@@ -1947,7 +1947,7 @@ _id_A137()
 
     for (;;)
     {
-        if ( self._id_0133 _meth_8624( "gunperk_quickscope" ) && self playerads() == 1 )
+        if ( self._id_0133 hasattachment( "gunperk_quickscope" ) && self playerads() == 1 )
         {
             thread _id_D692();
 
@@ -1969,7 +1969,7 @@ _id_D692()
     self endon( "quickscope_unset" );
 
     if ( !scripts\mp\utility\perk::_hasperk( "specialty_increaseaccuracy" ) )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_increaseaccuracy" );
+        scripts\mp\utility\perk::giveperk( "specialty_increaseaccuracy" );
 
     wait 1.0;
 
@@ -2019,7 +2019,7 @@ _id_D58B()
     self endon( "hardscope_cancel" );
     self endon( "hardscope_unset" );
     wait 0.5;
-    scripts\mp\utility\perk::_id_6FC2( "specialty_increaseaccuracy" );
+    scripts\mp\utility\perk::giveperk( "specialty_increaseaccuracy" );
 }
 
 _id_FAA1()
@@ -2043,7 +2043,7 @@ _id_A125()
     {
         if ( isdefined( self.health ) && isdefined( self.maxhealth ) && self.health < self.maxhealth || isdefined( self._id_0419 ) && isdefined( self._id_0419._id_0050 ) && self._id_0419._id_0050 > 0 )
         {
-            scripts\mp\utility\perk::_id_6FC2( "specialty_increaseaccuracy" );
+            scripts\mp\utility\perk::giveperk( "specialty_increaseaccuracy" );
 
             while ( isdefined( self.health ) && isdefined( self.maxhealth ) && self.health < self.maxhealth || isdefined( self._id_0419._id_0050 ) && self._id_0419._id_0050 > 0 )
                 waitframe();
@@ -2067,7 +2067,7 @@ _id_D45C()
 {
     self notify( "acquisition_set" );
     self endon( "acquisition_set" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_increaseaccuracy" );
+    scripts\mp\utility\perk::giveperk( "specialty_increaseaccuracy" );
     wait 5.0;
     scripts\mp\utility\perk::removeperk( "specialty_increaseaccuracy" );
 }
@@ -2079,7 +2079,7 @@ _id_D63B()
 
 _id_A12F()
 {
-    if ( self._id_0133 _meth_8624( "gunperk_panic" ) )
+    if ( self._id_0133 hasattachment( "gunperk_panic" ) )
         thread _id_D63C();
 
     for (;;)
@@ -2087,7 +2087,7 @@ _id_A12F()
         self waittill( "weapon_change" );
         waitframe();
 
-        if ( self._id_0133 _meth_8624( "gunperk_panic" ) )
+        if ( self._id_0133 hasattachment( "gunperk_panic" ) )
         {
             thread _id_D63C();
             continue;
@@ -2105,7 +2105,7 @@ _id_D63C()
     self endon( "panic_unset" );
 
     if ( !scripts\mp\utility\perk::_hasperk( "specialty_increaseaccuracy" ) )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_increaseaccuracy" );
+        scripts\mp\utility\perk::giveperk( "specialty_increaseaccuracy" );
 
     wait 3.0;
     scripts\mp\utility\perk::removeperk( "specialty_increaseaccuracy" );
@@ -2697,8 +2697,8 @@ _id_FA5C()
 
 _id_D6F3()
 {
-    scripts\mp\utility\perk::_id_6FC2( "specialty_bulletaccuracy" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_holdbreath" );
+    scripts\mp\utility\perk::giveperk( "specialty_bulletaccuracy" );
+    scripts\mp\utility\perk::giveperk( "specialty_holdbreath" );
 }
 
 _id_FB08()
@@ -3191,12 +3191,12 @@ _id_4275( var_0 )
     self._id_88E6 = 1;
     self._id_A25F = 1.1;
     scripts\mp\weapons::_id_FCCC();
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickdraw" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_stalker" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastoffhand" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastsprintrecovery" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickswap" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickdraw" );
+    scripts\mp\utility\perk::giveperk( "specialty_stalker" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastoffhand" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastsprintrecovery" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickswap" );
     thread _id_FA77();
     thread _id_FA79();
     thread _id_FA78();
@@ -3355,7 +3355,7 @@ _id_D54B()
 
     foreach ( var_2 in var_0 )
     {
-        if ( isdefined( var_2 ) && !isnullweapon( var_2 ) && var_2 _meth_8624( "maxammo", 1 ) && !istrue( var_2._id_5BAB ) )
+        if ( isdefined( var_2 ) && !isnullweapon( var_2 ) && var_2 hasattachment( "maxammo", 1 ) && !istrue( var_2._id_5BAB ) )
         {
             self givemaxammo( var_2 );
             var_2._id_5BAB = 1;
@@ -3400,7 +3400,7 @@ _id_D54D()
     if ( self._id_6DF0 )
         self waittill( "giveLoadout" );
 
-    var_0 = scripts\mp\equipment::_id_69A4( "primary" );
+    var_0 = scripts\mp\equipment::getcurrentequipment( "primary" );
 
     if ( isdefined( var_0 ) && var_0 != "none" )
         scripts\mp\equipment::incrementequipmentammo( var_0 );
@@ -3489,7 +3489,7 @@ _id_0EF7( var_0, var_1, var_2 )
     if ( isdefined( var_2 ) && var_2 )
         thread _id_10BA4();
 
-    scripts\mp\utility\perk::_id_6FC2( "specialty_regenfaster" );
+    scripts\mp\utility\perk::giveperk( "specialty_regenfaster" );
     self setclientomnvar( "ui_life_link", 1 );
     self notify( "enabled_life_pack_boost" );
     self._id_9370 = var_0;
@@ -4447,12 +4447,12 @@ _id_D5C4( var_0 )
     self._id_88E6 = 1;
     self._id_A25F = 1.25;
     scripts\mp\weapons::_id_FCCC();
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickdraw" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_stalker" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastoffhand" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastsprintrecovery" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickswap" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickdraw" );
+    scripts\mp\utility\perk::giveperk( "specialty_stalker" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastoffhand" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastsprintrecovery" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickswap" );
     thread _id_FAAE();
     thread _id_FAB0();
     thread _id_FAAF();
@@ -7327,7 +7327,7 @@ _id_FD11( var_0 )
         if ( !istrue( self._id_8963 ) )
         {
             self._id_8963 = 1;
-            scripts\mp\utility\perk::_id_6FC2( "specialty_regen_delay_reduced" );
+            scripts\mp\utility\perk::giveperk( "specialty_regen_delay_reduced" );
         }
     }
     else if ( istrue( self._id_8963 ) )
@@ -7420,7 +7420,7 @@ _id_C10B( var_0, var_1 )
         var_2._id_BD88[var_1] = 0;
 
     var_2._id_C109[var_1] = undefined;
-    var_3 = var_0 scripts\mp\equipment::_id_69A4( var_1 );
+    var_3 = var_0 scripts\mp\equipment::getcurrentequipment( var_1 );
 
     if ( !isdefined( var_3 ) )
         return;

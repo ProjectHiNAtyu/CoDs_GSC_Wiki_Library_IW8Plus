@@ -111,7 +111,7 @@ _id_AFC5()
 {
     scripts\cp_mp\utility\script_utility::registersharedfunc( "perk", "hasPerk", scripts\mp\utility\perk::_hasperk );
     scripts\cp_mp\utility\script_utility::registersharedfunc( "perk", "removePerk", scripts\mp\utility\perk::removeperk );
-    scripts\cp_mp\utility\script_utility::registersharedfunc( "perk", "givePerk", scripts\mp\utility\perk::_id_6FC2 );
+    scripts\cp_mp\utility\script_utility::registersharedfunc( "perk", "givePerk", scripts\mp\utility\perk::giveperk );
 }
 
 _id_B4F9()

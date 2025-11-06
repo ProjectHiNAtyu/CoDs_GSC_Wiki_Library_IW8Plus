@@ -3259,7 +3259,7 @@ _id_2F3F()
     thread _id_07C4::init();
     thread _id_07EA::init();
     thread _id_07D6::init();
-    thread _id_081A::init();
+    thread scripts\mp\spectating::init();
     thread _id_0817::init();
 
     if ( scripts\mp\utility\game::getgametype() == "br" )
@@ -3332,7 +3332,7 @@ _id_2F3F()
     thread _id_0793::init();
     thread _id_07D8::_id_8007();
     thread _id_07A6::init();
-    thread _id_0790::_id_56FD();
+    thread scripts\cp_mp\execution::_id_56FD();
     thread _id_0812::init();
     thread _id_07F9::init();
     thread _id_07AD::_id_8138();
@@ -6331,7 +6331,7 @@ _id_3503()
     self setplayerdata( level.progressiongroup, "bestWeapon", "hits", var_8 );
     self setplayerdata( level.progressiongroup, "bestWeapon", "deaths", var_9 );
     self setplayerdata( level.progressiongroup, "bestWeaponXP", var_10 );
-    var_11 = int( _func_0222( "mp/statstable.csv", 4, var_1, 0 ) );
+    var_11 = int( tablelookup( "mp/statstable.csv", 4, var_1, 0 ) );
     self setplayerdata( level.progressiongroup, "bestWeaponIndex", var_11 );
 }
 

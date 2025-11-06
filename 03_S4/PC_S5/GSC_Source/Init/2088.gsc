@@ -789,27 +789,27 @@ _id_635E( var_0 )
 get_pmf_data_row( var_0, var_1 )
 {
     var_2 = [];
-    var_2[0] = _func_0222( var_0, 0, var_1, 0 );
-    var_2[1] = _func_0222( var_0, 0, var_1, 1 );
-    var_2[2] = _func_0222( var_0, 0, var_1, 2 );
-    var_2[3] = _func_0222( var_0, 0, var_1, 3 );
-    var_2[4] = _func_0222( var_0, 0, var_1, 4 );
-    var_2[5] = _func_0222( var_0, 0, var_1, 5 );
-    var_2[6] = _func_0222( var_0, 0, var_1, 6 );
-    var_2[7] = _func_0222( var_0, 0, var_1, 7 );
-    var_2[8] = _func_0222( var_0, 0, var_1, 8 );
-    var_2[9] = _func_0222( var_0, 0, var_1, 9 );
-    var_2[10] = _func_0222( var_0, 0, var_1, 10 );
-    var_2[11] = _func_0222( var_0, 0, var_1, 11 );
-    var_2[12] = _func_0222( var_0, 0, var_1, 12 );
-    var_2[13] = _func_0222( var_0, 0, var_1, 13 );
-    var_2[14] = _func_0222( var_0, 0, var_1, 14 );
-    var_2[15] = _func_0222( var_0, 0, var_1, 15 );
-    var_2[16] = _func_0222( var_0, 0, var_1, 16 );
-    var_2[17] = _func_0222( var_0, 0, var_1, 17 );
-    var_2[18] = _func_0222( var_0, 0, var_1, 18 );
-    var_2[19] = _func_0222( var_0, 0, var_1, 19 );
-    var_2[20] = _func_0222( var_0, 0, var_1, 20 );
+    var_2[0] = tablelookup( var_0, 0, var_1, 0 );
+    var_2[1] = tablelookup( var_0, 0, var_1, 1 );
+    var_2[2] = tablelookup( var_0, 0, var_1, 2 );
+    var_2[3] = tablelookup( var_0, 0, var_1, 3 );
+    var_2[4] = tablelookup( var_0, 0, var_1, 4 );
+    var_2[5] = tablelookup( var_0, 0, var_1, 5 );
+    var_2[6] = tablelookup( var_0, 0, var_1, 6 );
+    var_2[7] = tablelookup( var_0, 0, var_1, 7 );
+    var_2[8] = tablelookup( var_0, 0, var_1, 8 );
+    var_2[9] = tablelookup( var_0, 0, var_1, 9 );
+    var_2[10] = tablelookup( var_0, 0, var_1, 10 );
+    var_2[11] = tablelookup( var_0, 0, var_1, 11 );
+    var_2[12] = tablelookup( var_0, 0, var_1, 12 );
+    var_2[13] = tablelookup( var_0, 0, var_1, 13 );
+    var_2[14] = tablelookup( var_0, 0, var_1, 14 );
+    var_2[15] = tablelookup( var_0, 0, var_1, 15 );
+    var_2[16] = tablelookup( var_0, 0, var_1, 16 );
+    var_2[17] = tablelookup( var_0, 0, var_1, 17 );
+    var_2[18] = tablelookup( var_0, 0, var_1, 18 );
+    var_2[19] = tablelookup( var_0, 0, var_1, 19 );
+    var_2[20] = tablelookup( var_0, 0, var_1, 20 );
     var_2[21] = tablelookuprownum( var_0, 0, var_1 );
     return var_2;
 }

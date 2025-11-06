@@ -72,7 +72,7 @@ on_turned()
     self.team = "allies";
     self._id_86F2 = 1;
     _id_08EA::_id_110A7( self._id_110B0 );
-    self _meth_852B( 0 );
+    self setsolid( 0 );
     self _meth_80C6( 0.01, 0.1 );
     scripts\cp\zombies\zombie_slow::end_all_slows();
     thread _id_5403();

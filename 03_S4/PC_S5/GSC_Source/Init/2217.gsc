@@ -310,7 +310,7 @@ _id_2CFE()
             }
 
             var_21 = var_18 / var_19;
-            var_3._id_19FD = _func_025E( var_3._id_C94F[var_20].origin, var_3._id_C94F[var_20 + 1].origin, var_21 );
+            var_3._id_19FD = vectorlerp( var_3._id_C94F[var_20].origin, var_3._id_C94F[var_20 + 1].origin, var_21 );
         }
     }
 }

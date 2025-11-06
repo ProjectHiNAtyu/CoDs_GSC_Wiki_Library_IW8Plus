@@ -38,15 +38,15 @@ init()
     level.sonyxpscale = var_6;
     level.ranktable = [];
     level._id_10DC3 = [];
-    level.maxrank = int( _func_0222( "mp/rankTable.csv", 0, "maxrank", 1 ) );
-    level._id_9C68 = int( _func_0222( "mp/rankTable.csv", 0, "maxelder", 1 ) );
+    level.maxrank = int( tablelookup( "mp/rankTable.csv", 0, "maxrank", 1 ) );
+    level._id_9C68 = int( tablelookup( "mp/rankTable.csv", 0, "maxelder", 1 ) );
 
     for ( var_7 = 0; var_7 <= level.maxrank; var_7++ )
     {
-        level.ranktable[var_7]["minXP"] = _func_0222( "mp/rankTable.csv", 0, var_7, 2 );
-        level.ranktable[var_7]["xpToNext"] = _func_0222( "mp/rankTable.csv", 0, var_7, 3 );
-        level.ranktable[var_7]["maxXP"] = _func_0222( "mp/rankTable.csv", 0, var_7, 7 );
-        level.ranktable[var_7]["splash"] = _func_0222( "mp/rankTable.csv", 0, var_7, 15 );
+        level.ranktable[var_7]["minXP"] = tablelookup( "mp/rankTable.csv", 0, var_7, 2 );
+        level.ranktable[var_7]["xpToNext"] = tablelookup( "mp/rankTable.csv", 0, var_7, 3 );
+        level.ranktable[var_7]["maxXP"] = tablelookup( "mp/rankTable.csv", 0, var_7, 7 );
+        level.ranktable[var_7]["splash"] = tablelookup( "mp/rankTable.csv", 0, var_7, 15 );
     }
 
     _id_0776::init();
@@ -167,12 +167,12 @@ _id_6CD9( var_0 )
 
 _id_6CDA( var_0, var_1 )
 {
-    return _func_0222( "mp/rankIconTable.csv", 0, var_0, var_1 + 1 );
+    return tablelookup( "mp/rankIconTable.csv", 0, var_0, var_1 + 1 );
 }
 
 _id_6CDB( var_0 )
 {
-    return int( _func_0222( "mp/rankTable.csv", 0, var_0, 13 ) );
+    return int( tablelookup( "mp/rankTable.csv", 0, var_0, 13 ) );
 }
 
 onplayerconnect()
@@ -819,9 +819,9 @@ incrankxp( var_0, var_1, var_2, var_3 )
     if ( isdefined( var_1 ) )
     {
         var_5 = scripts\cp\utility::_id_69D8( var_1.basename );
-        var_7 = _func_0222( "mp/statstable.csv", 5, var_5, 4 );
+        var_7 = tablelookup( "mp/statstable.csv", 5, var_5, 4 );
         var_8 = var_7 + "_variant_0";
-        var_6 = int( _func_0222( "loot/weapon_ids.csv", 9, var_8, 0 ) );
+        var_6 = int( tablelookup( "loot/weapon_ids.csv", 9, var_8, 0 ) );
 
         if ( istrue( var_4 ) )
         {
@@ -979,7 +979,7 @@ _id_6A68()
         if ( var_0 != 1.0 )
             level._id_60FC = var_0;
         else
-            level._id_60FC = float( _func_0222( "mp/gametypesTable.csv", 0, scripts\cp\utility::getgametype(), 17 ) );
+            level._id_60FC = float( tablelookup( "mp/gametypesTable.csv", 0, scripts\cp\utility::getgametype(), 17 ) );
     }
 
     return level._id_60FC;

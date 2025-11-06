@@ -60,19 +60,19 @@ _id_8B16( var_0, var_1 )
         if ( !isdefined( var_6 ) )
             return 0;
 
-        var_7 = _func_0222( "mp/attachmentmap.csv", 0, var_0, var_6 );
+        var_7 = tablelookup( "mp/attachmentmap.csv", 0, var_0, var_6 );
 
         if ( var_7 == "" )
         {
-            var_8 = _func_0222( "mp/statstable.csv", 4, var_0, 1 );
-            var_7 = _func_0222( "mp/attachmentmap.csv", 0, var_8, var_6 );
+            var_8 = tablelookup( "mp/statstable.csv", 4, var_0, 1 );
+            var_7 = tablelookup( "mp/attachmentmap.csv", 0, var_8, var_6 );
         }
 
         if ( var_7 == "" )
             var_7 = var_1;
 
         if ( var_7 != "" )
-            var_2 = int( _func_0222( "mp/attachmenttable.csv", 4, var_7, 31 ) );
+            var_2 = int( tablelookup( "mp/attachmenttable.csv", 4, var_7, 31 ) );
     }
 
     return var_2 == 1;
@@ -625,7 +625,7 @@ _id_FF5B( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7 )
         }
         else
         {
-            var_13 = _func_0222( "mp/statstable.csv", 0, var_12, 41 );
+            var_13 = tablelookup( "mp/statstable.csv", 0, var_12, 41 );
 
             if ( int( var_13 ) < 0 )
             {
@@ -1102,7 +1102,7 @@ _id_5BF2( var_0, var_1 )
 
 _id_981B( var_0 )
 {
-    var_1 = _func_0222( "mp/menuPowers.csv", 3, var_0, 2 );
+    var_1 = tablelookup( "mp/menuPowers.csv", 3, var_0, 2 );
 
     if ( !isdefined( var_1 ) || var_1 != "1" && var_1 != "2" )
         return undefined;
@@ -1211,7 +1211,7 @@ isweaponbanned( var_0, var_1 )
             return 0;
 
         var_4 = var_0 + "_variant_0";
-        var_3 = _func_0222( "loot/weapon_ids.csv", 9, var_4, 0 );
+        var_3 = tablelookup( "loot/weapon_ids.csv", 9, var_4, 0 );
     }
     else
         var_3 = scripts\engine\utility::_id_EA52( var_1 );
@@ -1226,7 +1226,7 @@ isattachmentbanned( var_0, var_1 )
     if ( var_2.size == 0 )
         return 0;
 
-    var_3 = _func_0222( "loot/" + var_0 + "_attachment_ids.csv", 1, var_1, 0 );
+    var_3 = tablelookup( "loot/" + var_0 + "_attachment_ids.csv", 1, var_1, 0 );
     return scripts\engine\utility::array_contains( var_2, var_3 );
 }
 
@@ -1278,7 +1278,7 @@ getitemid( var_0, var_1 )
             break;
     }
 
-    return _func_0222( var_2, var_3, var_0, var_4 );
+    return tablelookup( var_2, var_3, var_0, var_4 );
 }
 
 getbanneditems()

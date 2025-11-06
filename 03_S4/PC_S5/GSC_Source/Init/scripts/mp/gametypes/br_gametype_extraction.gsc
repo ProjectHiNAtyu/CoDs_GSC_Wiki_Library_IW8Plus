@@ -112,7 +112,7 @@ _id_B768()
         return;
 
     scripts\mp\playerlogic::_id_E337( undefined, 0 );
-    _id_0790::_id_0B9E();
+    scripts\cp_mp\execution::_clearexecution();
     scripts\mp\gametypes\br_pickups::_id_825B();
     thread scripts\mp\gametypes\br_gulag::_id_F631( 4 );
     scripts\mp\gametypes\br_gulag::_id_728C( 1 );
@@ -294,11 +294,11 @@ _id_77AA( var_0 )
 _id_4E84()
 {
     level._id_2BB5._id_A77F++;
-    level._id_2BB5._id_7B66 _meth_83A3( level._id_2BB5._id_A77F );
+    level._id_2BB5._id_7B66 setvalue( level._id_2BB5._id_A77F );
     level._id_2BB5._id_7B66 thread _id_7B61();
     level._id_2BB5._id_7B65 thread _id_7B61();
     var_0 = _id_698A();
-    level._id_2BB5._id_7B5F _meth_83A3( var_0 * 100 );
+    level._id_2BB5._id_7B5F setvalue( var_0 * 100 );
 
     foreach ( var_3, var_2 in level._id_EF6A )
     {
@@ -565,7 +565,7 @@ _id_3FF3( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7 )
         var_9.label = var_0;
 
     if ( isdefined( var_1 ) )
-        var_9 _meth_83A3( var_1 );
+        var_9 setvalue( var_1 );
 
     if ( isdefined( var_6 ) )
         var_9.color = var_6;
@@ -638,7 +638,7 @@ _id_4CF5( var_0, var_1 )
         if ( var_5 > 0 && var_0._id_B95C > var_3 || var_5 < 0 && var_0._id_B95C < var_3 )
             var_0._id_B95C = var_3;
 
-        var_0 _meth_83A3( var_0._id_B95C );
+        var_0 setvalue( var_0._id_B95C );
         wait( level._id_5F3A );
     }
 

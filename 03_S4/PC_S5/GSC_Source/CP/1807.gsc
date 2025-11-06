@@ -346,25 +346,25 @@ getweaponattachmentids( var_0 )
     {
         var_6 = 0;
         var_7 = scripts\cp\utility::_id_69D8( var_0.basename );
-        var_8 = _func_0222( "mp/statstable.csv", 5, var_7, 4 );
+        var_8 = tablelookup( "mp/statstable.csv", 5, var_7, 4 );
 
         foreach ( var_10 in var_0._id_0070 )
         {
             var_11 = scripts\cp\utility::_id_1DA5( var_10 );
-            var_12 = _func_0222( "mp/attachmenttable.csv", 5, var_11, 11 );
+            var_12 = tablelookup( "mp/attachmenttable.csv", 5, var_11, 11 );
 
             if ( issubstr( var_11, "zm_" ) )
                 var_11 = strtok( var_11, "_" )[1];
 
             if ( _id_1D9B( var_0, var_11 ) || var_12 != "" )
             {
-                var_5[var_6] = _func_0222( "loot/" + var_8 + "_attachment_ids.csv", 1, var_11, 0 );
+                var_5[var_6] = tablelookup( "loot/" + var_8 + "_attachment_ids.csv", 1, var_11, 0 );
                 var_6++;
             }
 
             if ( isdefined( level.activeattachmentoverrides ) && isdefined( level.activeattachmentoverrides[var_10] ) && _id_1D9B( var_0, level.activeattachmentoverrides[var_10] ) )
             {
-                var_5[var_6] = _func_0222( "loot/" + var_8 + "_attachment_ids.csv", 1, level.activeattachmentoverrides[var_10], 0 );
+                var_5[var_6] = tablelookup( "loot/" + var_8 + "_attachment_ids.csv", 1, level.activeattachmentoverrides[var_10], 0 );
                 var_6++;
             }
         }
@@ -390,14 +390,14 @@ getweaponlootid( var_0 )
     var_1 = _id_0728::_id_6A14( var_0 );
 
     if ( isdefined( var_1 ) )
-        return int( _func_0222( "loot/equipment_ids.csv", 1, var_1, 0 ) );
+        return int( tablelookup( "loot/equipment_ids.csv", 1, var_1, 0 ) );
 
     if ( isdefined( var_0 ) )
     {
         var_2 = scripts\cp\utility::_id_69D8( var_0.basename );
-        var_3 = _func_0222( "mp/statstable.csv", 5, var_2, 4 );
+        var_3 = tablelookup( "mp/statstable.csv", 5, var_2, 4 );
         var_4 = var_3 + "_variant_0";
-        return int( _func_0222( "loot/weapon_ids.csv", 9, var_4, 0 ) );
+        return int( tablelookup( "loot/weapon_ids.csv", 9, var_4, 0 ) );
     }
 
     return 0;
@@ -432,7 +432,7 @@ getaeweaponclass( var_0, var_1 )
             return 1;
         case "sniper":
             var_2 = scripts\cp\utility::getweaponrootname( var_0 );
-            var_3 = _func_0222( "mp/statstable.csv", 4, var_2, 1 );
+            var_3 = tablelookup( "mp/statstable.csv", 4, var_2, 1 );
 
             if ( var_3 == "weapon_dmr" )
                 return 5;
@@ -476,7 +476,7 @@ getaeweaponclass_no_damage_type( var_0 )
             return 1;
         case "sniper":
             var_1 = scripts\cp\utility::getweaponrootname( var_0 );
-            var_2 = _func_0222( "mp/statstable.csv", 4, var_1, 1 );
+            var_2 = tablelookup( "mp/statstable.csv", 4, var_1, 1 );
 
             if ( var_2 == "weapon_dmr" )
                 return 5;
@@ -688,11 +688,11 @@ getopticclass( var_0 )
         foreach ( var_2 in var_0._id_0070 )
         {
             var_3 = scripts\cp\utility::_id_1DA5( var_2 );
-            var_4 = _func_0222( "mp/attachmenttable.csv", 5, var_3, 2 );
+            var_4 = tablelookup( "mp/attachmenttable.csv", 5, var_3, 2 );
 
             if ( var_4 == "optic" )
             {
-                var_5 = _func_0222( "mp/reticlecategorytable.csv", 1, var_3, 2 );
+                var_5 = tablelookup( "mp/reticlecategorytable.csv", 1, var_3, 2 );
 
                 if ( isdefined( var_5 ) )
                 {
@@ -751,7 +751,7 @@ createcraftequipmentevent( var_0, var_1 )
     if ( !var_0 challengesenabledforplayer() )
         return;
 
-    var_2 = int( _func_0222( "loot/equipment_ids.csv", 1, var_1, 0 ) );
+    var_2 = int( tablelookup( "loot/equipment_ids.csv", 1, var_1, 0 ) );
     var_0 reportchallengeuserevent( "144115188075856019", [ 252, "CP", 23, var_2 ] );
 }
 
@@ -789,7 +789,7 @@ createpurchasecovenantevent( var_0, var_1 )
     var_4 = 0;
 
     if ( isdefined( var_2.lootreference ) )
-        var_4 = int( _func_0222( "loot/covenant_ids.csv", 0, var_2.lootreference, 1 ) );
+        var_4 = int( tablelookup( "loot/covenant_ids.csv", 0, var_2.lootreference, 1 ) );
 
     var_0 reportchallengeuserevent( "144115188075856020", [ 252, "CP", 24, var_4, 39, scripts\cp\utility::_id_459B( var_3._id_C040, 0 ) ] );
 }

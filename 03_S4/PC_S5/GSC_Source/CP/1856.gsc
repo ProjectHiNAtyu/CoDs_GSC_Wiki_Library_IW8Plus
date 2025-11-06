@@ -493,8 +493,8 @@ _id_2D1E()
 
     for ( var_2 = 0; var_2 <= var_1; var_2++ )
     {
-        var_3 = _func_0222( "mp/statstable.csv", 0, var_2, 4 );
-        var_4 = _func_0222( "mp/statstable.csv", 0, var_2, 2 );
+        var_3 = tablelookup( "mp/statstable.csv", 0, var_2, 4 );
+        var_4 = tablelookup( "mp/statstable.csv", 0, var_2, 2 );
 
         if ( !issubstr( var_4, "weapon_" ) )
             continue;

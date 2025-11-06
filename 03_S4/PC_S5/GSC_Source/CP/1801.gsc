@@ -45,8 +45,8 @@ _id_824D()
         if ( isdefined( var_1 ) && var_1 != "" )
         {
             var_2 = spawnstruct();
-            var_3 = _func_0222( "cp_reward_ids.csv", 2, var_1, 1 );
-            var_4 = _func_0222( "cp_reward_ids.csv", 2, var_1, 0 );
+            var_3 = tablelookup( "cp_reward_ids.csv", 2, var_1, 1 );
+            var_4 = tablelookup( "cp_reward_ids.csv", 2, var_1, 0 );
             var_2._id_AC3B = int( var_3 );
             var_2._id_7C8C = int( var_4 );
             level._id_AC3C[var_1] = var_2;
@@ -65,22 +65,22 @@ _id_8146( var_0, var_1 )
 {
     level._id_1FCC[var_0] = spawnstruct();
     level._id_1FCC[var_0].type = var_1;
-    var_2 = _func_0222( "mp/awardtable.csv", 1, var_0, 10 );
+    var_2 = tablelookup( "mp/awardtable.csv", 1, var_0, 10 );
 
     if ( isdefined( var_2 ) && var_2 != "" )
         level._id_1FCC[var_0]._id_10FDA = var_2;
 
-    var_3 = _func_0222( "mp/awardtable.csv", 1, var_0, 11 );
+    var_3 = tablelookup( "mp/awardtable.csv", 1, var_0, 11 );
 
     if ( isdefined( var_3 ) && var_3 != "" )
         level._id_1FCC[var_0]._id_60E4 = var_3;
 
-    var_4 = _func_0222( "mp/awardtable.csv", 1, var_0, 3 );
+    var_4 = tablelookup( "mp/awardtable.csv", 1, var_0, 3 );
 
     if ( isdefined( var_4 ) && var_4 != "" )
         level._id_1FCC[var_0]._id_332F = var_4;
 
-    var_5 = _func_0222( "mp/awardtable.csv", 1, var_0, 7 );
+    var_5 = tablelookup( "mp/awardtable.csv", 1, var_0, 7 );
 
     if ( isdefined( var_5 ) && var_5 != "" )
     {

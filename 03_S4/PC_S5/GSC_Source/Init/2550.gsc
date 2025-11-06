@@ -23,9 +23,9 @@ _id_7F26()
     for (;;)
     {
         var_2++;
-        var_3 = _func_0222( var_0, 0, "botArchetype", var_2 );
-        var_4 = _func_0222( var_0, 0, "botPersonalities", var_2 );
-        var_5 = _func_0222( var_0, 0, "botDifficulties", var_2 );
+        var_3 = tablelookup( var_0, 0, "botArchetype", var_2 );
+        var_4 = tablelookup( var_0, 0, "botPersonalities", var_2 );
+        var_5 = tablelookup( var_0, 0, "botDifficulties", var_2 );
 
         if ( !isdefined( var_3 ) || var_3 == "" )
             break;
@@ -39,7 +39,7 @@ _id_7F26()
         var_6 = [];
 
         foreach ( var_8 in var_1 )
-            var_6[var_8] = _func_0222( var_0, 0, var_8, var_2 );
+            var_6[var_8] = tablelookup( var_0, 0, var_8, var_2 );
 
         var_10 = strtok( var_3, "|" );
         var_11 = strtok( var_4, "| " );
@@ -74,7 +74,7 @@ _id_80D0()
     for (;;)
     {
         var_2++;
-        var_3 = _func_0222( var_0, 0, "template_", var_2 );
+        var_3 = tablelookup( var_0, 0, "template_", var_2 );
 
         if ( !isdefined( var_3 ) || var_3 == "" )
             break;
@@ -84,7 +84,7 @@ _id_80D0()
 
         foreach ( var_6 in var_1 )
         {
-            var_7 = _func_0222( var_0, 0, var_6, var_2 );
+            var_7 = tablelookup( var_0, 0, var_6, var_2 );
 
             if ( isdefined( var_7 ) && var_7 != "" )
                 level._id_2938[var_4][var_6] = var_7;

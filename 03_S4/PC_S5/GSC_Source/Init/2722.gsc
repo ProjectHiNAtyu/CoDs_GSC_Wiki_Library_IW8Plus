@@ -104,7 +104,7 @@ _id_B386( var_0, var_1 )
         case "MOD_FIRE":
             var_2 = "effort_burned";
 
-            if ( var_1 _meth_8624( "ammo_incendiary", 1 ) )
+            if ( var_1 hasattachment( "ammo_incendiary", 1 ) )
                 var_2 = "effort_death";
 
             break;
@@ -117,7 +117,7 @@ _id_B386( var_0, var_1 )
             var_2 = "effort_exploded";
             break;
         case "MOD_MELEE":
-            if ( var_1 _meth_8624( "bayonet", 1 ) || var_1.basename == "s4_me_knife_mp" )
+            if ( var_1 hasattachment( "bayonet", 1 ) || var_1.basename == "s4_me_knife_mp" )
                 var_2 = "effort_stabbed";
             else
                 var_2 = "effort_bludgeoned";

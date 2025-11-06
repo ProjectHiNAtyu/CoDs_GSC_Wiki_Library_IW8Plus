@@ -3,7 +3,7 @@
 
 _id_68E5( var_0 )
 {
-    var_1 = _func_0222( "mp/attachmenttable.csv", 4, var_0, 2 );
+    var_1 = tablelookup( "mp/attachmenttable.csv", 4, var_0, 2 );
     return var_1;
 }
 
@@ -316,7 +316,7 @@ _id_1DB1( var_0, var_1 )
     {
         var_3 = tablelookuprownum( "mp/attachmentcombos.csv", 0, var_1 );
 
-        if ( _func_0222( "mp/attachmentcombos.csv", 0, var_0, var_3 ) == "no" )
+        if ( tablelookup( "mp/attachmentcombos.csv", 0, var_0, var_3 ) == "no" )
             var_2 = 0;
     }
 
@@ -856,11 +856,11 @@ _id_6BA9()
         if ( var_3 == 0 )
             continue;
 
-        var_4 = _func_0222( "mp/attachmenttable.csv", 0, var_3, 5 );
+        var_4 = tablelookup( "mp/attachmenttable.csv", 0, var_3, 5 );
 
         if ( var_4 != "" )
         {
-            var_5 = _func_0222( "mp/attachmenttable.csv", 0, var_3, 2 );
+            var_5 = tablelookup( "mp/attachmenttable.csv", 0, var_3, 2 );
 
             if ( var_5 != "none" && var_5 != "rail" && !scripts\engine\utility::array_contains( var_0, var_4 ) )
                 var_0[var_0.size] = var_4;
@@ -886,11 +886,11 @@ _id_6BDC()
         if ( var_3 == 0 )
             continue;
 
-        var_4 = _func_0222( "mp/attachmenttable.csv", 0, var_3, 5 );
+        var_4 = tablelookup( "mp/attachmenttable.csv", 0, var_3, 5 );
 
         if ( var_4 != "" )
         {
-            var_5 = _func_0222( "mp/attachmenttable.csv", 0, var_3, 2 );
+            var_5 = tablelookup( "mp/attachmenttable.csv", 0, var_3, 2 );
 
             if ( var_5 == "rail" && !scripts\engine\utility::array_contains( var_0, var_4 ) )
                 var_0[var_0.size] = var_4;
@@ -1620,12 +1620,12 @@ _id_6C2B( var_0 )
 {
     var_1 = [];
 
-    for ( var_2 = 1; _func_0221( var_0 ) && _func_0222( var_0, 0, var_2, 0 ) != ""; var_2++ )
+    for ( var_2 = 1; _func_0221( var_0 ) && tablelookup( var_0, 0, var_2, 0 ) != ""; var_2++ )
     {
         var_1[var_2 - 1] = spawnstruct();
-        var_3 = _func_0222( var_0, 0, var_2, 1 );
-        var_4 = _func_0222( var_0, 0, var_2, 2 );
-        var_5 = _func_0222( var_0, 0, var_2, 3 );
+        var_3 = tablelookup( var_0, 0, var_2, 1 );
+        var_4 = tablelookup( var_0, 0, var_2, 2 );
+        var_5 = tablelookup( var_0, 0, var_2, 3 );
         var_1[var_2 - 1].origin = ( float( var_3 ), float( var_4 ), float( var_5 ) );
     }
 

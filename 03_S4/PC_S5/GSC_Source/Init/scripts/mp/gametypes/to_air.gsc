@@ -461,7 +461,7 @@ _id_33DD( var_0, var_1, var_2 )
     for ( var_5 = var_4 + var_2; var_3 < var_5; var_3 = gettime() )
     {
         var_6 = clamp( ( var_3 - var_4 ) / var_2, 0.0, 1.0 );
-        var_7 = _func_025E( var_0, var_1, var_6 );
+        var_7 = vectorlerp( var_0, var_1, var_6 );
         level._id_1DE6.angles = scripts\mp\utility\script::_id_FFE3( var_7, ( 0, 0, 1 ) );
         waitframe();
     }

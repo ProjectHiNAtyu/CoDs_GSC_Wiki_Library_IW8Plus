@@ -157,7 +157,7 @@ _id_1A61( var_0 )
 
             if ( isdefined( var_1 ) && var_1.basename == "snowball_mp" )
             {
-                var_3 = scripts\mp\equipment::_id_69A4( "primary" );
+                var_3 = scripts\mp\equipment::getcurrentequipment( "primary" );
                 var_4 = scripts\mp\equipment::_id_6A0F( var_3 );
 
                 if ( var_1.basename == "snowball_mp" && var_4 > 3 )
@@ -166,7 +166,7 @@ _id_1A61( var_0 )
 
             if ( isdefined( var_2 ) && var_2.basename == "pball_mp" )
             {
-                var_3 = scripts\mp\equipment::_id_69A4( "secondary" );
+                var_3 = scripts\mp\equipment::getcurrentequipment( "secondary" );
                 var_4 = scripts\mp\equipment::_id_6A0F( var_3 );
 
                 if ( var_2.basename == "pball_mp" )

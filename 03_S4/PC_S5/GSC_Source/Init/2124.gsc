@@ -228,7 +228,7 @@ _id_701E( var_0 )
         {
             if ( var_6 == var_0.owner )
             {
-                var_6 _meth_867F( var_1, var_2, var_4 );
+                var_6 setsoundsubmix( var_1, var_2, var_4 );
                 var_6 playsoundtoplayer( "kstreak_glidebomb_incoming_plr", var_6, var_0 );
                 continue;
             }
@@ -494,7 +494,7 @@ _id_3652()
     for (;;)
     {
         level waittill( "connected", var_0 );
-        var_0 _meth_867F( "mp_killstreak_chopper_gunner_owner_mute" );
+        var_0 setsoundsubmix( "mp_killstreak_chopper_gunner_owner_mute" );
     }
 }
 
@@ -504,7 +504,7 @@ _id_364C( var_0, var_1 )
     _id_0847::_id_DF24( var_2, var_0, "death" );
     _id_0847::_id_DF24( var_2, var_0, "crashing" );
     var_1 _meth_8680( "mp_killstreak_chopper_gunner_owner_mute" );
-    var_1 _meth_867F( "mp_killstreak_chopper_gunner_owner" );
+    var_1 setsoundsubmix( "mp_killstreak_chopper_gunner_owner" );
     thread _id_3654( var_0, var_1 );
 
     if ( var_0.team == "allies" )
@@ -551,12 +551,12 @@ _id_3654( var_0, var_1 )
     if ( var_2 == "leaving" )
     {
         var_1 _meth_8680( "mp_killstreak_chopper_gunner_owner", 4 );
-        var_1 _meth_867F( "mp_killstreak_chopper_gunner_owner_mute", 4 );
+        var_1 setsoundsubmix( "mp_killstreak_chopper_gunner_owner_mute", 4 );
     }
     else
     {
         var_1 _meth_8680( "mp_killstreak_chopper_gunner_owner" );
-        var_1 _meth_867F( "mp_killstreak_chopper_gunner_owner_mute", 4 );
+        var_1 setsoundsubmix( "mp_killstreak_chopper_gunner_owner_mute", 4 );
     }
 }
 

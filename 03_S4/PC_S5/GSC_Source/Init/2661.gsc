@@ -1111,8 +1111,8 @@ _id_FC2F()
 
         var_0 = _id_6CB5( self.team, self );
         var_1 = _id_6CB5( scripts\mp\utility\game::_id_6BE2( self.team ), self );
-        self._id_EF59 _meth_83A3( var_0 );
-        self._id_AC46 _meth_83A3( var_1 );
+        self._id_EF59 setvalue( var_0 );
+        self._id_AC46 setvalue( var_1 );
         level waittill( "uav_update" );
     }
 }

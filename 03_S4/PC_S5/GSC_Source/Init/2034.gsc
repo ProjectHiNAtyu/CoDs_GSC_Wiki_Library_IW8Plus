@@ -442,7 +442,7 @@ _id_D70D( var_0 )
             thread scripts\mp\playerlogic::_id_E285();
         }
 
-        thread _id_081A::_id_D6E2();
+        thread scripts\mp\spectating::setspectatepermissions();
     }
 
     self._id_EAF6 = undefined;
@@ -1067,7 +1067,7 @@ _id_24A6( var_0 )
                 thread scripts\mp\playerlogic::_id_E285();
             }
 
-            thread _id_081A::_id_D6E2();
+            thread scripts\mp\spectating::setspectatepermissions();
         }
 
         self._id_3B86 = gettime();
@@ -1192,7 +1192,7 @@ _id_9DD0( var_0 )
             thread scripts\mp\playerlogic::_id_E285();
     }
 
-    thread _id_081A::_id_D6E2();
+    thread scripts\mp\spectating::setspectatepermissions();
 }
 
 _id_1176( var_0, var_1, var_2 )
@@ -1237,7 +1237,7 @@ _id_1176( var_0, var_1, var_2 )
     if ( game["state"] != "postgame" )
         scripts\mp\playerlogic::_id_1177( istrue( var_2 ) );
 
-    scripts\mp\utility\game::_id_FCD2();
+    scripts\mp\utility\game::updateobjectivetext();
 
     if ( isdefined( var_1 ) && var_1 )
         waittillframeend;
@@ -1246,7 +1246,7 @@ _id_1176( var_0, var_1, var_2 )
     {
         self notify( "joined_spectators" );
         scripts\mp\teams::_id_AB04( self );
-        _id_081A::_id_AB04( self );
+        scripts\mp\spectating::_id_AB04( self );
         _id_07B4::_id_AB68( self );
         _id_0798::_id_AB06();
     }

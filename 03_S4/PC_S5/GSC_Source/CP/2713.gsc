@@ -36,7 +36,7 @@ _id_D5EB( var_0, var_1, var_2 )
 
 _id_6B28( var_0 )
 {
-    var_1 = _func_0222( "mp/hints.csv", 1, var_0, 0 );
+    var_1 = tablelookup( "mp/hints.csv", 1, var_0, 0 );
     return int( var_1 );
 }
 

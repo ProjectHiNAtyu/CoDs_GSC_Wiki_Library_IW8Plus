@@ -81,7 +81,7 @@ _id_EDC5( var_0, var_1 )
     self setclientomnvar( "ui_br_helmet_class", var_2 );
 
     if ( self._id_2A5A == 3 )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_stun_resistance" );
+        scripts\mp\utility\perk::giveperk( "specialty_stun_resistance" );
 
     self setclientomnvar( "ui_br_helmet_damage", 1 );
 }

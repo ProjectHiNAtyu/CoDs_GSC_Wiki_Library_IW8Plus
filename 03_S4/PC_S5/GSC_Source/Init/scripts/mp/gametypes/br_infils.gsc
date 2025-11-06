@@ -628,7 +628,7 @@ _id_D6D4()
     foreach ( var_1 in level.players )
     {
         var_1 _meth_8680( "fade_to_black_all_except_music_and_scripted5", 0.5 );
-        var_1 _meth_867F( "fade_to_black_all_except_music_scripted5_and_amb", 2.0 );
+        var_1 setsoundsubmix( "fade_to_black_all_except_music_scripted5_and_amb", 2.0 );
     }
 }
 
@@ -851,7 +851,7 @@ _id_7E7D()
     {
         var_2 playlocalsound( "br_infil_part1_lr" );
         var_2 _meth_8680( "mp_br_lobby_fade", 1.5 );
-        var_2 _meth_867F( "fade_to_black_all_except_music_and_scripted5", 0.5 );
+        var_2 setsoundsubmix( "fade_to_black_all_except_music_and_scripted5", 0.5 );
         var_3 = game["music"]["br_infil_intro"].size - 1;
         var_4 = randomint( var_3 );
         var_2 setplayermusicstate( game["music"]["br_infil_intro"][var_4] );
@@ -952,8 +952,8 @@ _id_7E62( var_0, var_1, var_2, var_3 )
     {
         foreach ( var_5 in level.players )
         {
-            var_5 _meth_867F( "iw8_br_infil_fadeout", 0.0 );
-            var_5 _meth_867F( "mp_br_infil_music", 0.0 );
+            var_5 setsoundsubmix( "iw8_br_infil_fadeout", 0.0 );
+            var_5 setsoundsubmix( "mp_br_infil_music", 0.0 );
         }
 
         level._id_7E65.alpha = 0;
@@ -968,8 +968,8 @@ _id_7E62( var_0, var_1, var_2, var_3 )
 
         foreach ( var_5 in level.players )
         {
-            var_5 _meth_867F( "mp_br_infil_anim", 0.0 );
-            var_5 _meth_867F( "mp_br_infil_ac130", 0.0 );
+            var_5 setsoundsubmix( "mp_br_infil_anim", 0.0 );
+            var_5 setsoundsubmix( "mp_br_infil_ac130", 0.0 );
         }
     }
 
@@ -1021,7 +1021,7 @@ _id_7E63( var_0, var_1, var_2 )
         level._id_7E83.alpha = 1;
 
         foreach ( var_4 in level.players )
-            var_4 _meth_867F( "iw8_mp_end_round", var_0 );
+            var_4 setsoundsubmix( "iw8_mp_end_round", var_0 );
 
         _id_107DB( var_0 );
     }

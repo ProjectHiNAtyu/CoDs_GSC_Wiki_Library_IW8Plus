@@ -538,7 +538,7 @@ _id_D351()
         level._id_0BA7._id_B5E3 = var_0;
     }
 
-    level._id_0BA7._id_B5E3._id_7B51 _meth_83A3( level._id_0BA7._id_B5E1 );
+    level._id_0BA7._id_B5E3._id_7B51 setvalue( level._id_0BA7._id_B5E1 );
 }
 
 _id_F2BA()

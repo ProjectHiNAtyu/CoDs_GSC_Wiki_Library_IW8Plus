@@ -99,7 +99,7 @@ _id_D4AB( var_0, var_1 )
         var_3 = scripts\engine\math::_id_5898( 40, 54, var_2 );
         var_4 = int( var_3 * 0.25 );
 
-        if ( var_1 _meth_8624( "ammo_incendiary", 1 ) && weaponclass( var_1 ) != "spread" )
+        if ( var_1 hasattachment( "ammo_incendiary", 1 ) && weaponclass( var_1 ) != "spread" )
         {
             var_4 = int( 3.0 );
 
@@ -197,7 +197,7 @@ _id_9ABC( var_0 )
 _id_880F( var_0 )
 {
     var_1 = _func_00E7( var_0 );
-    var_2 = var_0 _meth_8624( "ammo_incendiary", 1 );
+    var_2 = var_0 hasattachment( "ammo_incendiary", 1 );
     return var_1 == "WEAPON/AMMO_DB" || var_2;
 }
 

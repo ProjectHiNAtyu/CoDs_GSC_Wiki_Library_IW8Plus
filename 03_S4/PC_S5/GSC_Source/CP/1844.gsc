@@ -374,7 +374,7 @@ _id_F8BA( var_0 )
     if ( var_0 != "null" && !istrue( level._id_F8A1 ) )
     {
         level._id_F8A1 = 1;
-        var_2 = int( _func_0222( level._id_F8BC, 1, var_0, 0 ) );
+        var_2 = int( tablelookup( level._id_F8BC, 1, var_0, 0 ) );
         var_1 setclientomnvar( "zm_tutorial_num", var_2 );
         var_1 _id_D23E( var_0, 1 );
         level._id_F8A1 = undefined;

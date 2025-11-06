@@ -131,7 +131,7 @@ _id_5CC9( var_0, var_1, var_2, var_3 )
         var_5 = ( 0, 0, 0 );
 
         if ( level._id_5CC8 )
-            var_5 = _func_025E( var_0.origin + ( 0, 0, 48 ), var_1.origin + ( 0, 0, 48 ), 0.25 );
+            var_5 = vectorlerp( var_0.origin + ( 0, 0, 48 ), var_1.origin + ( 0, 0, 48 ), 0.25 );
         else
             var_5 = var_1.origin + ( 0, 0, 48 );
 
@@ -198,7 +198,7 @@ _id_5CD1( var_0, var_1, var_2, var_3 )
     if ( isdefined( var_0._id_A863 ) && level._id_5CC8 )
         _id_07F9::_id_A8B7( var_0._id_A863._id_A908, 0 );
     else
-        var_0._id_4140 = _func_025E( var_0._id_4140, var_1, 0.75 );
+        var_0._id_4140 = vectorlerp( var_0._id_4140, var_1, 0.75 );
 
     thread _id_B918( var_1, "flashpoint_kill_s2" );
     _id_5CC2( var_0, var_2, var_3 );

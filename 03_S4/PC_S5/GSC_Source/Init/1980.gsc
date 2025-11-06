@@ -1108,7 +1108,7 @@ _id_4006( var_0, var_1, var_2, var_3, var_4, var_5, var_6 )
     var_12 = scripts\mp\utility\weapon::_id_6A18( var_4.basename );
 
     if ( isdefined( var_6 ) && istrue( var_6._id_8835 ) && scripts\mp\equipment::_id_8836( var_6._id_5562 ) )
-        var_11 = _func_0222( "loot/equipment_ids.csv", 1, var_6._id_5562, 0 );
+        var_11 = tablelookup( "loot/equipment_ids.csv", 1, var_6._id_5562, 0 );
 
     var_13 = var_0 getoperatorlootid();
     var_14 = 0;
@@ -1155,12 +1155,12 @@ _id_4006( var_0, var_1, var_2, var_3, var_4, var_5, var_6 )
                 var_34 = undefined;
                 var_17 = 1;
                 var_35 = scripts\mp\utility\weapon::_id_69D8( var_4.basename );
-                var_36 = _func_0222( "mp/statstable.csv", 5, var_35, 4 );
+                var_36 = tablelookup( "mp/statstable.csv", 5, var_35, 4 );
 
                 foreach ( var_38 in var_10 )
                 {
-                    var_39 = _func_0222( "loot/" + var_36 + "_attachment_ids.csv", 0, var_38, 1 );
-                    var_32 = _func_0222( "mp/attachmenttable.csv", 5, var_39, 2 );
+                    var_39 = tablelookup( "loot/" + var_36 + "_attachment_ids.csv", 0, var_38, 1 );
+                    var_32 = tablelookup( "mp/attachmenttable.csv", 5, var_39, 2 );
 
                     if ( var_32 == "optic" )
                     {
@@ -1171,7 +1171,7 @@ _id_4006( var_0, var_1, var_2, var_3, var_4, var_5, var_6 )
                 }
 
                 if ( var_31 )
-                    var_34 = _func_0222( "mp/reticlecategorytable.csv", 1, var_33, 2 );
+                    var_34 = tablelookup( "mp/reticlecategorytable.csv", 1, var_33, 2 );
 
                 if ( isdefined( var_34 ) && var_31 )
                 {
@@ -1699,7 +1699,7 @@ isobjectivemode()
 
 isusingoperatorfavoriteweapon( var_0, var_1 )
 {
-    var_2 = _func_0222( "operators.csv", 1, var_1[0], 28 );
+    var_2 = tablelookup( "operators.csv", 1, var_1[0], 28 );
 
     if ( isdefined( var_0.basename ) && issubstr( var_0.basename, var_2 ) )
         return 1;
@@ -1718,7 +1718,7 @@ isweaponattachmentnameequipped( var_0, var_1 )
     {
         var_3 = 0;
         var_4 = scripts\mp\utility\weapon::_id_69D8( var_0.basename );
-        var_5 = _func_0222( "mp/statstable.csv", 5, var_4, 4 );
+        var_5 = tablelookup( "mp/statstable.csv", 5, var_4, 4 );
 
         foreach ( var_7 in var_0._id_0070 )
         {
@@ -1767,22 +1767,22 @@ getweaponattachmentids( var_0 )
     {
         var_2 = 0;
         var_3 = scripts\mp\utility\weapon::_id_69D8( var_0.basename );
-        var_4 = _func_0222( "mp/statstable.csv", 5, var_3, 4 );
+        var_4 = tablelookup( "mp/statstable.csv", 5, var_3, 4 );
 
         foreach ( var_6 in var_0._id_0070 )
         {
             var_7 = scripts\engine\utility::ter_op( var_6 == "gunperk_akimbo_smg", var_6, scripts\mp\utility\weapon::_id_1DA5( var_6 ) );
-            var_8 = _func_0222( "mp/attachmenttable.csv", 5, var_7, 11 );
+            var_8 = tablelookup( "mp/attachmenttable.csv", 5, var_7, 11 );
 
             if ( scripts\mp\utility\weapon::_id_1D9B( var_0, var_7 ) || var_8 != "" )
             {
-                var_1[var_2] = _func_0222( "loot/" + var_4 + "_attachment_ids.csv", 1, var_7, 0 );
+                var_1[var_2] = tablelookup( "loot/" + var_4 + "_attachment_ids.csv", 1, var_7, 0 );
                 var_2++;
             }
 
             if ( isdefined( level.activeattachmentoverrides ) && isdefined( level.activeattachmentoverrides[var_6] ) && scripts\mp\utility\weapon::_id_1D9B( var_0, level.activeattachmentoverrides[var_6] ) )
             {
-                var_1[var_2] = _func_0222( "loot/" + var_4 + "_attachment_ids.csv", 1, level.activeattachmentoverrides[var_6], 0 );
+                var_1[var_2] = tablelookup( "loot/" + var_4 + "_attachment_ids.csv", 1, level.activeattachmentoverrides[var_6], 0 );
                 var_2++;
             }
         }
@@ -1988,9 +1988,9 @@ getweaponlootid( var_0 )
     if ( isdefined( var_0 ) )
     {
         var_2 = scripts\mp\utility\weapon::_id_69D8( var_0.basename );
-        var_3 = _func_0222( "mp/statstable.csv", 5, var_2, 4 );
+        var_3 = tablelookup( "mp/statstable.csv", 5, var_2, 4 );
         var_4 = var_3 + "_variant_0";
-        var_1 = int( _func_0222( "loot/weapon_ids.csv", 9, var_4, 0 ) );
+        var_1 = int( tablelookup( "loot/weapon_ids.csv", 9, var_4, 0 ) );
     }
 
     return var_1;
@@ -2005,7 +2005,7 @@ getoperatorlootid()
         var_1 = self [[ scripts\cp_mp\utility\script_utility::getsharedfunc( "player", "lookupCurrentOperator" ) ]]( self.team );
 
     if ( var_1 != "" )
-        var_0 = int( _func_0222( "loot/operator_ids.csv", 1, var_1, 0 ) );
+        var_0 = int( tablelookup( "loot/operator_ids.csv", 1, var_1, 0 ) );
 
     return var_0;
 }

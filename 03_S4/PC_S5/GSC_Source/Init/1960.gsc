@@ -132,7 +132,7 @@ _id_1721( var_0, var_1 )
 
         var_21 = 0;
 
-        if ( var_9 _meth_8624( "akimbo", 1 ) )
+        if ( var_9 hasattachment( "akimbo", 1 ) )
             var_21 = 1;
 
         var_22 = scripts\mp\weapons::_id_68BB( var_9 );

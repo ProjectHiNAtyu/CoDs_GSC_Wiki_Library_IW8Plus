@@ -583,7 +583,7 @@ _id_E727()
 {
     waitframe();
     scripts\mp\utility\player::_id_FD26( "spectator" );
-    _id_081A::_id_D512();
+    scripts\mp\spectating::_id_D512();
 
     if ( isdefined( self._id_8FB8 ) )
         self setplayerangles( self._id_8FB8 );

@@ -100,7 +100,7 @@ handle_solid_state()
     var_0 = getdvarint( "#x31a346059478fef5c", 0 );
 
     if ( var_0 )
-        self _meth_852B();
+        self setsolid();
     else
         self notsolid();
 }
@@ -1145,7 +1145,7 @@ _endspectatearena()
 {
     var_0 = self;
     var_0.spectatingarenaindex = undefined;
-    var_0 _id_081A::_id_D6E2();
+    var_0 scripts\mp\spectating::setspectatepermissions();
     var_0 setclientomnvar( "ui_arena_evo_spectating_arena", 0 );
     var_0 scripts\mp\utility\player::_id_FD26( "playing" );
     var_0 setorigin( var_0 get_spectate_ended_origin() );

@@ -17,7 +17,7 @@ _id_6C4B()
 _id_D660( var_0 )
 {
     if ( var_0 )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_empimmune" );
+        scripts\mp\utility\perk::giveperk( "specialty_empimmune" );
     else
         scripts\mp\utility\perk::removeperk( "specialty_empimmune" );
 }

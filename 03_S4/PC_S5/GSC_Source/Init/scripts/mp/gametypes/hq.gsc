@@ -1281,7 +1281,7 @@ _id_34DE()
     if ( !scripts\mp\utility\teams::_id_6DCA( level._id_110CF._id_ADAE, "aliveCount" ) )
     {
         level._id_E3E2[level._id_110CF._id_ADAE]._id_15B5 = 1;
-        _id_081A::_id_FD35();
+        scripts\mp\spectating::_id_FD35();
     }
 }
 

@@ -291,7 +291,7 @@ _id_6B2B()
 
 _id_6BD6( var_0, var_1 )
 {
-    var_2 = _func_0222( "mp/cac/bodies.csv", 1, var_1, 23 );
+    var_2 = tablelookup( "mp/cac/bodies.csv", 1, var_1, 23 );
 
     if ( isdefined( var_2 ) )
     {
@@ -336,6 +336,6 @@ _id_6BD6( var_0, var_1 )
 
 _id_DB8C( var_0 )
 {
-    var_1 = _func_0222( "mp/cac/bodies.csv", 1, var_0, 22 );
+    var_1 = tablelookup( "mp/cac/bodies.csv", 1, var_0, 22 );
     return isdefined( var_1 ) && var_1 == "1";
 }

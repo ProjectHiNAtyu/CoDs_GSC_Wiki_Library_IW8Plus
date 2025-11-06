@@ -21,7 +21,7 @@ _id_CA3F( var_0, var_1 )
     self._id_756C = 0;
 
     if ( var_0 != "" )
-        scripts\mp\equipment::_id_D543( var_0, 0 );
+        scripts\mp\equipment::setequipmentammo( var_0, 0 );
 
     _id_CA40();
 }
@@ -30,7 +30,7 @@ _id_CA40()
 {
     playfxontag( level._effect["helmet_pop"], self, "j_head" );
     self detach( self._id_7611, "" );
-    self _meth_8526( self._id_25E5, self._id_20C6 );
+    self setcustomization( self._id_25E5, self._id_20C6 );
     self._id_7611 = self._id_20C6;
     self attach( self._id_20C6, "", 1 );
 }

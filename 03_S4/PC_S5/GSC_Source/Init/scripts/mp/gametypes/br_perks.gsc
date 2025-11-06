@@ -137,14 +137,14 @@ _id_2DE4( var_0 )
                     case 0:
                         if ( var_1 == 0 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_hard_shell" );
+                            scripts\mp\utility\perk::giveperk( "specialty_hard_shell" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_hard_shell" );
                         }
                         else if ( var_1 == 1 )
                             thread scripts\mp\hud_message::showsplash( "br_specialty_throwback" );
                         else if ( var_1 == 2 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_blastshield" );
+                            scripts\mp\utility\perk::giveperk( "specialty_blastshield" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_blastshield" );
                         }
 
@@ -152,17 +152,17 @@ _id_2DE4( var_0 )
                     case 1:
                         if ( var_1 == 0 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_lightweight" );
+                            scripts\mp\utility\perk::giveperk( "specialty_lightweight" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_lightweight" );
                         }
                         else if ( var_1 == 1 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_marathon" );
+                            scripts\mp\utility\perk::giveperk( "specialty_marathon" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_marathon" );
                         }
                         else if ( var_1 == 2 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_quieter" );
+                            scripts\mp\utility\perk::giveperk( "specialty_quieter" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_quieter" );
                         }
 
@@ -170,17 +170,17 @@ _id_2DE4( var_0 )
                     case 2:
                         if ( var_1 == 0 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_quickswap" );
+                            scripts\mp\utility\perk::giveperk( "specialty_quickswap" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_quickswap" );
                         }
                         else if ( var_1 == 1 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
+                            scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_fastreload" );
                         }
                         else if ( var_1 == 2 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_gung_ho" );
+                            scripts\mp\utility\perk::giveperk( "specialty_gung_ho" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_gung_ho" );
                         }
 
@@ -188,17 +188,17 @@ _id_2DE4( var_0 )
                     case 3:
                         if ( var_1 == 0 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_boom" );
+                            scripts\mp\utility\perk::giveperk( "specialty_boom" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_boom" );
                         }
                         else if ( var_1 == 1 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_selectivehearing" );
+                            scripts\mp\utility\perk::giveperk( "specialty_selectivehearing" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_selectivehearing" );
                         }
                         else if ( var_1 == 2 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_tracker" );
+                            scripts\mp\utility\perk::giveperk( "specialty_tracker" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_tracker" );
                         }
 
@@ -206,17 +206,17 @@ _id_2DE4( var_0 )
                     case 4:
                         if ( var_1 == 0 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_holdbreath" );
+                            scripts\mp\utility\perk::giveperk( "specialty_holdbreath" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_holdbreath" );
                         }
                         else if ( var_1 == 1 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_quickdraw" );
+                            scripts\mp\utility\perk::giveperk( "specialty_quickdraw" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_quickdraw" );
                         }
                         else if ( var_1 == 2 )
                         {
-                            scripts\mp\utility\perk::_id_6FC2( "specialty_steadyaimpro" );
+                            scripts\mp\utility\perk::giveperk( "specialty_steadyaimpro" );
                             thread scripts\mp\hud_message::showsplash( "br_specialty_steadyaim" );
                         }
 

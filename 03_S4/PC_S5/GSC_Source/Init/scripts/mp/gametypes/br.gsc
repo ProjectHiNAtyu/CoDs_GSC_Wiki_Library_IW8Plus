@@ -176,7 +176,7 @@ main()
     level._effect["vfx_br_ac130_cloud_break"] = loadfx( "vfx/iw8_br/gameplay/infil/vfx_br_infil_cloud_break" );
     level._effect["vfx_br_infil_cloud_cover"] = loadfx( "vfx/iw8_br/gameplay/infil/vfx_br_infil_cloud_cover" );
     level._effect["vfx_br_infil_cloud_anim"] = loadfx( "vfx/iw8_br/gameplay/infil/vfx_br_infil_cloud_anim" );
-    level._id_2946 = 1;
+    level.bots_ignore_team_balance = 1;
     level._id_EF88 = getdvarint( "#x3fb633b613cfaed9e", 1 ) > 0;
     level._id_98D0 = getdvarint( "#x39f117d8c9d946098", 0 );
     setdvar( "#x3c80aa624ac7318ab", 560 );
@@ -232,31 +232,31 @@ _id_829B( var_0 )
 {
     var_1 = _func_0225( "mp/classtable_br.csv" ) - 1;
     var_2["loadoutArchetype"] = "archetype_assault";
-    var_2["loadoutPrimary"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimary", var_0 + 1 );
-    var_2["loadoutPrimaryAttachment"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment1", var_0 + 1 );
-    var_2["loadoutPrimaryAttachment2"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment2", var_0 + 1 );
-    var_2["loadoutPrimaryAttachment3"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment3", var_0 + 1 );
-    var_2["loadoutPrimaryAttachment4"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment4", var_0 + 1 );
-    var_2["loadoutPrimaryAttachment5"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment5", var_0 + 1 );
-    var_2["loadoutPrimaryCamo"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryCamo", var_0 + 1 );
-    var_2["loadoutPrimaryReticle"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutPrimaryReticle", var_0 + 1 );
-    var_2["loadoutSecondary"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondary", var_0 + 1 );
-    var_2["loadoutSecondaryAttachment"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment1", var_0 + 1 );
-    var_2["loadoutSecondaryAttachment2"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment2", var_0 + 1 );
-    var_2["loadoutSecondaryAttachment3"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment3", var_0 + 1 );
-    var_2["loadoutSecondaryAttachment4"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment4", var_0 + 1 );
-    var_2["loadoutSecondaryAttachment5"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment5", var_0 + 1 );
-    var_2["loadoutSecondaryCamo"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryCamo", var_0 + 1 );
-    var_2["loadoutSecondaryReticle"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutSecondaryReticle", var_0 + 1 );
+    var_2["loadoutPrimary"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimary", var_0 + 1 );
+    var_2["loadoutPrimaryAttachment"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment1", var_0 + 1 );
+    var_2["loadoutPrimaryAttachment2"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment2", var_0 + 1 );
+    var_2["loadoutPrimaryAttachment3"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment3", var_0 + 1 );
+    var_2["loadoutPrimaryAttachment4"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment4", var_0 + 1 );
+    var_2["loadoutPrimaryAttachment5"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryAttachment5", var_0 + 1 );
+    var_2["loadoutPrimaryCamo"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryCamo", var_0 + 1 );
+    var_2["loadoutPrimaryReticle"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutPrimaryReticle", var_0 + 1 );
+    var_2["loadoutSecondary"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondary", var_0 + 1 );
+    var_2["loadoutSecondaryAttachment"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment1", var_0 + 1 );
+    var_2["loadoutSecondaryAttachment2"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment2", var_0 + 1 );
+    var_2["loadoutSecondaryAttachment3"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment3", var_0 + 1 );
+    var_2["loadoutSecondaryAttachment4"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment4", var_0 + 1 );
+    var_2["loadoutSecondaryAttachment5"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryAttachment5", var_0 + 1 );
+    var_2["loadoutSecondaryCamo"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryCamo", var_0 + 1 );
+    var_2["loadoutSecondaryReticle"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutSecondaryReticle", var_0 + 1 );
     var_2["loadoutMeleeSlot"] = "none";
-    var_2["loadoutEquipmentPrimary"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutEquipmentPrimary", var_0 + 1 );
-    var_2["loadoutEquipmentSecondary"] = _func_0222( "mp/classtable_br.csv", 0, "loadoutEquipmentSecondary", var_0 + 1 );
+    var_2["loadoutEquipmentPrimary"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutEquipmentPrimary", var_0 + 1 );
+    var_2["loadoutEquipmentSecondary"] = tablelookup( "mp/classtable_br.csv", 0, "loadoutEquipmentSecondary", var_0 + 1 );
     var_2["loadoutStreakType"] = "assault";
     var_2["loadoutKillstreak1"] = "none";
     var_2["loadoutKillstreak2"] = "none";
     var_2["loadoutKillstreak3"] = "none";
     var_2["loadoutSuper"] = "super_br_extract";
-    var_2["loadoutPerks"] = [ _func_0222( "mp/classtable_br.csv", 0, "loadoutPerk1", var_0 + 1 ), _func_0222( "mp/classtable_br.csv", 0, "loadoutPerk2", var_0 + 1 ), _func_0222( "mp/classtable_br.csv", 0, "loadoutPerk3", var_0 + 1 ), _func_0222( "mp/classtable_br.csv", 0, "loadoutExtraPerk1", var_0 + 1 ), _func_0222( "mp/classtable_br.csv", 0, "loadoutExtraPerk2", var_0 + 1 ), _func_0222( "mp/classtable_br.csv", 0, "loadoutExtraPerk3", var_0 + 1 ) ];
+    var_2["loadoutPerks"] = [ tablelookup( "mp/classtable_br.csv", 0, "loadoutPerk1", var_0 + 1 ), tablelookup( "mp/classtable_br.csv", 0, "loadoutPerk2", var_0 + 1 ), tablelookup( "mp/classtable_br.csv", 0, "loadoutPerk3", var_0 + 1 ), tablelookup( "mp/classtable_br.csv", 0, "loadoutExtraPerk1", var_0 + 1 ), tablelookup( "mp/classtable_br.csv", 0, "loadoutExtraPerk2", var_0 + 1 ), tablelookup( "mp/classtable_br.csv", 0, "loadoutExtraPerk3", var_0 + 1 ) ];
     var_2["loadoutGesture"] = "playerData";
     return var_2;
 }
@@ -570,31 +570,31 @@ _id_BBA7()
 _id_4034( var_0 )
 {
     var_1["loadoutArchetype"] = "archetype_assault";
-    var_1["loadoutPrimary"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimary", var_0 + 1 );
-    var_1["loadoutPrimaryAttachment"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment1", var_0 + 1 );
-    var_1["loadoutPrimaryAttachment2"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment2", var_0 + 1 );
-    var_1["loadoutPrimaryAttachment3"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment3", var_0 + 1 );
-    var_1["loadoutPrimaryAttachment4"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment4", var_0 + 1 );
-    var_1["loadoutPrimaryAttachment5"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment5", var_0 + 1 );
-    var_1["loadoutPrimaryCamo"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryCamo", var_0 + 1 );
-    var_1["loadoutPrimaryReticle"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryReticle", var_0 + 1 );
-    var_1["loadoutSecondary"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondary", var_0 + 1 );
-    var_1["loadoutSecondaryAttachment"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment1", var_0 + 1 );
-    var_1["loadoutSecondaryAttachment2"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment2", var_0 + 1 );
-    var_1["loadoutSecondaryAttachment3"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment3", var_0 + 1 );
-    var_1["loadoutSecondaryAttachment4"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment4", var_0 + 1 );
-    var_1["loadoutSecondaryAttachment5"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment5", var_0 + 1 );
-    var_1["loadoutSecondaryCamo"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryCamo", var_0 + 1 );
-    var_1["loadoutSecondaryReticle"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryReticle", var_0 + 1 );
+    var_1["loadoutPrimary"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimary", var_0 + 1 );
+    var_1["loadoutPrimaryAttachment"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment1", var_0 + 1 );
+    var_1["loadoutPrimaryAttachment2"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment2", var_0 + 1 );
+    var_1["loadoutPrimaryAttachment3"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment3", var_0 + 1 );
+    var_1["loadoutPrimaryAttachment4"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment4", var_0 + 1 );
+    var_1["loadoutPrimaryAttachment5"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryAttachment5", var_0 + 1 );
+    var_1["loadoutPrimaryCamo"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryCamo", var_0 + 1 );
+    var_1["loadoutPrimaryReticle"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPrimaryReticle", var_0 + 1 );
+    var_1["loadoutSecondary"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondary", var_0 + 1 );
+    var_1["loadoutSecondaryAttachment"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment1", var_0 + 1 );
+    var_1["loadoutSecondaryAttachment2"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment2", var_0 + 1 );
+    var_1["loadoutSecondaryAttachment3"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment3", var_0 + 1 );
+    var_1["loadoutSecondaryAttachment4"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment4", var_0 + 1 );
+    var_1["loadoutSecondaryAttachment5"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryAttachment5", var_0 + 1 );
+    var_1["loadoutSecondaryCamo"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryCamo", var_0 + 1 );
+    var_1["loadoutSecondaryReticle"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutSecondaryReticle", var_0 + 1 );
     var_1["loadoutMeleeSlot"] = "none";
-    var_1["loadoutEquipmentPrimary"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutEquipmentPrimary", var_0 + 1 );
-    var_1["loadoutEquipmentSecondary"] = _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutEquipmentSecondary", var_0 + 1 );
+    var_1["loadoutEquipmentPrimary"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutEquipmentPrimary", var_0 + 1 );
+    var_1["loadoutEquipmentSecondary"] = tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutEquipmentSecondary", var_0 + 1 );
     var_1["loadoutStreakType"] = "assault";
     var_1["loadoutKillstreak1"] = "none";
     var_1["loadoutKillstreak2"] = "none";
     var_1["loadoutKillstreak3"] = "none";
     var_1["loadoutSuper"] = "super_br_extract";
-    var_1["loadoutPerks"] = [ _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPerk1", var_0 + 1 ), _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPerk2", var_0 + 1 ), _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutPerk3", var_0 + 1 ), _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutExtraPerk1", var_0 + 1 ), _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutExtraPerk2", var_0 + 1 ), _func_0222( "mp/classtable_br_prematch.csv", 0, "loadoutExtraPerk3", var_0 + 1 ) ];
+    var_1["loadoutPerks"] = [ tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPerk1", var_0 + 1 ), tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPerk2", var_0 + 1 ), tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutPerk3", var_0 + 1 ), tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutExtraPerk1", var_0 + 1 ), tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutExtraPerk2", var_0 + 1 ), tablelookup( "mp/classtable_br_prematch.csv", 0, "loadoutExtraPerk3", var_0 + 1 ) ];
     var_1["loadoutGesture"] = "playerData";
     var_1["tableColumn"] = var_0;
     return var_1;
@@ -1545,7 +1545,7 @@ _id_6FAF( var_0 )
     if ( var_0 scripts\mp\utility\perk::_hasperk( "specialty_pistoldeath" ) )
         return;
 
-    var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_pistoldeath" );
+    var_0 scripts\mp\utility\perk::giveperk( "specialty_pistoldeath" );
 }
 
 _id_1084D()
@@ -3163,7 +3163,7 @@ _id_2C38( var_0 )
         self setclientomnvar( "ui_br_transition_type", 4 );
         wait 0.5;
         _id_E30E( var_2, self._id_BBED.angles );
-        _id_081A::_id_D512();
+        scripts\mp\spectating::_id_D512();
         self freezecontrols( 1 );
     }
     else
@@ -3484,7 +3484,7 @@ _id_2A4F( var_0, var_1 )
         var_0 _id_07E8::_id_6FB0( var_11 );
 
         if ( !var_0 scripts\mp\utility\perk::_hasperk( "specialty_pistoldeath" ) )
-            var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_pistoldeath" );
+            var_0 scripts\mp\utility\perk::giveperk( "specialty_pistoldeath" );
     }
 }
 
@@ -3975,11 +3975,11 @@ _id_E286( var_0 )
 
 _id_B6A3()
 {
-    if ( _id_0790::_id_755D() )
+    if ( scripts\cp_mp\execution::hasexecution() )
     {
         self._id_CB4A = self._id_5705;
-        _id_0790::_id_0B9E();
-        self _meth_86C4();
+        scripts\cp_mp\execution::_clearexecution();
+        self disableexecutionattack();
     }
 }
 
@@ -3987,8 +3987,8 @@ _id_B6A4()
 {
     if ( isdefined( self._id_CB4A ) )
     {
-        _id_0790::_id_0C12( self._id_CB4A );
-        self _meth_86C5();
+        scripts\cp_mp\execution::_giveexecution( self._id_CB4A );
+        self enableexecutionattack();
         self._id_CB4A = undefined;
     }
 }

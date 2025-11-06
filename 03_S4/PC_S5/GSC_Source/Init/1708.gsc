@@ -803,7 +803,7 @@ _id_541A( var_0 )
     if ( isdefined( var_1._id_F20E ) && var_2 > var_1._id_F20E + 5000 )
         return anim._id_58E3;
 
-    self._id_0270 = _func_025E( self._id_0270, scripts\anim\utility_common::_id_69FC(), 0.1 );
+    self._id_0270 = vectorlerp( self._id_0270, scripts\anim\utility_common::_id_69FC(), 0.1 );
     return anim._id_CA5F;
 }
 

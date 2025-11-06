@@ -16,7 +16,7 @@ _id_DF09()
     for (;;)
     {
         level waittill( "connected", var_0 );
-        var_0 _meth_867F( "mp_default_mix", 0.0, 1 );
+        var_0 setsoundsubmix( "mp_default_mix", 0.0, 1 );
     }
 }
 

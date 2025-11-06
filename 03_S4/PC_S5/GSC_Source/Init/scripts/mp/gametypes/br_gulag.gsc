@@ -1576,7 +1576,7 @@ _id_8265( var_0 )
     if ( var_5 )
     {
         scripts\mp\gametypes\br::_id_E30E( var_3 + ( 0, 0, 100 ), self.angles );
-        _id_081A::_id_D512();
+        scripts\mp\spectating::_id_D512();
         _id_7283( var_3 );
     }
 
@@ -1589,7 +1589,7 @@ _id_8265( var_0 )
     self._id_5EC2 = var_4;
     self._id_5EC7 = var_3;
     scripts\mp\playerlogic::_id_E337( undefined, 0 );
-    _id_0790::_id_0B9E();
+    scripts\cp_mp\execution::_clearexecution();
     self setclientomnvar( "ui_gulag", 1 );
     self._id_EA1E = undefined;
     self._id_7276 = 0;
@@ -3384,7 +3384,7 @@ _id_24D7( var_0 )
 _id_FC13( var_0 )
 {
     var_1 = 1000;
-    var_0._id_7B5C _meth_83A3( ( var_0.owner._id_B956 - var_0._id_174E ) * var_1 );
+    var_0._id_7B5C setvalue( ( var_0.owner._id_B956 - var_0._id_174E ) * var_1 );
 
     if ( var_0._id_B666 != -1 )
     {
@@ -3403,7 +3403,7 @@ _id_FC13( var_0 )
 
     if ( var_0._id_174E > 0 )
     {
-        var_0._id_7B5B _meth_83A3( var_0._id_174E * var_1 );
+        var_0._id_7B5B setvalue( var_0._id_174E * var_1 );
         var_0._id_7B5B.alpha = 1.0;
     }
     else
@@ -4063,7 +4063,7 @@ _id_B6C6( var_0, var_1 )
     wait( var_11 );
     var_2 scripts\mp\hud_message::_id_3983();
     var_2 scripts\mp\playerlogic::_id_E337( undefined, 0 );
-    var_2 _id_0790::_id_0B9E();
+    var_2 scripts\cp_mp\execution::_clearexecution();
     var_2 scripts\mp\gametypes\br_pickups::_id_825B();
     var_2._id_C6A6 = undefined;
 
@@ -4765,9 +4765,9 @@ _id_B743()
         self setplayermusicstate( "br_gulag_intro" );
 
         if ( scripts\mp\gametypes\br_public::_id_878D() )
-            self _meth_867F( "iw8_br_gulag_tutorial", 0.5 );
+            self setsoundsubmix( "iw8_br_gulag_tutorial", 0.5 );
         else
-            self _meth_867F( "fade_to_black_all_except_music_and_scripted5", 0.5 );
+            self setsoundsubmix( "fade_to_black_all_except_music_and_scripted5", 0.5 );
 
         self _meth_8766( "mp_donetsk_gulag_intro" );
         self._id_B863 = 1;

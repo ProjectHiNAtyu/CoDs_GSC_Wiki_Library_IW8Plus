@@ -1082,7 +1082,7 @@ _id_F239( var_0, var_1 )
 
 _id_654D( var_0 )
 {
-    var_1 = _func_0222( "cp/cp_vo_lookup.csv", 0, var_0, 1 );
+    var_1 = tablelookup( "cp/cp_vo_lookup.csv", 0, var_0, 1 );
 
     if ( isdefined( var_1 ) )
     {

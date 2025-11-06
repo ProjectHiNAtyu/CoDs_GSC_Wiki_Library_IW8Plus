@@ -494,7 +494,7 @@ _id_8297()
 _id_ABA8( var_0 )
 {
     var_1 = _id_6D68( var_0.streakname );
-    scripts\mp\utility\perk::_id_6FC2( var_1 );
+    scripts\mp\utility\perk::giveperk( var_1 );
 }
 
 _id_6D68( var_0 )
@@ -541,12 +541,12 @@ _id_ABA7( var_0 )
     foreach ( var_2 in level._id_AFFD )
     {
         if ( istrue( var_2._id_E3CE ) && !_func_0419( var_2._id_C189 ) )
-            scripts\mp\utility\perk::_id_6FC2( var_2._id_C189 );
+            scripts\mp\utility\perk::giveperk( var_2._id_C189 );
     }
 
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_specialist_bonus" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_lightweight" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
+    scripts\mp\utility\perk::giveperk( "specialty_specialist_bonus" );
+    scripts\mp\utility\perk::giveperk( "specialty_lightweight" );
 }
 
 _id_68EB()

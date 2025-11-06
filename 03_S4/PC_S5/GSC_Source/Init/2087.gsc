@@ -62,7 +62,7 @@ _id_10E13( var_0 )
         var_1 = var_0 getcurrentweapon();
         var_2 = weaponclass( var_1 );
 
-        if ( var_1 _meth_8624( "linearbrake", 1 ) && !scripts\mp\utility\weapon::_id_88F6( var_1 ) && !scripts\mp\utility\perk::_hasperk( "specialty_blastshield" ) )
+        if ( var_1 hasattachment( "linearbrake", 1 ) && !scripts\mp\utility\weapon::_id_88F6( var_1 ) && !scripts\mp\utility\perk::_hasperk( "specialty_blastshield" ) )
         {
             if ( !isdefined( self._id_EBBB ) )
                 self._id_EBBB = 0;

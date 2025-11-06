@@ -294,7 +294,7 @@ _id_34DE()
     if ( !scripts\mp\utility\teams::_id_6DCA( level._id_CA84, "aliveCount" ) )
     {
         level._id_E3E2[level._id_CA84]._id_15B5 = 1;
-        _id_081A::_id_FD35();
+        scripts\mp\spectating::_id_FD35();
     }
 }
 
@@ -313,7 +313,7 @@ _id_4D2B()
 
     for ( var_5 = 2; var_5 < 11; var_5++ )
     {
-        var_6 = _func_0222( var_2, var_4, var_3, var_5 );
+        var_6 = tablelookup( var_2, var_4, var_3, var_5 );
 
         if ( var_6 != "" )
             _id_D561( var_5, float( var_6 ) );

@@ -165,7 +165,7 @@ _id_F53D()
 
     if ( var_0 == 0 )
     {
-        var_1 = _func_0222( "mp/trial_mission_table.csv", 2, getdvar( "#x376847958d67972ef" ), 0 );
+        var_1 = tablelookup( "mp/trial_mission_table.csv", 2, getdvar( "#x376847958d67972ef" ), 0 );
 
         if ( var_1 != "" )
             var_0 = var_1;
@@ -174,17 +174,17 @@ _id_F53D()
     }
 
     level._id_F516["missionID"] = int( var_0 );
-    level._id_F516["zone"] = _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 2 );
-    level._id_F516["missionScript"] = _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 3 );
-    level._id_F516["variant"] = _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 4 );
-    level._id_F516["team"] = _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 5 );
-    level._id_F516["scoreType"] = _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 6 );
-    level._id_F516["tier1"] = int( _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 8 ) );
-    level._id_F516["tier2"] = int( _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 9 ) );
-    level._id_F516["tier3"] = int( _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 10 ) );
-    level._id_F516["attempts"] = int( _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 11 ) );
-    level._id_F516["compassMaterialOverride"] = _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 18 );
-    level._id_F516["playerDataId"] = int( _func_0222( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 20 ) );
+    level._id_F516["zone"] = tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 2 );
+    level._id_F516["missionScript"] = tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 3 );
+    level._id_F516["variant"] = tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 4 );
+    level._id_F516["team"] = tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 5 );
+    level._id_F516["scoreType"] = tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 6 );
+    level._id_F516["tier1"] = int( tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 8 ) );
+    level._id_F516["tier2"] = int( tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 9 ) );
+    level._id_F516["tier3"] = int( tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 10 ) );
+    level._id_F516["attempts"] = int( tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 11 ) );
+    level._id_F516["compassMaterialOverride"] = tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 18 );
+    level._id_F516["playerDataId"] = int( tablelookup( "mp/trial_mission_table.csv", 0, level._id_F516["missionID"], 20 ) );
 
     if ( level._id_F516["zone"] != getdvar( "#x376847958d67972ef" ) )
     {

@@ -1043,9 +1043,9 @@ _id_503A( var_0 )
 _id_35DC()
 {
     var_0 = randomfloatrange( 0, 1.0 );
-    var_1 = _func_025E( level._id_2E3B._id_E715, level._id_2E3B._id_5340, var_0 );
-    var_2 = _func_025E( level._id_2E3C._id_5340, level._id_2E3C._id_E715, var_0 );
-    var_3 = _func_025E( var_1, var_2, 0.5 );
+    var_1 = vectorlerp( level._id_2E3B._id_E715, level._id_2E3B._id_5340, var_0 );
+    var_2 = vectorlerp( level._id_2E3C._id_5340, level._id_2E3C._id_E715, var_0 );
+    var_3 = vectorlerp( var_1, var_2, 0.5 );
     var_4 = scripts\engine\trace::ray_trace( var_3, var_3 - ( 0, 0, 100000 ) );
     var_3 = var_4["position"];
     var_5 = _id_5AE5( var_3 );
@@ -1582,7 +1582,7 @@ _id_E727()
 
     waitframe();
     scripts\mp\utility\player::_id_FD26( "spectator" );
-    _id_081A::_id_D512();
+    scripts\mp\spectating::_id_D512();
 
     if ( isdefined( self._id_8FB8 ) )
         self setplayerangles( self._id_8FB8 );
@@ -2091,12 +2091,12 @@ _id_2E19()
     var_8 = ( var_5, var_6, 0 );
     level._id_2E3B._id_E715 = level._id_2E3B._id_E715 + var_8;
     level._id_2E3B._id_5340 = level._id_2E3B._id_5340 + var_8;
-    level._id_2E3B._id_9E8E = _func_025E( level._id_2E3B._id_E715, level._id_2E3B._id_5340, 0.5 );
+    level._id_2E3B._id_9E8E = vectorlerp( level._id_2E3B._id_E715, level._id_2E3B._id_5340, 0.5 );
     level._id_2E3C._id_E715 = level._id_2E3C._id_E715 + var_8;
     level._id_2E3C._id_5340 = level._id_2E3C._id_5340 + var_8;
-    level._id_2E3C._id_9E8E = _func_025E( level._id_2E3C._id_E715, level._id_2E3C._id_5340, 0.5 );
-    level._id_2358 = _func_025E( level._id_2E3B._id_9E8E, level._id_2E3C._id_9E8E, 0.5 );
-    level._id_2E37 = _func_025E( level._id_2E3B._id_E715, level._id_2E3C._id_5340, var_4 );
+    level._id_2E3C._id_9E8E = vectorlerp( level._id_2E3C._id_E715, level._id_2E3C._id_5340, 0.5 );
+    level._id_2358 = vectorlerp( level._id_2E3B._id_9E8E, level._id_2E3C._id_9E8E, 0.5 );
+    level._id_2E37 = vectorlerp( level._id_2E3B._id_E715, level._id_2E3C._id_5340, var_4 );
     level._id_2E37 = level._id_2E37 - level._id_2E3B._id_E715;
     level._id_2E37 = vectornormalize( level._id_2E37 ) * level._id_2E30 / 10;
     level._id_2E37 = ( level._id_2E37[0], level._id_2E37[1], 0 );
@@ -2149,8 +2149,8 @@ _id_2E11()
             level._id_2E3C._id_5340 = level._id_2E3C._id_5340 - level._id_2E37;
         }
 
-        level._id_2E3B._id_9E8E = _func_025E( level._id_2E3B._id_E715, level._id_2E3B._id_5340, 0.5 );
-        level._id_2E3C._id_9E8E = _func_025E( level._id_2E3C._id_E715, level._id_2E3C._id_5340, 0.5 );
+        level._id_2E3B._id_9E8E = vectorlerp( level._id_2E3B._id_E715, level._id_2E3B._id_5340, 0.5 );
+        level._id_2E3C._id_9E8E = vectorlerp( level._id_2E3C._id_E715, level._id_2E3C._id_5340, 0.5 );
         level._id_2E39["axis"] = 0;
         level._id_2E39["allies"] = 0;
     }
@@ -2185,8 +2185,8 @@ _id_2E11()
 
         var_7 = var_0 / var_2;
         var_8 = var_1 / var_3;
-        var_9 = _func_025E( var_7, var_8, 0.5 );
-        level._id_2E37 = _func_025E( level._id_2358, var_9, 0.5 );
+        var_9 = vectorlerp( var_7, var_8, 0.5 );
+        level._id_2E37 = vectorlerp( level._id_2358, var_9, 0.5 );
         level._id_2E37 = level._id_2E37 - level._id_2358;
         var_10 = distance2d( level._id_2358, var_9 );
         level._id_2E37 = vectornormalize( level._id_2E37 ) * var_10 / 4;
@@ -2196,10 +2196,10 @@ _id_2E11()
         {
             level._id_2E3B._id_E715 = level._id_2E3B._id_E715 + level._id_2E37;
             level._id_2E3B._id_5340 = level._id_2E3B._id_5340 + level._id_2E37;
-            level._id_2E3B._id_9E8E = _func_025E( level._id_2E3B._id_E715, level._id_2E3B._id_5340, 0.5 );
+            level._id_2E3B._id_9E8E = vectorlerp( level._id_2E3B._id_E715, level._id_2E3B._id_5340, 0.5 );
             level._id_2E3C._id_E715 = level._id_2E3C._id_E715 + level._id_2E37;
             level._id_2E3C._id_5340 = level._id_2E3C._id_5340 + level._id_2E37;
-            level._id_2E3C._id_9E8E = _func_025E( level._id_2E3C._id_E715, level._id_2E3C._id_5340, 0.5 );
+            level._id_2E3C._id_9E8E = vectorlerp( level._id_2E3C._id_E715, level._id_2E3C._id_5340, 0.5 );
 
             if ( 0 )
             {

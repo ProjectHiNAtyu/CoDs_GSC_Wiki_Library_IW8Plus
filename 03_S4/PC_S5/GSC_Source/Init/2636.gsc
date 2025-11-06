@@ -153,7 +153,7 @@ _id_0D99( var_0 )
 _id_7AEF( var_0, var_1 )
 {
     scripts\common\utility::_id_1593( 0 );
-    self _meth_867F( "mp_killstreak_overlay" );
+    self setsoundsubmix( "mp_killstreak_overlay" );
     var_2 = _id_0A54::_id_6D1F( var_0, var_1 );
 
     if ( !isdefined( var_2 ) )

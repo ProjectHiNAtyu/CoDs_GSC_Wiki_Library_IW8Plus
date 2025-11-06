@@ -46,7 +46,7 @@ _id_7007( var_0 )
 
 _id_6FCC( var_0 )
 {
-    scripts\mp\utility\perk::_id_6FC2( var_0 );
+    scripts\mp\utility\perk::giveperk( var_0 );
     self._id_10DB9[self._id_10DB9.size] = var_0;
 }
 

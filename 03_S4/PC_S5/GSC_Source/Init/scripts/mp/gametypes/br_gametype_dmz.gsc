@@ -625,7 +625,7 @@ _id_B768()
     self._id_83CE = undefined;
     _id_0A99::_id_D5EA( 0 );
     scripts\mp\playerlogic::_id_E337( undefined, 0 );
-    _id_0790::_id_0B9E();
+    scripts\cp_mp\execution::_clearexecution();
     scripts\mp\gametypes\br_pickups::_id_825B();
 
     if ( scripts\mp\gametypes\br_public::_id_8805() && isdefined( level._id_B59F ) )
@@ -706,7 +706,7 @@ _id_58C8( var_0, var_1 )
         var_3 = scripts\mp\gametypes\br_gulag::_id_B6CA();
         scripts\mp\gametypes\br_spectate::_id_B67C();
         scripts\mp\gametypes\br::_id_E30E( var_3.origin, var_3.angles );
-        _id_081A::_id_D512();
+        scripts\mp\spectating::_id_D512();
         self._id_83CD = var_3.origin;
         self._id_83CE = gettime();
         scripts\engine\utility::_id_5474( "playerRespawn_intermission_spawned" );
@@ -792,11 +792,11 @@ _id_78F9( var_0 )
 _id_4E84()
 {
     level._id_2BB5._id_A77F++;
-    level._id_2BB5._id_7B66 _meth_83A3( level._id_2BB5._id_A77F );
+    level._id_2BB5._id_7B66 setvalue( level._id_2BB5._id_A77F );
     level._id_2BB5._id_7B66 thread _id_7B61();
     level._id_2BB5._id_7B65 thread _id_7B61();
     var_0 = _id_698A();
-    level._id_2BB5._id_7B5F _meth_83A3( var_0 * 100 );
+    level._id_2BB5._id_7B5F setvalue( var_0 * 100 );
 
     foreach ( var_3, var_2 in level._id_EF6A )
     {
@@ -948,7 +948,7 @@ _id_D8B9()
     {
         var_10 = _id_3FF3( &"MP_BR_INGAME/EXTRACT_PLUNDER", 0, "RIGHT", "CENTER", 70 + var_2, var_0, undefined, var_9, 1 );
         var_11 = _id_3FF3( &"MP_BR_INGAME/ST_PLACE", undefined, "RIGHT", "CENTER", -65 + var_2, var_0, undefined, var_9, 1 );
-        var_11 _meth_83A3( 1 );
+        var_11 setvalue( 1 );
         var_10._id_B16C = var_11;
         _id_D717( var_9, var_10 );
     }
@@ -1015,7 +1015,7 @@ _id_3FF3( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7, var_8, var_9 )
         var_10.label = var_0;
 
     if ( isdefined( var_1 ) )
-        var_10 _meth_83A3( var_1 );
+        var_10 setvalue( var_1 );
 
     if ( isdefined( var_6 ) )
         var_10.color = var_6;
@@ -2955,7 +2955,7 @@ _id_4B7B( var_0, var_1 )
         if ( var_10 > 0 && var_7 > var_8 || var_10 < 0 && var_7 < var_8 )
             var_7 = var_8;
 
-        var_15 _meth_83A3( var_7 );
+        var_15 setvalue( var_7 );
         wait( level._id_5F3A );
     }
 

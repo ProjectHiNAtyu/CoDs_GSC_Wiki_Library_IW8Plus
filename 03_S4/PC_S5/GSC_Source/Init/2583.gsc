@@ -284,12 +284,12 @@ _id_EB7D( var_0 )
         var_0 setweaponammostock( var_3, var_8 );
     }
 
-    var_11 = var_0 scripts\mp\equipment::_id_69A4( "primary" );
+    var_11 = var_0 scripts\mp\equipment::getcurrentequipment( "primary" );
 
     if ( isdefined( var_11 ) )
         var_0 scripts\mp\equipment::incrementequipmentammo( var_11 );
 
-    var_12 = var_0 scripts\mp\equipment::_id_69A4( "secondary" );
+    var_12 = var_0 scripts\mp\equipment::getcurrentequipment( "secondary" );
 
     if ( isdefined( var_12 ) )
         var_0 scripts\mp\equipment::incrementequipmentammo( var_12 );

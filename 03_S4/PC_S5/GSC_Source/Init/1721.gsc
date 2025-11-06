@@ -662,7 +662,7 @@ _id_8505()
         else if ( var_10 )
         {
             var_14 = randomfloatrange( 0.7, 0.85 );
-            var_12 = _func_025E( self.origin, var_1._id_8512, var_14 );
+            var_12 = vectorlerp( self.origin, var_1._id_8512, var_14 );
             var_12 = _id_5AE6( var_8, var_12, var_12, var_6, self._id_03B2, self._id_0201 );
         }
         else if ( !var_11 )

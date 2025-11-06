@@ -1134,7 +1134,7 @@ _id_B932( var_0 )
         else
             var_6 = game["music"]["payback_lose"].size - 1;
 
-        var_3 _meth_867F( "mp_matchend_music", 2 );
+        var_3 setsoundsubmix( "mp_matchend_music", 2 );
         var_3 enableplayerbreathsystem( 0 );
     }
 
@@ -1185,7 +1185,7 @@ _id_AAF6()
                     if ( var_2 _meth_81E2() && !var_2 _meth_81E3() )
                         continue;
 
-                    var_2 _meth_867F( "mp_matchend_music", 2 );
+                    var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                     if ( scripts\mp\utility\game::getgametype() == "arena_evo" || scripts\mp\utility\game::getgametype() == "sd" )
                     {
@@ -1203,7 +1203,7 @@ _id_AAF6()
                     if ( var_2 _meth_81E2() && !var_2 _meth_81E3() )
                         continue;
 
-                    var_2 _meth_867F( "mp_matchend_music", 2 );
+                    var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                     if ( scripts\mp\utility\game::getgametype() == "arena_evo" || scripts\mp\utility\game::getgametype() == "sd" )
                     {
@@ -1224,7 +1224,7 @@ _id_AAF6()
         {
             foreach ( var_2 in level.players )
             {
-                var_2 _meth_867F( "mp_matchend_music", 2 );
+                var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                 if ( isdefined( var_2.team ) && var_2.team == "allies" )
                 {
@@ -1249,7 +1249,7 @@ _id_AAF6()
         {
             foreach ( var_2 in level.players )
             {
-                var_2 _meth_867F( "mp_matchend_music", 2 );
+                var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                 if ( isdefined( var_2.team ) && var_2.team == "axis" )
                 {
@@ -1274,7 +1274,7 @@ _id_AAF6()
         {
             foreach ( var_2 in level.players )
             {
-                var_2 _meth_867F( "mp_matchend_music", 2 );
+                var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                 if ( isdefined( var_2.team ) && var_2.team == "allies" )
                 {
@@ -1300,7 +1300,7 @@ _id_AAF6()
     {
         foreach ( var_2 in level.players )
         {
-            var_2 _meth_867F( "mp_matchend_music", 2 );
+            var_2 setsoundsubmix( "mp_matchend_music", 2 );
             var_2 setplayermusicstate( "" );
 
             if ( var_2 _meth_81E2() && !var_2 _meth_81E3() )
@@ -1736,7 +1736,7 @@ _id_893D()
 aud_infil_start()
 {
     foreach ( var_1 in level.players )
-        var_1 _meth_867F( "mp_intro_infil" );
+        var_1 setsoundsubmix( "mp_intro_infil" );
 }
 
 aud_infil_end()
@@ -1844,7 +1844,7 @@ sd_round_end_music( var_0 )
                     else
                         var_2 setplayermusicstate( game["music"]["mp_match_winners_circle"][0] );
 
-                    var_2 _meth_867F( "mp_matchend_music", 2 );
+                    var_2 setsoundsubmix( "mp_matchend_music", 2 );
                 }
             }
             else if ( var_0 == "axis" )
@@ -1859,7 +1859,7 @@ sd_round_end_music( var_0 )
                     else
                         var_2 setplayermusicstate( game["music"]["mp_match_winners_circle"][1] );
 
-                    var_2 _meth_867F( "mp_matchend_music", 2 );
+                    var_2 setsoundsubmix( "mp_matchend_music", 2 );
                 }
             }
             else
@@ -1872,7 +1872,7 @@ sd_round_end_music( var_0 )
         {
             foreach ( var_2 in level.players )
             {
-                var_2 _meth_867F( "mp_matchend_music", 2 );
+                var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                 if ( isdefined( var_2.team ) && var_2.team == "allies" )
                 {
@@ -1897,7 +1897,7 @@ sd_round_end_music( var_0 )
         {
             foreach ( var_2 in level.players )
             {
-                var_2 _meth_867F( "mp_matchend_music", 2 );
+                var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                 if ( isdefined( var_2.team ) && var_2.team == "axis" )
                 {
@@ -1922,7 +1922,7 @@ sd_round_end_music( var_0 )
         {
             foreach ( var_2 in level.players )
             {
-                var_2 _meth_867F( "mp_matchend_music", 2 );
+                var_2 setsoundsubmix( "mp_matchend_music", 2 );
 
                 if ( isdefined( var_2.team ) && var_2.team == "allies" )
                 {

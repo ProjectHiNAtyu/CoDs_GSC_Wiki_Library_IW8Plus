@@ -16,7 +16,7 @@ _id_D795()
 _id_D776()
 {
     level._id_2943 = 1;
-    level._id_2946 = 1;
+    level.bots_ignore_team_balance = 1;
     level._id_2944 = 1;
     thread _id_27F8();
 }

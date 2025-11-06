@@ -8,12 +8,12 @@ _id_EB15()
 
     if ( !scripts\mp\utility\perk::_hasperk( "specialty_ninja" ) )
     {
-        scripts\mp\utility\perk::_id_6FC2( "specialty_quieter" );
-        scripts\mp\utility\perk::_id_6FC2( "specialty_no_battle_chatter" );
+        scripts\mp\utility\perk::giveperk( "specialty_quieter" );
+        scripts\mp\utility\perk::giveperk( "specialty_no_battle_chatter" );
     }
 
     if ( !scripts\mp\utility\perk::_hasperk( "specialty_scout" ) )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_ghost" );
+        scripts\mp\utility\perk::giveperk( "specialty_ghost" );
 
     self._id_43A1 = 0;
 

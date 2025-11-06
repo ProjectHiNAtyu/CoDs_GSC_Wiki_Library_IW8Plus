@@ -182,7 +182,7 @@ _id_6F90( var_0, var_1, var_2, var_3 )
         var_4 thread [[ level._id_D8E7 ]]();
 
     var_4 notify( "giveLoadout" );
-    var_4 scripts\cp\utility::_id_6FC2( "specialty_pistoldeath" );
+    var_4 scripts\cp\utility::giveperk( "specialty_pistoldeath" );
     var_4 thread scripts\cp_mp\utility\player_utility::monitorammoregen();
 
     if ( getdvarint( "#x3dee089cb49164e4e", 0 ) != 1 )
@@ -370,22 +370,22 @@ _id_C2F4( var_0 )
 _id_6C48()
 {
     var_0 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "operators", 0 );
-    self.operatorid = int( _func_0222( "loot/operator_ids.csv", 1, var_0, 0 ) );
-    self.operatorfaveweap = _func_0222( "operators.csv", 1, var_0, 28 );
+    self.operatorid = int( tablelookup( "loot/operator_ids.csv", 1, var_0, 0 ) );
+    self.operatorfaveweap = tablelookup( "operators.csv", 1, var_0, 28 );
     var_1 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "operatorCustomization", var_0, "skin" );
-    var_2 = _func_0222( "loot/operator_skin_ids.csv", 0, var_1, 1 );
+    var_2 = tablelookup( "loot/operator_skin_ids.csv", 0, var_1, 1 );
     var_3 = undefined;
     var_4 = undefined;
 
     if ( getdvarint( "#x3d26e55a89fd9c8fd" ) )
     {
-        var_3 = _func_0222( "loot/operator_skin_ids.csv", 1, var_2, 13 );
-        var_4 = _func_0222( "loot/operator_skin_ids.csv", 1, var_2, 12 );
+        var_3 = tablelookup( "loot/operator_skin_ids.csv", 1, var_2, 13 );
+        var_4 = tablelookup( "loot/operator_skin_ids.csv", 1, var_2, 12 );
     }
     else
     {
-        var_3 = _func_0222( "operatorskins.csv", 1, var_2, 4 );
-        var_4 = _func_0222( "operatorskins.csv", 1, var_2, 5 );
+        var_3 = tablelookup( "operatorskins.csv", 1, var_2, 4 );
+        var_4 = tablelookup( "operatorskins.csv", 1, var_2, 5 );
     }
 
     if ( var_3 == "" || var_4 == "" )
@@ -402,8 +402,8 @@ _id_D5FC( var_0 )
 {
     level endon( "game_ended" );
     wait 0.05;
-    self _meth_8526( var_0[0], var_0[1] );
-    _id_D4BE( self _meth_8128(), self _meth_8129(), self _meth_812C() );
+    self setcustomization( var_0[0], var_0[1] );
+    _id_D4BE( self getcustomizationbody(), self getcustomizationhead(), self getcustomizationviewmodel() );
 }
 
 _id_6666()
@@ -522,7 +522,7 @@ _id_D4BE( var_0, var_1, var_2 )
     _id_0766::detachsupermodel();
     self._id_25E4 = var_0;
     self setmodel( var_0 );
-    self _meth_83AB( var_2 );
+    self setviewmodel( var_2 );
 
     if ( isdefined( var_1 ) )
     {
@@ -540,7 +540,7 @@ _id_6C56()
 
 _id_6C4C( var_0 )
 {
-    return _func_0222( "mp/cac/bodies.csv", 0, var_0, 5 );
+    return tablelookup( "mp/cac/bodies.csv", 0, var_0, 5 );
 }
 
 _id_FCCC()
@@ -704,10 +704,10 @@ _id_6E94( var_0 )
 {
     var_1 = undefined;
     var_2 = scripts\cp\utility::_id_6902( var_0 );
-    var_1 = float( _func_0222( "mp/statstable.csv", 4, var_2, 8 ) );
+    var_1 = float( tablelookup( "mp/statstable.csv", 4, var_2, 8 ) );
 
     if ( !isdefined( var_1 ) || var_1 < 1 )
-        var_1 = float( _func_0222( level._id_60AE, 4, var_2, 8 ) );
+        var_1 = float( tablelookup( level._id_60AE, 4, var_2, 8 ) );
 
     if ( !isdefined( var_1 ) || var_1 < 1 )
         var_1 = 10;
@@ -1934,20 +1934,20 @@ _id_6F73( var_0, var_1 )
 
 _id_EC5F( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutArchetype", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutArchetype", var_1 + 1 );
 }
 
 _id_EC68( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutName", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutName", var_1 + 1 );
 }
 
 _id_EC6D( var_0, var_1, var_2 )
 {
     if ( var_2 == 0 )
-        return _func_0222( var_0, 0, "loadoutPrimary", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutPrimary", var_1 + 1 );
     else
-        return _func_0222( var_0, 0, "loadoutSecondary", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutSecondary", var_1 + 1 );
 }
 
 _id_EC6E( var_0, var_1, var_2, var_3 )
@@ -1955,9 +1955,9 @@ _id_EC6E( var_0, var_1, var_2, var_3 )
     var_4 = "none";
 
     if ( var_2 == 0 )
-        var_4 = _func_0222( var_0, 0, "loadoutPrimaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
+        var_4 = tablelookup( var_0, 0, "loadoutPrimaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
     else
-        var_4 = _func_0222( var_0, 0, "loadoutSecondaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
+        var_4 = tablelookup( var_0, 0, "loadoutSecondaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
 
     if ( var_4 == "" || var_4 == "none" )
         return "none";
@@ -1968,90 +1968,90 @@ _id_EC6E( var_0, var_1, var_2, var_3 )
 _id_EC6F( var_0, var_1, var_2 )
 {
     if ( var_2 == 0 )
-        return _func_0222( var_0, 0, "loadoutPrimaryCamo", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutPrimaryCamo", var_1 + 1 );
     else
-        return _func_0222( var_0, 0, "loadoutSecondaryCamo", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutSecondaryCamo", var_1 + 1 );
 }
 
 _id_EC70( var_0, var_1, var_2 )
 {
     if ( var_2 == 0 )
-        return _func_0222( var_0, 0, "loadoutPrimaryReticle", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutPrimaryReticle", var_1 + 1 );
     else
-        return _func_0222( var_0, 0, "loadoutSecondaryReticle", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutSecondaryReticle", var_1 + 1 );
 }
 
 _id_EC69( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, "loadoutPerk" + ( var_2 + 1 ), var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutPerk" + ( var_2 + 1 ), var_1 + 1 );
 }
 
 _id_EC65( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, "loadoutExtraPerk" + ( var_2 + 1 ), var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutExtraPerk" + ( var_2 + 1 ), var_1 + 1 );
 }
 
 _id_EC60( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutEquipmentPrimary", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutEquipmentPrimary", var_1 + 1 );
 }
 
 _id_EC63( var_0, var_1 )
 {
-    var_2 = _func_0222( var_0, 0, "loadoutExtraEquipmentPrimary", var_1 + 1 );
+    var_2 = tablelookup( var_0, 0, "loadoutExtraEquipmentPrimary", var_1 + 1 );
     return isdefined( var_2 ) && var_2 == "TRUE";
 }
 
 _id_EC61( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutEquipmentSecondary", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutEquipmentSecondary", var_1 + 1 );
 }
 
 _id_EC64( var_0, var_1 )
 {
-    var_2 = _func_0222( var_0, 0, "loadoutExtraEquipmentSecondary", var_1 + 1 );
+    var_2 = tablelookup( var_0, 0, "loadoutExtraEquipmentSecondary", var_1 + 1 );
     return isdefined( var_2 ) && var_2 == "TRUE";
 }
 
 _id_EC6C( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutSuper", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutSuper", var_1 + 1 );
 }
 
 table_getartifact( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutArtifact", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutArtifact", var_1 + 1 );
 }
 
 _id_EC6B( var_0, var_1 )
 {
-    var_2 = _func_0222( var_0, 0, "loadoutSpecialist", var_1 + 1 );
+    var_2 = tablelookup( var_0, 0, "loadoutSpecialist", var_1 + 1 );
     return isdefined( var_2 ) && var_2 == "TRUE";
 }
 
 _id_EC66( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutGesture", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutGesture", var_1 + 1 );
 }
 
 _id_EC5E( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutAccessory", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutAccessory", var_1 + 1 );
 }
 
 _id_EC62( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutExecution", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutExecution", var_1 + 1 );
 }
 
 _id_EC67( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, "loadoutStreak" + var_2, var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutStreak" + var_2, var_1 + 1 );
 }
 
 _id_EC6A( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutRole", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutRole", var_1 + 1 );
 }
 
 _id_6960( var_0 )

@@ -53,14 +53,14 @@ _id_6B20( var_0, var_1 )
 _id_6E66( var_0, var_1 )
 {
     var_2 = "mp/loot/weapon/" + var_0 + ".csv";
-    var_3 = _func_0222( var_2, 0, var_1, 3 );
+    var_3 = tablelookup( var_2, 0, var_1, 3 );
     return var_3;
 }
 
 _id_981C( var_0, var_1 )
 {
     var_2 = "mp/loot/weapon/" + var_0 + ".csv";
-    var_3 = _func_0222( var_2, 0, var_1, 1 );
+    var_3 = tablelookup( var_2, 0, var_1, 1 );
     return var_3;
 }
 
@@ -127,7 +127,7 @@ _id_6E81( var_0, var_1 )
         return 0;
 
     var_2 = _func_02F6( var_0 );
-    var_3 = int( _func_0222( var_2, 0, var_1, 4 ) );
+    var_3 = int( tablelookup( var_2, 0, var_1, 4 ) );
     return var_3;
 }
 

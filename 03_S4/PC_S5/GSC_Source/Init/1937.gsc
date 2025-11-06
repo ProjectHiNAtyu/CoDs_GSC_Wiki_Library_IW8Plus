@@ -534,9 +534,9 @@ get_tank_anim_offset( var_0 )
     var_2[var_2.size] = "#x3692cb74dd48b9201";
     var_2[var_2.size] = "#x3f78f7065b839937e";
     var_2[var_2.size] = "#x34d970cd342e8775f";
-    var_3 = _func_0222( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_1[int( var_0 )], 1 );
-    var_4 = _func_0222( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_1[int( var_0 )], 2 );
-    var_5 = _func_0222( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_1[int( var_0 )], 3 );
+    var_3 = tablelookup( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_1[int( var_0 )], 1 );
+    var_4 = tablelookup( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_1[int( var_0 )], 2 );
+    var_5 = tablelookup( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_1[int( var_0 )], 3 );
     var_6 = ( int( var_3 ), int( var_4 ), int( var_5 ) );
     var_7 = get_dvar_offset( var_6, ( 0, 0, 0 ), var_2[int( var_0 )] );
     return var_7["pos"];
@@ -2977,7 +2977,7 @@ get_offset_transform_from_position_table( var_0 )
 
 get_frontend_position_data( var_0, var_1 )
 {
-    return int( _func_0222( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_0, var_1 ) );
+    return int( tablelookup( "frontEndSceneData/frontendCharacterPositionData.csv", 0, var_0, var_1 ) );
 }
 
 _id_D7D1()
@@ -3069,7 +3069,7 @@ _id_5541()
         if ( var_0 == "taunt_started" )
         {
             _id_07B8::_id_C69C();
-            var_2 = _func_0222( "mp/cac/taunts.csv", 0, var_1, 9 );
+            var_2 = tablelookup( "mp/cac/taunts.csv", 0, var_1, 9 );
             _id_07B8::_id_BD6B( var_2, -1, 0 );
             continue;
         }

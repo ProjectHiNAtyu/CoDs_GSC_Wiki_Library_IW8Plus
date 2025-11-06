@@ -195,7 +195,7 @@ _id_DB8C()
 {
     var_0 = scripts\mp\teams::_id_69B9();
     var_1 = var_0["body"];
-    var_2 = _func_0222( "mp/cac/bodies.csv", 1, var_1, 22 );
+    var_2 = tablelookup( "mp/cac/bodies.csv", 1, var_1, 22 );
     return isdefined( var_2 ) && var_2 == "1";
 }
 
@@ -203,7 +203,7 @@ _id_6BD6( var_0 )
 {
     var_1 = scripts\mp\teams::_id_69B9();
     var_2 = var_1["body"];
-    var_3 = _func_0222( "mp/cac/bodies.csv", 1, var_2, 23 );
+    var_3 = tablelookup( "mp/cac/bodies.csv", 1, var_2, 23 );
 
     if ( isdefined( var_3 ) )
     {

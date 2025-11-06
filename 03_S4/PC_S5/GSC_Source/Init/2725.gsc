@@ -241,7 +241,7 @@ _id_6DDA( var_0 )
 _id_6DD0( var_0 )
 {
     if ( !isdefined( level._id_EF6A[var_0]["teamIcon"] ) )
-        level._id_EF6A[var_0]["teamIcon"] = _func_0222( "mp/factionTable.csv", 0, game[var_0], 5 );
+        level._id_EF6A[var_0]["teamIcon"] = tablelookup( "mp/factionTable.csv", 0, game[var_0], 5 );
 
     return level._id_EF6A[var_0]["teamIcon"];
 }
@@ -249,7 +249,7 @@ _id_6DD0( var_0 )
 _id_6DCF( var_0 )
 {
     if ( !isdefined( level._id_EF6A[var_0]["headIcon"] ) )
-        level._id_EF6A[var_0]["headIcon"] = _func_0222( "mp/factionTable.csv", 0, game[var_0], 7 );
+        level._id_EF6A[var_0]["headIcon"] = tablelookup( "mp/factionTable.csv", 0, game[var_0], 7 );
 
     return level._id_EF6A[var_0]["headIcon"];
 }
@@ -257,7 +257,7 @@ _id_6DCF( var_0 )
 _id_6DDF( var_0 )
 {
     if ( !isdefined( level._id_EF6A[var_0]["soundInfix"] ) )
-        level._id_EF6A[var_0]["soundInfix"] = _func_0222( "mp/factionTable.csv", 0, game[var_0], 8 );
+        level._id_EF6A[var_0]["soundInfix"] = tablelookup( "mp/factionTable.csv", 0, game[var_0], 8 );
 
     return level._id_EF6A[var_0]["soundInfix"];
 }
@@ -265,7 +265,7 @@ _id_6DDF( var_0 )
 _id_69BA( var_0 )
 {
     if ( !isdefined( level._id_EF6A[var_0]["customizationInfix"] ) )
-        level._id_EF6A[var_0]["customizationInfix"] = _func_0222( "mp/factionTable.csv", 0, game[var_0], 10 );
+        level._id_EF6A[var_0]["customizationInfix"] = tablelookup( "mp/factionTable.csv", 0, game[var_0], 10 );
 
     return level._id_EF6A[var_0]["customizationInfix"];
 }
@@ -314,7 +314,7 @@ _id_6DCC( var_0 )
                 break;
         }
 
-        level._id_EF6A[var_0]["teamFaction"] = _func_0222( "mp/mapInfo.csv", 0, scripts\cp_mp\utility\game_utility::_id_6B2D(), var_1 );
+        level._id_EF6A[var_0]["teamFaction"] = tablelookup( "mp/mapInfo.csv", 0, scripts\cp_mp\utility\game_utility::_id_6B2D(), var_1 );
 
         if ( level._id_EF6A[var_0]["teamFaction"] == "" )
             level._id_EF6A[var_0]["teamFaction"] = "USMC";

@@ -332,10 +332,10 @@ _id_6836( var_0 )
 {
     foreach ( var_2 in var_0 )
     {
-        if ( var_2 _meth_8624( "ammo_crossbow" ) && self._id_174D == "bolt_default" )
+        if ( var_2 hasattachment( "ammo_crossbow" ) && self._id_174D == "bolt_default" )
             return var_2;
 
-        if ( var_2 _meth_8624( "boltstun_crossbow" ) && self._id_174D == "bolt_stun" )
+        if ( var_2 hasattachment( "boltstun_crossbow" ) && self._id_174D == "bolt_stun" )
             return var_2;
     }
 

@@ -71,7 +71,7 @@ _id_52F7( var_0, var_1, var_2, var_3 )
         foreach ( var_5 in level.players )
         {
             var_5 playsoundtoplayer( "zmb_exfil_fail", var_5 );
-            var_5 _meth_867F( "cp_exfil_complete" );
+            var_5 setsoundsubmix( "cp_exfil_complete" );
             var_5 thread _id_43E8( var_2 );
         }
 
@@ -329,7 +329,7 @@ _id_DFE1( var_0, var_1 )
             var_5 = randomint( var_4 );
             var_3 setplayermusicstate( game["music"]["cp_roundloss"][var_5] );
             var_3 _meth_8078( 0 );
-            var_3 _meth_867F( "cp_matchend", 3 );
+            var_3 setsoundsubmix( "cp_matchend", 3 );
             var_3 thread _id_DFE6( var_0 );
 
             if ( istrue( var_3._id_A360 ) )
@@ -353,7 +353,7 @@ _id_DFE1( var_0, var_1 )
             }
 
             var_3 setplayermusicstate( "mus_west_victory" );
-            var_3 _meth_867F( "cp_matchend", 3 );
+            var_3 setsoundsubmix( "cp_matchend", 3 );
         }
     }
 

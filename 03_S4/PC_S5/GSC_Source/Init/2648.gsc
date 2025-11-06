@@ -460,7 +460,7 @@ _id_C70E()
 {
     if ( isdefined( self._id_C70D ) )
     {
-        scripts\mp\utility\perk::_id_6FC2( self._id_C70D );
+        scripts\mp\utility\perk::giveperk( self._id_C70D );
         self._id_C70D = undefined;
     }
 }

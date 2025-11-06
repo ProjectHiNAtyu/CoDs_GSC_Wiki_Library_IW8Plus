@@ -94,7 +94,7 @@ _id_F7A9( var_0 )
 _id_10F6F( var_0, var_1, var_2 )
 {
     scripts\common\utility::_id_1593( 0 );
-    self _meth_867F( "mp_killstreak_overlay" );
+    self setsoundsubmix( "mp_killstreak_overlay" );
     var_3 = undefined;
 
     if ( scripts\cp_mp\utility\script_utility::issharedfuncdefined( "white_phosphorus", "getSelectMapPoint" ) )

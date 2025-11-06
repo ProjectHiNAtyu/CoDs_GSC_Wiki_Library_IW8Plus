@@ -442,11 +442,11 @@ _id_D4BE( var_0, var_1, var_2 )
     if ( isdefined( self._id_7611 ) )
         self detach( self._id_7611 );
 
-    var_0 = self _meth_8128();
-    var_1 = self _meth_8129();
-    var_2 = self _meth_812C();
+    var_0 = self getcustomizationbody();
+    var_1 = self getcustomizationhead();
+    var_2 = self getcustomizationviewmodel();
     self setmodel( var_0 );
-    self _meth_83AB( var_2 );
+    self setviewmodel( var_2 );
     self attach( var_1, "", 1 );
     self._id_7611 = var_1;
 }
@@ -494,10 +494,10 @@ _id_5E82( var_0 )
             break;
     }
 
-    self _meth_8526( var_1, var_2 );
-    var_4 = self _meth_8128();
-    var_5 = self _meth_8129();
-    var_6 = self _meth_812C();
+    self setcustomization( var_1, var_2 );
+    var_4 = self getcustomizationbody();
+    var_5 = self getcustomizationhead();
+    var_6 = self getcustomizationviewmodel();
     _id_D4BE( var_4, var_5, var_6 );
 }
 
@@ -523,10 +523,10 @@ _id_69B9()
 _id_D5FC()
 {
     var_0 = _id_69B9();
-    self _meth_8526( var_0["body"], var_0["head"] );
-    var_1 = self _meth_8128();
-    var_2 = self _meth_8129();
-    var_3 = self _meth_812C();
+    self setcustomization( var_0["body"], var_0["head"] );
+    var_1 = self getcustomizationbody();
+    var_2 = self getcustomizationhead();
+    var_3 = self getcustomizationviewmodel();
     _id_D4BE( var_1, var_2, var_3 );
 }
 
@@ -549,7 +549,7 @@ _id_6C51()
 
 _id_6C6E( var_0 )
 {
-    var_1 = _func_0222( "mp/cac/bodies.csv", 1, var_0, 3 );
+    var_1 = tablelookup( "mp/cac/bodies.csv", 1, var_0, 3 );
 
     if ( !isdefined( var_1 ) || var_1 == "" )
         var_1 = "viewhands_mp_base_iw8";
@@ -559,12 +559,12 @@ _id_6C6E( var_0 )
 
 _id_6C4C( var_0 )
 {
-    return _func_0222( "mp/cac/bodies.csv", 1, var_0, 5 );
+    return tablelookup( "mp/cac/bodies.csv", 1, var_0, 5 );
 }
 
 _id_6C57( var_0 )
 {
-    return _func_0222( "mp/cac/bodies.csv", 0, var_0, 1 );
+    return tablelookup( "mp/cac/bodies.csv", 0, var_0, 1 );
 }
 
 _id_D8A1()
@@ -581,7 +581,7 @@ _id_D8A1()
 
         _id_D4BE( self._id_AC3D._id_45A5, self._id_AC3D._id_45B5, self._id_AC3D._id_45CF );
         scripts\mp\utility\player::_id_0CF0( self._id_AC3D._id_EAF7 );
-        _id_0790::_id_0C12( self._id_AC3D._id_56F2 );
+        scripts\cp_mp\execution::_giveexecution( self._id_AC3D._id_56F2 );
 
         if ( !isai( self ) )
             self _meth_8300( self._id_39FC );
@@ -629,7 +629,7 @@ setupultraoperatorskins( var_0 )
     if ( !self _meth_86EE() || !self _meth_8679( "ultra_operators" ) )
         return;
 
-    var_1 = _func_0222( "loot/operator_skin_ids.csv", 0, var_0, 32 );
+    var_1 = tablelookup( "loot/operator_skin_ids.csv", 0, var_0, 32 );
 
     if ( isdefined( var_1 ) && var_1 != "" )
     {
@@ -643,7 +643,7 @@ setupultraoperatorskins( var_0 )
     else
         self setscriptablepartstate( "ultra_operators", "neutral" );
 
-    var_2 = _func_0222( "loot/operator_skin_ids.csv", 0, var_0, 37 );
+    var_2 = tablelookup( "loot/operator_skin_ids.csv", 0, var_0, 37 );
 
     if ( isdefined( var_2 ) && var_2 != "" )
         scripts\mp\utility\player::_id_0CF0( var_2 );
@@ -679,10 +679,10 @@ _id_4028()
 
     if ( !isagent( self ) )
     {
-        self _meth_8526( var_1, var_2 );
-        var_4 = self _meth_8128();
-        var_5 = self _meth_8129();
-        var_6 = self _meth_812C();
+        self setcustomization( var_1, var_2 );
+        var_4 = self getcustomizationbody();
+        var_5 = self getcustomizationhead();
+        var_6 = self getcustomizationviewmodel();
         var_7 = _id_6C6E( var_1 );
     }
     else
@@ -914,7 +914,7 @@ _id_9817( var_0 )
 
                     foreach ( var_19, var_18 in level._id_AC3D[var_0] )
                     {
-                        var_24 = int( _func_0222( "operators.csv", 1, var_19, 6 ) );
+                        var_24 = int( tablelookup( "operators.csv", 1, var_19, 6 ) );
 
                         if ( var_24 )
                         {
@@ -1033,7 +1033,7 @@ _id_293C( var_0 )
         {
             if ( issubstr( var_7, "_basic" ) )
             {
-                var_9 = int( _func_0222( "loot/operator_skin_ids.csv", 1, var_7, 0 ) );
+                var_9 = int( tablelookup( "loot/operator_skin_ids.csv", 1, var_7, 0 ) );
                 self._id_2950 = var_9;
                 var_10 = var_9;
                 break;
@@ -1053,7 +1053,7 @@ _id_293C( var_0 )
         {
             if ( var_4 == var_11 )
             {
-                var_9 = int( _func_0222( "loot/operator_skin_ids.csv", 1, var_7, 0 ) );
+                var_9 = int( tablelookup( "loot/operator_skin_ids.csv", 1, var_7, 0 ) );
                 self._id_2950 = var_9;
                 var_10 = var_9;
                 break;
@@ -1139,8 +1139,8 @@ _id_6BD1()
         if ( isbot( self ) && getdvarint( "#x3fac27956b234c8fd", 0 ) != 0 )
         {
             var_7 = getdvarint( "#x3fac27956b234c8fd", 0 );
-            var_2 = _func_0222( "loot/operator_skin_ids.csv", 0, var_7, 13 );
-            var_3 = _func_0222( "loot/operator_skin_ids.csv", 0, var_7, 12 );
+            var_2 = tablelookup( "loot/operator_skin_ids.csv", 0, var_7, 13 );
+            var_3 = tablelookup( "loot/operator_skin_ids.csv", 0, var_7, 12 );
         }
         else if ( getdvarint( "#x31a62c84c9e4799d8", 0 ) == 1 )
         {
@@ -1157,7 +1157,7 @@ _id_6BD1()
 
             if ( scripts\mp\utility\game::isroundbased() && game["roundsPlayed"] > 0 )
             {
-                var_2 = _func_0222( "loot/operator_skin_ids.csv", 0, self.pers["defaultOperatorSkinIndex"], 13 );
+                var_2 = tablelookup( "loot/operator_skin_ids.csv", 0, self.pers["defaultOperatorSkinIndex"], 13 );
 
                 if ( isdefined( var_2 ) )
                     self._id_D05F = scripts\engine\utility::_id_1BAB( var_8, var_2 );
@@ -1177,7 +1177,7 @@ _id_6BD1()
             var_2 = var_8[self._id_D05F];
             var_3 = var_9[self._id_D05F];
             var_11 = var_10[self._id_D05F];
-            self _meth_8526( var_2, var_3 );
+            self setcustomization( var_2, var_3 );
             var_12 = self getentitynumber();
             level._id_B687[var_12][self.team]._id_AC41 = var_11;
             level._id_B687[var_12][self.team]._id_AC45 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "operatorCustomization", var_11, "skin" );
@@ -1187,11 +1187,11 @@ _id_6BD1()
         }
         else
         {
-            var_2 = _func_0222( "loot/operator_skin_ids.csv", 0, var_1, 13 );
-            var_3 = _func_0222( "loot/operator_skin_ids.csv", 0, var_1, 12 );
+            var_2 = tablelookup( "loot/operator_skin_ids.csv", 0, var_1, 13 );
+            var_3 = tablelookup( "loot/operator_skin_ids.csv", 0, var_1, 12 );
         }
 
-        var_4 = _func_0222( "operators.csv", 1, var_0, 21 );
+        var_4 = tablelookup( "operators.csv", 1, var_0, 21 );
     }
 
     self._id_25E5 = var_2;
@@ -1562,12 +1562,12 @@ _id_5E8D()
     if ( self.team == "axis" )
     {
         self setmodel( "mp_fullbody_heavy" );
-        self _meth_83AB( "viewmodel_mp_base_iw8" );
+        self setviewmodel( "viewmodel_mp_base_iw8" );
     }
     else
     {
         self setmodel( "mp_body_infected_a" );
-        self _meth_83AB( "viewmodel_mp_base_iw8" );
+        self setviewmodel( "viewmodel_mp_base_iw8" );
     }
 
     if ( isdefined( self._id_7611 ) )
@@ -1943,7 +1943,7 @@ _id_D5C3()
     var_0 = "c_s4_usa_juggernaut_01";
     var_1 = undefined;
     var_2 = "viewhands_juggernaut";
-    self _meth_8526( var_0, var_1 );
+    self setcustomization( var_0, var_1 );
     _id_D4BE( var_0, var_1, var_2 );
 }
 
@@ -2170,10 +2170,10 @@ getoperatorpomintro( var_0 )
     else
         var_1 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "operatorCustomization", var_0, "intro" );
 
-    self.loadoutintro = _func_0222( "loot/playofmatchintro_ids.csv", 0, var_1, 1 );
+    self.loadoutintro = tablelookup( "loot/playofmatchintro_ids.csv", 0, var_1, 1 );
 
     if ( !isdefined( self.loadoutintro ) )
-        self.loadoutintro = _func_0222( "operators.csv", 1, var_0, 30 );
+        self.loadoutintro = tablelookup( "operators.csv", 1, var_0, 30 );
 
     self.loadoutintro = validateplayerloadoutpomintro();
     return self.loadoutintro;
@@ -2186,10 +2186,10 @@ getoperatorhighlightintro( var_0 )
     else
         var_1 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "operatorCustomization", var_0, "taunt" );
 
-    self.loadouthighlight = _func_0222( "loot/fatality_ids.csv", 0, var_1, 1 );
+    self.loadouthighlight = tablelookup( "loot/fatality_ids.csv", 0, var_1, 1 );
 
     if ( !isdefined( self.loadouthighlight ) )
-        self.loadouthighlight = _func_0222( "operators.csv", 1, var_0, 31 );
+        self.loadouthighlight = tablelookup( "operators.csv", 1, var_0, 31 );
 
     self.loadouthighlight = validateplayerloadouthighlight();
     return self.loadouthighlight;
@@ -2198,7 +2198,7 @@ getoperatorhighlightintro( var_0 )
 validateplayerloadouthighlight()
 {
     var_0 = self.loadouthighlight;
-    var_1 = _func_0222( "postMatchFlowAnimations.csv", 0, var_0, 0 ) != "";
+    var_1 = tablelookup( "postMatchFlowAnimations.csv", 0, var_0, 0 ) != "";
 
     if ( !var_1 )
         return _id_0828::get_default_fatality_ref();
@@ -2209,7 +2209,7 @@ validateplayerloadouthighlight()
 validateplayerloadoutpomintro()
 {
     var_0 = self.loadoutintro;
-    var_1 = _func_0222( "postMatchFlowAnimationsIntros.csv", 0, var_0, 0 ) != "";
+    var_1 = tablelookup( "postMatchFlowAnimationsIntros.csv", 0, var_0, 0 ) != "";
 
     if ( !var_1 )
         return _id_0828::get_default_pom_intro();
@@ -2220,48 +2220,48 @@ validateplayerloadoutpomintro()
 _id_6BD2( var_0 )
 {
     var_1 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "operatorCustomization", var_0, "execution" );
-    self._id_966C = _func_0222( "loot/executions_ids.csv", 0, var_1, 1 );
+    self._id_966C = tablelookup( "loot/executions_ids.csv", 0, var_1, 1 );
 
     if ( !isdefined( self._id_966C ) )
-        self._id_966C = _func_0222( "operators.csv", 1, var_0, 26 );
+        self._id_966C = tablelookup( "operators.csv", 1, var_0, 26 );
 
     return self._id_966C;
 }
 
 _id_6BD7( var_0 )
 {
-    var_1 = _func_0222( "operators.csv", 1, var_0, 3 );
+    var_1 = tablelookup( "operators.csv", 1, var_0, 3 );
     return int( var_1 );
 }
 
 _id_6BD9( var_0 )
 {
-    var_1 = _func_0222( "operators.csv", 1, var_0, 10 );
+    var_1 = tablelookup( "operators.csv", 1, var_0, 10 );
     return var_1;
 }
 
 getoperatorvoiceprefix( var_0 )
 {
-    var_1 = _func_0222( "operators.csv", 1, var_0, 14 );
+    var_1 = tablelookup( "operators.csv", 1, var_0, 14 );
     return "mp_" + var_1;
 }
 
 getoperatorbayovoice( var_0 )
 {
-    var_1 = _func_0222( "operators.csv", 1, var_0, 33 );
+    var_1 = tablelookup( "operators.csv", 1, var_0, 33 );
     return var_1;
 }
 
 _id_6BD4( var_0 )
 {
-    var_1 = scripts\engine\utility::ter_op( _func_0222( "operators.csv", 1, var_0, 11 ) == "0", "male", "female" );
+    var_1 = scripts\engine\utility::ter_op( tablelookup( "operators.csv", 1, var_0, 11 ) == "0", "male", "female" );
     return var_1;
 }
 
 _id_6E3E( var_0 )
 {
     var_1 = self getplayerdata( level.loadoutsgroup, "customizationSetup", "vehicleCustomization", var_0, "camo" );
-    var_2 = _func_0222( "mp_cp/vehiclecamos.csv", 6, var_1, 5 );
+    var_2 = tablelookup( "mp_cp/vehiclecamos.csv", 6, var_1, 5 );
     return var_2;
 }
 
@@ -2460,7 +2460,7 @@ _id_6B8F( var_0, var_1 )
         }
 
         var_3 = level._id_B687[var_2][self.team]._id_AC45;
-        var_5 = _func_0222( "loot/operator_skin_ids.csv", 0, var_3, 1 );
+        var_5 = tablelookup( "loot/operator_skin_ids.csv", 0, var_3, 1 );
         var_6 = 0;
 
         foreach ( var_9, var_8 in level._id_AC3D[self.team][var_0] )
@@ -2654,23 +2654,23 @@ localafkdebugenabled()
 getoperatorreactivestagesetdef()
 {
     var_0 = _id_9818( self.team );
-    return _func_0222( "loot/operator_skin_ids.csv", 0, var_0, 38 );
+    return tablelookup( "loot/operator_skin_ids.csv", 0, var_0, 38 );
 }
 
 getoperatorreactivesource()
 {
     var_0 = _id_9818( self.team );
-    return _func_0222( "loot/operator_skin_ids.csv", 0, var_0, 40 );
+    return tablelookup( "loot/operator_skin_ids.csv", 0, var_0, 40 );
 }
 
 getoperatorreactivepreviewstage()
 {
     var_0 = _id_9818( self.team );
-    return int( _func_0222( "loot/operator_skin_ids.csv", 0, var_0, 39 ) );
+    return int( tablelookup( "loot/operator_skin_ids.csv", 0, var_0, 39 ) );
 }
 
 getoperatorultrascriptablestate()
 {
     var_0 = _id_9818( self.team );
-    return _func_0222( "loot/operator_skin_ids.csv", 0, var_0, 32 );
+    return tablelookup( "loot/operator_skin_ids.csv", 0, var_0, 32 );
 }

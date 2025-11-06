@@ -250,7 +250,7 @@ _id_D050( var_0 )
         var_7 = 3;
         var_4 = 1;
         scripts\common\utility::_id_1593( 0 );
-        self _meth_867F( "mp_killstreak_overlay" );
+        self setsoundsubmix( "mp_killstreak_overlay" );
         var_2 = undefined;
 
         if ( scripts\cp_mp\utility\script_utility::issharedfuncdefined( "airstrike", "getSelectMapPoint" ) )
@@ -262,7 +262,7 @@ _id_D050( var_0 )
     {
         var_7 = 1;
         scripts\common\utility::_id_1593( 0 );
-        self _meth_867F( "mp_killstreak_overlay" );
+        self setsoundsubmix( "mp_killstreak_overlay" );
         var_2 = undefined;
 
         if ( scripts\cp_mp\utility\script_utility::issharedfuncdefined( "airstrike", "getSelectMapPoint" ) )

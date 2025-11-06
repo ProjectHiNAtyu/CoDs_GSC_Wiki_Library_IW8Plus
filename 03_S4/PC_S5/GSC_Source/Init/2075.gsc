@@ -137,7 +137,7 @@ _id_96AA()
         var_0++;
     }
 
-    var_6 = _func_0222( "mp/superratetable.csv", 0, scripts\mp\utility\game::getgametype(), 1 );
+    var_6 = tablelookup( "mp/superratetable.csv", 0, scripts\mp\utility\game::getgametype(), 1 );
 
     if ( isdefined( var_6 ) && var_6 != "" )
         level._id_EB2B._id_EB23 = float( var_6 );
@@ -2027,7 +2027,7 @@ _id_EB30()
 
 _id_EB2F()
 {
-    scripts\mp\utility\perk::_id_6FC2( "specialty_hack" );
+    scripts\mp\utility\perk::giveperk( "specialty_hack" );
 }
 
 _id_EB2D()

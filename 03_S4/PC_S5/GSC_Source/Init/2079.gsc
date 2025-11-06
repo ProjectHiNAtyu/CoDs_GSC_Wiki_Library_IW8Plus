@@ -626,7 +626,7 @@ _id_C7F1( var_0, var_1 )
     var_2._id_5EC2 = ( 0, var_7[1], 0 );
     waitframe();
     var_2 scripts\mp\utility\player::_id_FD26( "spectator" );
-    var_2 _id_081A::_id_D512();
+    var_2 scripts\mp\spectating::_id_D512();
     waitframe();
 
     if ( isdefined( level._id_C7F4[var_2.guid]._id_75ED ) )

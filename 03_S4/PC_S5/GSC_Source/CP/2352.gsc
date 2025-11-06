@@ -17,7 +17,7 @@ _id_B07B( var_0, var_1, var_2, var_3 )
     if ( !var_3 && !istrue( level.disable_pickup_item_vo ) )
         var_0 _id_0720::_id_BEC0( "pickup_item" );
 
-    var_4 = _func_0222( "cp/equipment.csv", 1, var_1._id_22AC, 0 );
+    var_4 = tablelookup( "cp/equipment.csv", 1, var_1._id_22AC, 0 );
     var_0 _id_092E::show_pickup_notification( 3, 0, int( var_4 ) );
     var_5 = spawnstruct();
     var_5._id_5556 = var_1._id_22AC;
@@ -88,7 +88,7 @@ _id_30D9( var_0, var_1, var_2 )
         return 0;
 
     var_3 = _id_6D2F( var_1._id_8B2D );
-    var_4 = var_0 _id_0728::_id_69A4( var_3 );
+    var_4 = var_0 _id_0728::getcurrentequipment( var_3 );
 
     if ( !isdefined( var_4 ) )
         return 1;

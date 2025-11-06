@@ -367,7 +367,7 @@ _id_AB70( var_0 )
 
     if ( level._id_2BB5._id_9C7F )
     {
-        level._id_2BB5._id_7B68 _meth_83A3( level._id_2BB5._id_8D6E );
+        level._id_2BB5._id_7B68 setvalue( level._id_2BB5._id_8D6E );
 
         if ( level._id_2BB5._id_8D6E >= level._id_2BB5._id_9C7F )
         {
@@ -483,7 +483,7 @@ _id_3FF3( var_0, var_1, var_2, var_3, var_4, var_5, var_6, var_7 )
         var_9.label = var_0;
 
     if ( isdefined( var_1 ) )
-        var_9 _meth_83A3( var_1 );
+        var_9 setvalue( var_1 );
 
     if ( isdefined( var_6 ) )
         var_9.color = var_6;
@@ -621,7 +621,7 @@ _id_D8BA()
             }
 
             var_6[var_7]._id_A3CD _meth_8367( var_13 );
-            var_6[var_7]._id_FF6D _meth_83A3( var_11 * 100 );
+            var_6[var_7]._id_FF6D setvalue( var_11 * 100 );
             var_6[var_7]._id_A3CD.alpha = 1;
             var_6[var_7]._id_FF6D.alpha = 1;
             var_9++;

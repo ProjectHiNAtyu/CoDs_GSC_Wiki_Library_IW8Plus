@@ -925,10 +925,10 @@ _id_0C43( var_0, var_1 )
 {
     if ( isdefined( var_0 ) && isdefined( var_1 ) )
     {
-        var_2 = self _meth_8131();
+        var_2 = self getentityvelocity();
         var_2 = vectornormalize( var_2 );
         var_0 = vectornormalize( var_0 );
-        var_3 = _func_025E( var_2, var_0, var_1 );
+        var_3 = vectorlerp( var_2, var_0, var_1 );
         return var_3;
     }
     else

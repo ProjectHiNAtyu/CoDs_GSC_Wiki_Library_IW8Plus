@@ -24,7 +24,7 @@ _id_C1DA( var_0, var_1, var_2, var_3 )
         level._id_433B = [];
 
     var_4 = tablelookuprownum( "mp/modcardtable.csv", 1, var_0 );
-    var_5 = scripts\engine\utility::_id_EA52( _func_0222( "mp/modcardtable.csv", 1, var_0, 1 ) );
+    var_5 = scripts\engine\utility::_id_EA52( tablelookup( "mp/modcardtable.csv", 1, var_0, 1 ) );
     var_6 = _func_0483( "#x336339467cdad1bb7", var_5 );
 
     if ( getdvarint( _func_0483( "#x33880edb0ab3f8758", var_0 ), 0 ) != 0 )
@@ -33,19 +33,19 @@ _id_C1DA( var_0, var_1, var_2, var_3 )
         return;
     }
 
-    var_7 = int( _func_0222( "mp/modcardtable.csv", 1, var_0, 3 ) );
+    var_7 = int( tablelookup( "mp/modcardtable.csv", 1, var_0, 3 ) );
 
     if ( getdvarint( "#x37b1d8e3caad83b08", 1 ) && !scripts\engine\utility::is_equal( var_0, "none" ) )
         var_7 = 0;
 
     setdvarifuninitialized( var_6, var_7 );
     var_8 = spawnstruct();
-    var_8._id_7C8C = int( _func_0222( "mp/modcardtable.csv", 1, var_0, 0 ) );
+    var_8._id_7C8C = int( tablelookup( "mp/modcardtable.csv", 1, var_0, 0 ) );
     var_8._id_D570 = var_2;
     var_8._id_FA98 = var_3;
     var_8._id_19F0 = var_1;
     var_8._id_C189 = var_0;
-    var_8._id_722F = _func_0222( "mp/modcardtable.csv", 1, var_0, 4 );
+    var_8._id_722F = tablelookup( "mp/modcardtable.csv", 1, var_0, 4 );
     var_9 = getdvarint( var_6 );
 
     if ( _id_9FC5( var_8 ) )
@@ -208,7 +208,7 @@ _id_D1A3( var_0 )
 _id_6F2A( var_0 )
 {
     if ( !var_0 scripts\mp\utility\perk::_hasperk( "specialty_extra_deadly" ) )
-        var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_extra_deadly" );
+        var_0 scripts\mp\utility\perk::giveperk( "specialty_extra_deadly" );
 }
 
 _id_ED94( var_0 )
@@ -237,7 +237,7 @@ _id_F711( var_0 )
     var_1 = self;
 
     if ( !var_1 scripts\mp\utility\perk::_hasperk( var_0 ) )
-        var_1 scripts\mp\utility\perk::_id_6FC2( var_0 );
+        var_1 scripts\mp\utility\perk::giveperk( var_0 );
 }
 
 _id_F724( var_0 )

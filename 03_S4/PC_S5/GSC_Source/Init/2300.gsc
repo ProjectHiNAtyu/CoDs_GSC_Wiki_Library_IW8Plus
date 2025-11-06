@@ -1832,7 +1832,7 @@ _id_DDEE( var_0, var_1, var_2 )
         {
             var_10 = scripts\engine\trace::ray_trace( self.origin + ( 0, 0, 12 ), self.origin - ( 0, 0, 999 ) );
             var_11 = var_10["normal"];
-            var_11 = _func_025E( var_5, var_11, 0.25 );
+            var_11 = vectorlerp( var_5, var_11, 0.25 );
             var_5 = var_11;
             var_12 = anglestoup( self.angles );
             var_13 = scripts\engine\math::_id_FFDC( var_11, var_12 );

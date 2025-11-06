@@ -72,10 +72,10 @@ _id_8141()
                     if ( isdefined( var_9 ) && var_9.size > 0 )
                     {
                         var_11 = int( var_9 );
-                        var_12 = _func_0222( "loot/weapon_ids.csv", 0, var_11, 1 );
-                        var_13 = _func_0222( "loot/weapon_ids.csv", 0, var_11, 9 );
+                        var_12 = tablelookup( "loot/weapon_ids.csv", 0, var_11, 1 );
+                        var_13 = tablelookup( "loot/weapon_ids.csv", 0, var_11, 9 );
                         var_14 = scripts\mp\utility\weapon::_id_6E93( var_12 );
-                        var_15 = int( _func_0222( var_14, 1, var_13, 0 ) );
+                        var_15 = int( tablelookup( var_14, 1, var_13, 0 ) );
                         var_16 = tablelookupbyrow( level._id_2BEB, var_4, 10 );
                         var_17 = [];
                         var_18 = [];
@@ -614,7 +614,7 @@ _id_EDBE( var_0, var_1 )
             if ( var_5 + var_0._id_011A > var_6 )
             {
                 var_7 = var_6 - var_5;
-                scripts\mp\equipment::_id_D543( var_2, var_6 );
+                scripts\mp\equipment::setequipmentammo( var_2, var_6 );
                 var_0._id_011A = var_0._id_011A - var_7;
                 var_4 = 1;
             }
@@ -627,7 +627,7 @@ _id_EDBE( var_0, var_1 )
     else if ( !isdefined( self.equipment[var_3] ) || scripts\mp\equipment::_id_6A15( var_3 ) == 0 )
     {
         scripts\mp\equipment::giveequipment( var_2, var_3 );
-        scripts\mp\equipment::_id_D543( var_2, var_0._id_011A );
+        scripts\mp\equipment::setequipmentammo( var_2, var_0._id_011A );
     }
     else if ( !getdvarint( "#x37cbb0fd1da5c320a", 1 ) )
     {
@@ -642,7 +642,7 @@ _id_EDBE( var_0, var_1 )
     {
         _id_502D( var_3, var_1 );
         scripts\mp\equipment::giveequipment( var_2, var_3 );
-        scripts\mp\equipment::_id_D543( var_2, var_0._id_011A );
+        scripts\mp\equipment::setequipmentammo( var_2, var_0._id_011A );
     }
 
     if ( var_3 == "health" && getdvarint( "#x319d0418d7f12962d", 0 ) )
@@ -737,7 +737,7 @@ _id_1129( var_0 )
     var_2 = level.maxteamsize == 1;
 
     if ( var_2 && !var_1 scripts\mp\utility\perk::_hasperk( "specialty_pistoldeath" ) )
-        var_1 scripts\mp\utility\perk::_id_6FC2( "specialty_pistoldeath" );
+        var_1 scripts\mp\utility\perk::giveperk( "specialty_pistoldeath" );
 }
 
 _id_C519()
@@ -815,7 +815,7 @@ _id_0C11( var_0, var_1, var_2 )
     }
 
     scripts\mp\equipment::giveequipment( var_0, "super" );
-    scripts\mp\equipment::_id_D543( var_0, var_2 );
+    scripts\mp\equipment::setequipmentammo( var_0, var_2 );
 }
 
 _id_EDD9( var_0, var_1 )
@@ -2178,7 +2178,7 @@ _id_7446( var_0, var_1 )
         _id_502D( var_1 );
 
     scripts\mp\equipment::giveequipment( var_0, var_1 );
-    scripts\mp\equipment::_id_D543( var_0, 1 );
+    scripts\mp\equipment::setequipmentammo( var_0, 1 );
 }
 
 _id_EB46( var_0 )

@@ -132,7 +132,7 @@ _id_95DC()
 
 _id_EC72( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, var_1, var_2 );
+    return tablelookup( var_0, 0, var_1, var_2 );
 }
 
 _id_8031( var_0 )
@@ -2324,7 +2324,7 @@ _id_95E0()
 
 _id_D400( var_0 )
 {
-    var_1 = _func_0222( "cp/cp_relic_table.csv", 1, var_0, 0 );
+    var_1 = tablelookup( "cp/cp_relic_table.csv", 1, var_0, 0 );
     var_2 = int( var_1 );
     self _meth_82F8( "cp_active_relics", var_2 - 1, 1 );
 }

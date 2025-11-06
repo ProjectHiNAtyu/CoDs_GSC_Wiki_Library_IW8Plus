@@ -1554,7 +1554,7 @@ _id_6C95( var_0 )
 
 _id_6CA6( var_0 )
 {
-    var_1 = int( _func_0222( "mp/brmissions.csv", 1, var_0, 0 ) );
+    var_1 = int( tablelookup( "mp/brmissions.csv", 1, var_0, 0 ) );
     return var_1;
 }
 
@@ -2062,7 +2062,7 @@ _id_6CA8( var_0 )
 
     if ( !isdefined( var_1 ) )
     {
-        var_1 = _func_0222( "mp/brmissions.csv", 1, var_0, 7 );
+        var_1 = tablelookup( "mp/brmissions.csv", 1, var_0, 7 );
         level._id_BEAF._id_C811._id_3332[var_0] = var_1;
     }
 
@@ -2082,12 +2082,12 @@ _id_6C9E( var_0 )
 
         for (;;)
         {
-            var_5 = _func_0222( var_1, 0, var_0, var_3 );
+            var_5 = tablelookup( var_1, 0, var_0, var_3 );
 
             if ( var_5 == "" )
                 break;
 
-            var_6 = _func_0222( var_1, 0, var_0, var_4 );
+            var_6 = tablelookup( var_1, 0, var_0, var_4 );
             var_2[var_5] = var_6;
             var_3 = var_3 + 2;
             var_4 = var_4 + 2;
@@ -2113,7 +2113,7 @@ _id_6CA1( var_0 )
 
     if ( !isdefined( var_2 ) )
     {
-        var_2 = _func_0222( var_1, 0, var_0, 1 );
+        var_2 = tablelookup( var_1, 0, var_0, 1 );
         level._id_BEAF._id_C811._id_C816[var_0] = var_2;
     }
 
@@ -2136,7 +2136,7 @@ _id_6CA2( var_0 )
         if ( isdefined( var_3 ) )
             var_2 = var_3;
         else
-            var_2 = _func_0222( var_1, 0, var_0, 2 );
+            var_2 = tablelookup( var_1, 0, var_0, 2 );
 
         var_4 = _id_6CA1( var_0 );
         var_2 = _id_3315( var_4, var_2 );
@@ -2171,13 +2171,13 @@ _id_6C9F( var_0 )
 
         for (;;)
         {
-            var_4 = _func_0222( "mp/brmission_reward_scalers.csv", 0, var_0, var_2 );
+            var_4 = tablelookup( "mp/brmission_reward_scalers.csv", 0, var_0, var_2 );
 
             if ( var_4 == "" )
                 break;
 
             var_4 = int( var_4 );
-            var_5 = float( _func_0222( "mp/brmission_reward_scalers.csv", 0, var_0, var_3 ) );
+            var_5 = float( tablelookup( "mp/brmission_reward_scalers.csv", 0, var_0, var_3 ) );
             var_1[var_4] = var_5;
             var_2 = var_2 + 2;
             var_3 = var_3 + 2;
@@ -2338,7 +2338,7 @@ _id_6C9C( var_0, var_1, var_2 )
 _id_BEB7( var_0 )
 {
     var_1 = _id_6CA0();
-    var_2 = _func_0222( var_1, 0, var_0, 0 );
+    var_2 = tablelookup( var_1, 0, var_0, 0 );
     return var_2 != "";
 }
 
@@ -2398,7 +2398,7 @@ _id_6CA0()
 _id_6C9D( var_0 )
 {
     var_1 = _id_6CA0();
-    return int( _func_0222( var_1, 0, var_0, 1 ) );
+    return int( tablelookup( var_1, 0, var_0, 1 ) );
 }
 
 _id_6CA3( var_0 )

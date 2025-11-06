@@ -191,7 +191,7 @@ showsplash( var_0, var_1, var_2, var_3, var_4 )
 
     if ( getdvarint( "#x33def60164323d0cb", 0 ) == 1 )
     {
-        if ( _func_0222( "mp/splashtable.csv", 0, var_0, 6 ) == "splash" && _func_0222( "mp/splashtable.csv", 0, var_0, 7 ) == "skill" )
+        if ( tablelookup( "mp/splashtable.csv", 0, var_0, 6 ) == "splash" && tablelookup( "mp/splashtable.csv", 0, var_0, 7 ) == "skill" )
         {
             var_5 = [ "arena_evo_match_won", "arena_evo_teammate_left", "arena_evo_team_eliminated" ];
             var_6 = 0;

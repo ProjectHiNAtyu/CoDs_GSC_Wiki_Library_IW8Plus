@@ -554,7 +554,7 @@ _id_6ED8( var_0, var_1 )
         switch ( var_6.type )
         {
             case "Perk":
-                scripts\cp\utility::_id_6FC2( var_6._id_C189 );
+                scripts\cp\utility::giveperk( var_6._id_C189 );
                 break;
             case "PerkDataAdditive":
                 var_7 = scripts\cp\utility::_id_459B( var_6._id_04CB, 0 );

@@ -47,7 +47,7 @@ _id_1F04( var_0 )
         var_0 thread _id_0A9F::_id_7003( "buff_teammate" );
 
     self setclientomnvar( "ui_aura_quickswap", 1 );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
+    scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
     self playlocalsound( "mp_overcharge_on" );
     thread _id_386C();
     wait 5;

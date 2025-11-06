@@ -2305,7 +2305,7 @@ _id_6DDF( var_0 )
         level._id_EF6A[var_0] = [];
 
     if ( !isdefined( level._id_EF6A[var_0]["soundInfix"] ) )
-        level._id_EF6A[var_0]["soundInfix"] = _func_0222( "mp/factionTable.csv", 0, game[var_0], 8 );
+        level._id_EF6A[var_0]["soundInfix"] = tablelookup( "mp/factionTable.csv", 0, game[var_0], 8 );
 
     return level._id_EF6A[var_0]["soundInfix"];
 }

@@ -233,20 +233,20 @@ _id_C111( var_0, var_1, var_2 )
 
 _id_EC5F( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutArchetype", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutArchetype", var_1 + 1 );
 }
 
 _id_EC68( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutName", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutName", var_1 + 1 );
 }
 
 _id_EC6D( var_0, var_1, var_2 )
 {
     if ( var_2 == 0 )
-        return _func_0222( var_0, 0, "loadoutPrimary", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutPrimary", var_1 + 1 );
     else
-        return _func_0222( var_0, 0, "loadoutSecondary", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutSecondary", var_1 + 1 );
 }
 
 _id_EC6E( var_0, var_1, var_2, var_3 )
@@ -254,9 +254,9 @@ _id_EC6E( var_0, var_1, var_2, var_3 )
     var_4 = "none";
 
     if ( var_2 == 0 )
-        var_4 = _func_0222( var_0, 0, "loadoutPrimaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
+        var_4 = tablelookup( var_0, 0, "loadoutPrimaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
     else
-        var_4 = _func_0222( var_0, 0, "loadoutSecondaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
+        var_4 = tablelookup( var_0, 0, "loadoutSecondaryAttachment" + ( var_3 + 1 ), var_1 + 1 );
 
     if ( var_4 == "" || var_4 == "none" )
         return "none";
@@ -267,80 +267,80 @@ _id_EC6E( var_0, var_1, var_2, var_3 )
 _id_EC6F( var_0, var_1, var_2 )
 {
     if ( var_2 == 0 )
-        return _func_0222( var_0, 0, "loadoutPrimaryCamo", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutPrimaryCamo", var_1 + 1 );
     else
-        return _func_0222( var_0, 0, "loadoutSecondaryCamo", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutSecondaryCamo", var_1 + 1 );
 }
 
 _id_EC70( var_0, var_1, var_2 )
 {
     if ( var_2 == 0 )
-        return _func_0222( var_0, 0, "loadoutPrimaryReticle", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutPrimaryReticle", var_1 + 1 );
     else
-        return _func_0222( var_0, 0, "loadoutSecondaryReticle", var_1 + 1 );
+        return tablelookup( var_0, 0, "loadoutSecondaryReticle", var_1 + 1 );
 }
 
 _id_EC69( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, "loadoutPerk" + ( var_2 + 1 ), var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutPerk" + ( var_2 + 1 ), var_1 + 1 );
 }
 
 _id_EC65( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, "loadoutExtraPerk" + ( var_2 + 1 ), var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutExtraPerk" + ( var_2 + 1 ), var_1 + 1 );
 }
 
 _id_EC60( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutEquipmentPrimary", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutEquipmentPrimary", var_1 + 1 );
 }
 
 _id_EC63( var_0, var_1 )
 {
-    var_2 = _func_0222( var_0, 0, "loadoutExtraEquipmentPrimary", var_1 + 1 );
+    var_2 = tablelookup( var_0, 0, "loadoutExtraEquipmentPrimary", var_1 + 1 );
     return isdefined( var_2 ) && var_2 == "TRUE";
 }
 
 _id_EC61( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutEquipmentSecondary", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutEquipmentSecondary", var_1 + 1 );
 }
 
 _id_EC64( var_0, var_1 )
 {
-    var_2 = _func_0222( var_0, 0, "loadoutExtraEquipmentSecondary", var_1 + 1 );
+    var_2 = tablelookup( var_0, 0, "loadoutExtraEquipmentSecondary", var_1 + 1 );
     return isdefined( var_2 ) && var_2 == "TRUE";
 }
 
 _id_EC6C( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutSuper", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutSuper", var_1 + 1 );
 }
 
 _id_EC6B( var_0, var_1 )
 {
-    var_2 = _func_0222( var_0, 0, "loadoutSpecialist", var_1 + 1 );
+    var_2 = tablelookup( var_0, 0, "loadoutSpecialist", var_1 + 1 );
     return isdefined( var_2 ) && var_2 == "TRUE";
 }
 
 _id_EC66( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutGesture", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutGesture", var_1 + 1 );
 }
 
 _id_EC5E( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutAccessory", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutAccessory", var_1 + 1 );
 }
 
 _id_EC62( var_0, var_1 )
 {
-    return _func_0222( var_0, 0, "loadoutExecution", var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutExecution", var_1 + 1 );
 }
 
 _id_EC67( var_0, var_1, var_2 )
 {
-    return _func_0222( var_0, 0, "loadoutStreak" + var_2, var_1 + 1 );
+    return tablelookup( var_0, 0, "loadoutStreak" + var_2, var_1 + 1 );
 }
 
 _id_962F( var_0 )
@@ -410,7 +410,7 @@ _id_961F( var_0 )
     _id_961E( var_0 );
     _id_0A6E::_id_5F00();
     _id_0793::_id_3941();
-    _id_0790::_id_0B9E();
+    scripts\cp_mp\execution::_clearexecution();
     _id_07A6::_id_396B();
     _id_0A6C::_id_AFE5();
 
@@ -440,7 +440,7 @@ _id_9620( var_0 )
     _id_961E( var_0 );
     _id_0A6E::_id_5F00();
     _id_0793::_id_3941();
-    _id_0790::_id_0B9E();
+    scripts\cp_mp\execution::_clearexecution();
     _id_07A6::_id_396B();
     _id_0A6C::_id_AFE5();
 
@@ -475,7 +475,7 @@ _id_9630( var_0 )
     if ( !isdefined( self._id_967F ) )
         self._id_967F = [];
 
-    scripts\mp\utility\perk::_id_6FC2( var_0 );
+    scripts\mp\utility\perk::giveperk( var_0 );
     self._id_967F[self._id_967F.size] = var_0;
 }
 
@@ -1571,7 +1571,7 @@ _id_9631( var_0 )
         scripts\cp_mp\utility\inventory_utility::_giveweapon( var_4, undefined, undefined, var_4.basename == "s4_me_fists_mp" );
         scripts\mp\weapons::_id_FD69( var_4 );
         _id_0A6E::_id_96A5( var_4 );
-        var_5 = var_0._id_968A _meth_8624( "maxammo", 1 );
+        var_5 = var_0._id_968A hasattachment( "maxammo", 1 );
 
         if ( var_2 )
             _id_C6B3( var_1, "primary" );
@@ -1638,7 +1638,7 @@ _id_9632( var_0 )
             scripts\cp_mp\utility\inventory_utility::_giveweapon( var_4, undefined, undefined, 1 );
             scripts\mp\weapons::_id_FD69( var_4 );
 
-            if ( var_4 _meth_8624( "akimbo", 1 ) )
+            if ( var_4 hasattachment( "akimbo", 1 ) )
             {
                 var_5 = self getweaponammostock( var_4 ) + self getweaponammoclip( var_4, "right" ) + self getweaponammoclip( var_4, "left" );
                 self setweaponammostock( var_4, var_5 * 2 - self getweaponammoclip( var_4, "right" ) - self getweaponammoclip( var_4, "left" ) );
@@ -1648,7 +1648,7 @@ _id_9632( var_0 )
                 self setweaponammoclip( var_4, 1 );
 
             _id_0A6E::_id_96A5( var_4 );
-            var_6 = var_0._id_9699 _meth_8624( "maxammo", 1 );
+            var_6 = var_0._id_9699 hasattachment( "maxammo", 1 );
 
             if ( var_2 )
                 _id_C6B3( var_1, "secondary" );
@@ -1712,7 +1712,7 @@ _id_9653( var_0 )
     _id_9630( "specialty_ads_overlay_awareness" );
 
     if ( scripts\mp\utility\game::_id_8902() )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_pistoldeath" );
+        scripts\mp\utility\perk::giveperk( "specialty_pistoldeath" );
 
     _id_9630( "specialty_location_marking" );
 
@@ -2429,7 +2429,7 @@ _id_9635( var_0, var_1, var_2 )
             var_16 = _func_02F6( var_14 );
 
             if ( isdefined( var_16 ) )
-                var_13 = _func_0222( var_16, 0, var_15, 17 );
+                var_13 = tablelookup( var_16, 0, var_15, 17 );
         }
 
         var_17 = "";
@@ -2441,7 +2441,7 @@ _id_9635( var_0, var_1, var_2 )
             var_16 = _func_02F6( var_18 );
 
             if ( isdefined( var_16 ) )
-                var_17 = _func_0222( var_16, 0, var_19, 17 );
+                var_17 = tablelookup( var_16, 0, var_19, 17 );
         }
 
         var_20 = spawnstruct();
@@ -3125,7 +3125,7 @@ _id_6CF2( var_0 )
     if ( !isdefined( var_0 ) )
         return undefined;
 
-    var_1 = int( _func_0222( "mp/reticleTable.csv", 1, var_0, 5 ) );
+    var_1 = int( tablelookup( "mp/reticleTable.csv", 1, var_0, 5 ) );
 
     if ( !isdefined( var_1 ) || var_1 == 0 )
         return undefined;
@@ -3953,7 +3953,7 @@ _id_C6BA( var_0 )
 
 _id_C6B9( var_0, var_1 )
 {
-    var_2 = scripts\mp\equipment::_id_69A4( var_0 );
+    var_2 = scripts\mp\equipment::getcurrentequipment( var_0 );
 
     if ( !isdefined( var_2 ) )
         var_2 = "none";
@@ -4067,7 +4067,7 @@ _id_C6B2( var_0, var_1 )
     if ( !isdefined( var_3 ) )
         return;
 
-    scripts\mp\equipment::_id_D543( var_2, var_3 );
+    scripts\mp\equipment::setequipmentammo( var_2, var_3 );
 }
 
 _id_C6B6( var_0 )
@@ -4121,7 +4121,7 @@ _id_E265( var_0, var_1, var_2 )
         var_5 = 0;
         var_6 = 0;
 
-        if ( var_0 _meth_8624( "akimbo", 1 ) )
+        if ( var_0 hasattachment( "akimbo", 1 ) )
             self setweaponammoclip( var_3, var_5, "left" );
     }
     else
@@ -4318,7 +4318,7 @@ _id_FC78( var_0, var_1 )
         var_2 scripts\mp\utility\perk::removeperk( var_3 );
 
     var_2.pers["gamemodeLoadout"]["loadoutPerks"][var_1] = var_0;
-    var_2 scripts\mp\utility\perk::_id_6FC2( var_0 );
+    var_2 scripts\mp\utility\perk::giveperk( var_0 );
 }
 
 _id_C1AA()
@@ -4353,7 +4353,7 @@ carefulmovementmonitor()
         {
             if ( !var_2 && !scripts\mp\utility\perk::_hasperk( "specialty_quieter" ) )
             {
-                scripts\mp\utility\perk::_id_6FC2( "specialty_quieter" );
+                scripts\mp\utility\perk::giveperk( "specialty_quieter" );
                 var_2 = 1;
             }
         }
@@ -4444,7 +4444,7 @@ _id_F75B()
     {
         self._id_505C = 1;
 
-        if ( self._id_0133 _meth_8624( "gunperk_acrobatic" ) )
+        if ( self._id_0133 hasattachment( "gunperk_acrobatic" ) )
         {
             scripts\mp\utility\weapon::_id_D69A( 0, -6, 1 );
             self _meth_8381( 3 );

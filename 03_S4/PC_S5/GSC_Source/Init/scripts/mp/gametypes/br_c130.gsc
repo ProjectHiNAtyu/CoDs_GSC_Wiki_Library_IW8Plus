@@ -1014,7 +1014,7 @@ _id_7E6B( var_0 )
     if ( isdefined( var_0 ) )
         var_0 playsoundtoplayer( "br_ac130_flyby", var_1 );
 
-    var_1 _meth_867F( "mp_br_infil_music", 0.0 );
+    var_1 setsoundsubmix( "mp_br_infil_music", 0.0 );
     var_2 = game["music"]["br_plane_jump"].size - 1;
     var_3 = randomint( var_2 );
     var_1 setplayermusicstate( game["music"]["br_plane_jump"][var_3] );

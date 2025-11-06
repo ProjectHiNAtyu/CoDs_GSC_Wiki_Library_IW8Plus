@@ -333,7 +333,7 @@ _id_6A8F()
 _id_549F()
 {
     if ( !scripts\cp\utility::_hasperk( "specialty_pistoldeath" ) )
-        scripts\cp\utility::_id_6FC2( "specialty_pistoldeath" );
+        scripts\cp\utility::giveperk( "specialty_pistoldeath" );
 
     _id_072C::_id_FBD9( _id_072C::_id_67C3(), "num_players_enter_laststand" );
     var_0 = [];
@@ -439,7 +439,7 @@ _id_345A()
         if ( istrue( var_2._id_0245 ) )
             continue;
 
-        if ( var_2 _meth_8624( "doubletap", 1 ) )
+        if ( var_2 hasattachment( "doubletap", 1 ) )
         {
             var_0 = var_2 _meth_866A( "doubletap" );
             var_3 = getcompleteweaponname( var_0 );
@@ -1091,7 +1091,7 @@ _id_9091( var_0 )
 
     if ( var_0 _id_30F7() )
     {
-        var_1 = int( _func_0222( "cp/cp_hints.csv", 1, "self_revive", 0 ) );
+        var_1 = int( tablelookup( "cp/cp_hints.csv", 1, "self_revive", 0 ) );
         var_0 setclientomnvar( "zm_hint_index", var_1 );
     }
 
@@ -1471,7 +1471,7 @@ _id_3ED7()
 
         for ( var_2 = 0; var_2 < var_1; var_2++ )
         {
-            var_3 = _func_0222( "cp/zombies/zombie_perks_bit_mask_table.csv", 1, var_0[var_2], 2 );
+            var_3 = tablelookup( "cp/zombies/zombie_perks_bit_mask_table.csv", 1, var_0[var_2], 2 );
 
             if ( _func_0121( var_3 ) && var_3 != "" )
             {
@@ -1643,7 +1643,7 @@ _id_AB31()
     if ( weaponclass( var_1 ) != "pistol" || var_1.basename == "s4_me_rindigo_mp" || issubstr( var_1.basename, "iw8_knife_mp" ) )
         var_1 = scripts\cp\cp_weapon::buildweapon( "s4_pi_mike1911_mp", [], "none", "none", -1 );
 
-    if ( var_1 _meth_8624( "akimbo", 1 ) )
+    if ( var_1 hasattachment( "akimbo", 1 ) )
     {
         var_2 = var_1._id_030D;
         var_3 = undefined;

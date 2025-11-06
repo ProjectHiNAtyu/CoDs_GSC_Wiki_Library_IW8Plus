@@ -712,9 +712,9 @@ _id_7EB7()
 
         var_3 = spawnstruct();
         var_3.index = int( var_2 );
-        var_3._id_C189 = _func_0222( var_0, 0, var_2, 1 );
-        var_3._id_25E4 = _func_0222( var_0, 0, var_2, 2 );
-        var_3._id_7611 = _func_0222( var_0, 0, var_2, 3 );
+        var_3._id_C189 = tablelookup( var_0, 0, var_2, 1 );
+        var_3._id_25E4 = tablelookup( var_0, 0, var_2, 2 );
+        var_3._id_7611 = tablelookup( var_0, 0, var_2, 3 );
         level._id_121A[var_3._id_C189] = var_3;
         var_1++;
     }

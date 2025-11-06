@@ -32,7 +32,7 @@ _id_A2BF( var_0, var_1 )
 
 _id_A2BC( var_0, var_1 )
 {
-    return int( _func_0222( "cp/allMeritsTable.csv", 0, var_0, 10 + var_1 * 3 ) );
+    return int( tablelookup( "cp/allMeritsTable.csv", 0, var_0, 10 + var_1 * 3 ) );
 }
 
 _id_B8B4( var_0, var_1, var_2 )

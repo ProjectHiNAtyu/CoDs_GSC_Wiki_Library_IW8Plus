@@ -163,7 +163,7 @@ _id_89FA( var_0 )
 
 _id_E72A( var_0, var_1 )
 {
-    var_2 = int( _func_0222( "mp/killstreakTable.csv", 1, var_0, 0 ) );
+    var_2 = int( tablelookup( "mp/killstreakTable.csv", 1, var_0, 0 ) );
     self setclientomnvar( "ui_remote_control_sequence", var_2 );
     thread _id_EC84( var_1 );
 }

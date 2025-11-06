@@ -620,7 +620,7 @@ _id_ABA1()
     if ( self.pers["team"] == "allies" )
     {
         if ( level._id_5264 )
-            scripts\mp\utility\perk::_id_6FC2( "specialty_boom" );
+            scripts\mp\utility\perk::giveperk( "specialty_boom" );
 
         if ( level._id_8885 )
             thread _id_6FFA();
@@ -633,7 +633,7 @@ _id_ABA1()
     else if ( self.pers["team"] == "axis" )
     {
         if ( level._id_5264 )
-            scripts\mp\utility\perk::_id_6FC2( "specialty_boom" );
+            scripts\mp\utility\perk::giveperk( "specialty_boom" );
 
         var_0 = 1.05;
         var_1 = int( floor( level._id_7E13["axis"] / 3 ) );
@@ -653,7 +653,7 @@ _id_ABA1()
         if ( level._id_7E20 != "equip_tac_insert" || level._id_7E20 == "none" )
             scripts\mp\equipment::giveequipment( level._id_7E20, "secondary" );
         else
-            scripts\mp\utility\perk::_id_6FC2( "specialty_tacticalinsertion" );
+            scripts\mp\utility\perk::giveperk( "specialty_tacticalinsertion" );
 
         _id_07E6::_id_8C15();
     }
@@ -711,7 +711,7 @@ _id_6F97()
         var_0 = [ "specialty_longersprint", "specialty_quickdraw", "specialty_falldamage" ];
 
     foreach ( var_2 in var_0 )
-        scripts\mp\utility\perk::_id_6FC2( var_2 );
+        scripts\mp\utility\perk::giveperk( var_2 );
 }
 
 _id_D5B7()
@@ -1783,7 +1783,7 @@ _id_AFD8()
         scripts\mp\utility\perk::removeperk( "specialty_tacticalinsertion" );
 
     if ( !scripts\mp\utility\perk::_hasperk( "specialty_tacticalinsertion" ) )
-        scripts\mp\utility\perk::_id_6FC2( "specialty_tacticalinsertion" );
+        scripts\mp\utility\perk::giveperk( "specialty_tacticalinsertion" );
 
     scripts\mp\equipment::giveequipment( level._id_7E20, "secondary" );
 }

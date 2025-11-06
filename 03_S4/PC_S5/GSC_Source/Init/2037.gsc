@@ -308,7 +308,7 @@ _id_9A28( var_0, var_1 )
     if ( isdefined( self._id_7DF9 ) )
         return;
 
-    scripts\mp\utility\perk::_id_6FC2( "specialty_spygame" );
+    scripts\mp\utility\perk::giveperk( "specialty_spygame" );
     self._id_7DF9 = 1;
 
     while ( self istouching( var_0 ) && var_1._id_94AE == 0 )

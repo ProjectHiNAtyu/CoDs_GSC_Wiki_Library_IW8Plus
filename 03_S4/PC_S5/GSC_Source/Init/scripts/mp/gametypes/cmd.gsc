@@ -2329,9 +2329,9 @@ _id_6FA8()
     self.health = self.maxhealth;
     self._id_88DF = 1;
     self._id_A25F = 0.75;
-    scripts\mp\utility\perk::_id_6FC2( "specialty_scavenger" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_quickdraw" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_sharp_focus" );
+    scripts\mp\utility\perk::giveperk( "specialty_scavenger" );
+    scripts\mp\utility\perk::giveperk( "specialty_quickdraw" );
+    scripts\mp\utility\perk::giveperk( "specialty_sharp_focus" );
     thread _id_8C7D();
     thread _id_8C8C();
     level notify( "gained_juggernaut", self );
@@ -2576,7 +2576,7 @@ _id_E727()
 {
     waitframe();
     scripts\mp\utility\player::_id_FD26( "spectator" );
-    _id_081A::_id_D512();
+    scripts\mp\spectating::_id_D512();
 
     if ( isdefined( self._id_8FB8 ) )
         self setplayerangles( self._id_8FB8 );

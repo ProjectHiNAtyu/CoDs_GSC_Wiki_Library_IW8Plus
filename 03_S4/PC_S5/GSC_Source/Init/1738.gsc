@@ -224,10 +224,10 @@ _id_FBD4( var_0, var_1, var_2, var_3, var_4 )
     if ( !isdefined( var_11 ) )
         var_11 = 1;
 
-    if ( var_4.basename == "s4_sh_bromeo5_mp" && var_4 _meth_8624( "bar_xs_sawed_bromeo5" ) )
+    if ( var_4.basename == "s4_sh_bromeo5_mp" && var_4 hasattachment( "bar_xs_sawed_bromeo5" ) )
         var_11 = var_11 * 1.5;
 
-    if ( var_4.basename == "s4_mr_ptango41_mp" && var_4 _meth_8624( "ammo_concussion" ) )
+    if ( var_4.basename == "s4_mr_ptango41_mp" && var_4 hasattachment( "ammo_concussion" ) )
     {
         var_11 = var_11 * 10;
         self shellshock( "chargemode_mp", 0.8 );
@@ -628,7 +628,7 @@ _id_EBB3()
         }
     }
 
-    if ( self._id_0133 _meth_8624( "gunperk_steady" ) )
+    if ( self._id_0133 hasattachment( "gunperk_steady" ) )
         var_0 = var_0 * 0.5;
 
     return var_0;

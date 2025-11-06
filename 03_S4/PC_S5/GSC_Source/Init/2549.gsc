@@ -412,7 +412,7 @@ _id_2746()
                 var_9 = var_22.origin;
             else if ( var_36 < 5000 )
                 var_9 = var_22.origin;
-            else if ( length( var_22 _meth_8131() ) < 25 )
+            else if ( length( var_22 getentityvelocity() ) < 25 )
                 var_9 = var_22.origin;
             else if ( gettime() - var_8 > 500 )
             {
@@ -897,7 +897,7 @@ _id_FFB7()
 
         if ( isdefined( var_6 ) )
         {
-            if ( ( isai( var_6 ) || isplayer( var_6 ) ) && length( var_6 _meth_8131() ) < 25 )
+            if ( ( isai( var_6 ) || isplayer( var_6 ) ) && length( var_6 getentityvelocity() ) < 25 )
                 var_0 = var_6.origin;
             else if ( gettime() - var_3 < 500 )
             {
@@ -1586,7 +1586,7 @@ _id_286B( var_0 )
         return var_0.origin;
     else
     {
-        if ( length( var_0 _meth_8131() ) < 25 )
+        if ( length( var_0 getentityvelocity() ) < 25 )
             return var_0.origin;
 
         var_1 = var_0 getentitynumber();
@@ -1599,7 +1599,7 @@ _id_286B( var_0 )
 
         if ( var_3 <= 400 )
         {
-            var_4 = vectornormalize( var_0 _meth_8131() );
+            var_4 = vectornormalize( var_0 getentityvelocity() );
             var_5 = vectornormalize( self._id_A936[var_1] - var_0.origin );
 
             if ( vectordot( var_4, var_5 ) < -0.5 )

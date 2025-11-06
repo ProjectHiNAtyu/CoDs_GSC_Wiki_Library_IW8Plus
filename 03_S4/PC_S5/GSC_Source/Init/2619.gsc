@@ -53,7 +53,7 @@ _id_E697( var_0 )
     self endon( "disconnect" );
     level endon( "game_ended" );
     self iprintlnbold( "If I go down, I'm taking them with me!" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_pistoldeath" );
+    scripts\mp\utility\perk::giveperk( "specialty_pistoldeath" );
     self._id_8DD9 = 1;
     self._id_441E = spawn( "script_model", self gettagorigin( "j_helmet" ) );
     self._id_441E setmodel( "ks_death_switch_mp" );

@@ -793,7 +793,7 @@ _id_3667()
     _func_01E3( "" );
 
     foreach ( var_3 in level.players )
-        var_3 _meth_867F( "mp_br_exfil_fade", 4 );
+        var_3 setsoundsubmix( "mp_br_exfil_fade", 4 );
 }
 
 _id_3666()

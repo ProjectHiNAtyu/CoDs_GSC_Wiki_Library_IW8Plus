@@ -584,7 +584,7 @@ _id_AA71( var_0, var_1 )
     }
     else if ( var_0 == "loadout_purchase" )
     {
-        var_10 = int( _func_0222( "mp/s4BaseKioskPurchases.csv", 2, "loadouts", 0 ) );
+        var_10 = int( tablelookup( "mp/s4BaseKioskPurchases.csv", 2, "loadouts", 0 ) );
         var_7 = level._id_229D._id_8B38[var_10];
         var_9 = var_2 _handleloadoutpurchase( var_7, var_1 );
     }

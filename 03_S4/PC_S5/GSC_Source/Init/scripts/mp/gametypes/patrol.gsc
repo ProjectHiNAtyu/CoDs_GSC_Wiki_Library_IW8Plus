@@ -487,7 +487,7 @@ rotateentovertime( var_0, var_1 )
             else
                 var_9 = ( var_0[0], -180, var_0[2] );
 
-            var_10 = _func_025E( var_4, var_9, var_7 / ( var_6 * 1000 ) );
+            var_10 = vectorlerp( var_4, var_9, var_7 / ( var_6 * 1000 ) );
 
             if ( var_10[1] >= 180 )
             {
@@ -506,7 +506,7 @@ rotateentovertime( var_0, var_1 )
         }
         else
         {
-            var_10 = _func_025E( var_4, var_0, var_7 / ( var_1 * 1000 ) );
+            var_10 = vectorlerp( var_4, var_0, var_7 / ( var_1 * 1000 ) );
             self.angles = var_10;
         }
 

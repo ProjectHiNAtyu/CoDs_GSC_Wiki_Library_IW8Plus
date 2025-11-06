@@ -49,7 +49,7 @@ _id_A000( var_0 )
     if ( isdefined( var_11 ) )
     {
         var_13 = var_9 + var_11;
-        var_14 = _func_0222( "mp/matchIntensityTable.csv", 0, var_3, var_13 );
+        var_14 = tablelookup( "mp/matchIntensityTable.csv", 0, var_3, var_13 );
 
         if ( isdefined( var_14 ) && var_14 != "" )
             var_10 = float( var_14 );

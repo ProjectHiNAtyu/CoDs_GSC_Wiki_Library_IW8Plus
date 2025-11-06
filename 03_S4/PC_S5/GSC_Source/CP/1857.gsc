@@ -507,7 +507,7 @@ _id_FCC7()
 
 _id_6B58( var_0 )
 {
-    return _func_0222( "cp/allMeritsTable.csv", 0, var_0, 5 );
+    return tablelookup( "cp/allMeritsTable.csv", 0, var_0, 5 );
 }
 
 _id_8B0A( var_0 )
@@ -549,19 +549,19 @@ _id_8969( var_0 )
 
 _id_9DE0( var_0, var_1, var_2 )
 {
-    var_3 = _func_0222( var_0, 0, var_1, 10 + var_2 * 3 );
+    var_3 = tablelookup( var_0, 0, var_1, 10 + var_2 * 3 );
     return int( var_3 );
 }
 
 _id_9DDE( var_0, var_1, var_2 )
 {
-    var_3 = _func_0222( var_0, 0, var_1, 11 + var_2 * 3 );
+    var_3 = tablelookup( var_0, 0, var_1, 11 + var_2 * 3 );
     return int( var_3 );
 }
 
 _id_9DDF( var_0, var_1, var_2 )
 {
-    var_3 = _func_0222( var_0, 0, var_1, 12 + var_2 * 3 );
+    var_3 = tablelookup( var_0, 0, var_1, 12 + var_2 * 3 );
     return int( var_3 );
 }
 
@@ -648,7 +648,7 @@ _id_75CF( var_0 )
 
 _id_6B59( var_0 )
 {
-    var_1 = _func_0222( "cp/allMeritsTable.csv", 0, var_0, 7 );
+    var_1 = tablelookup( "cp/allMeritsTable.csv", 0, var_0, 7 );
 
     if ( isdefined( var_1 ) && var_1 == "" )
         return undefined;

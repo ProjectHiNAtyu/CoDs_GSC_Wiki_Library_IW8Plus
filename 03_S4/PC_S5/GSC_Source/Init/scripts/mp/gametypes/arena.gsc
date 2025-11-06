@@ -1103,7 +1103,7 @@ _id_34DE()
     }
 
     if ( var_0 )
-        _id_081A::_id_FD35();
+        scripts\mp\spectating::_id_FD35();
 }
 
 _id_ABC0()
@@ -2514,7 +2514,7 @@ _id_6A11( var_0 )
 _id_6A10( var_0 )
 {
     var_1 = "mp/arenaGGWeapons.csv";
-    var_2 = _func_0222( var_1, 0, var_0, 3 );
+    var_2 = tablelookup( var_1, 0, var_0, 3 );
     return var_2;
 }
 
@@ -2565,7 +2565,7 @@ _id_10ADE()
     if ( var_3 && !var_2 )
         var_0 scripts\mp\equipment::incrementequipmentammo( self.equipment, 1 );
     else if ( var_6 && !var_3 )
-        var_0 _id_5040( var_0 scripts\mp\equipment::_id_69A4( self._id_5596 ) );
+        var_0 _id_5040( var_0 scripts\mp\equipment::getcurrentequipment( self._id_5596 ) );
 
     if ( !var_3 )
         var_0 scripts\mp\equipment::giveequipment( self.equipment, self._id_5596 );
@@ -2591,7 +2591,7 @@ _id_3535( var_0 )
 
 _id_34F1( var_0 )
 {
-    var_1 = var_0 scripts\mp\equipment::_id_69A4( self._id_5596 );
+    var_1 = var_0 scripts\mp\equipment::getcurrentequipment( self._id_5596 );
 
     if ( isdefined( var_1 ) )
         return var_0 scripts\mp\equipment::_id_6A0F( var_1 );
@@ -2601,7 +2601,7 @@ _id_34F1( var_0 )
 
 _id_3523( var_0 )
 {
-    var_1 = var_0 scripts\mp\equipment::_id_69A4( self._id_5596 );
+    var_1 = var_0 scripts\mp\equipment::getcurrentequipment( self._id_5596 );
 
     if ( isdefined( var_1 ) )
         return self.equipment == var_1;
@@ -2682,13 +2682,13 @@ _id_D53E()
     self setclientomnvar( "ui_arena_en_secondary", -1 );
     self setclientomnvar( "ui_arena_en_lethal", -1 );
     self setclientomnvar( "ui_arena_en_tactical", -1 );
-    var_6 = int( _func_0222( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutPrimary"], 1 ) );
+    var_6 = int( tablelookup( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutPrimary"], 1 ) );
     self setclientomnvar( "ui_arena_en_primary", var_6 );
-    var_7 = int( _func_0222( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutSecondary"], 1 ) );
+    var_7 = int( tablelookup( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutSecondary"], 1 ) );
     self setclientomnvar( "ui_arena_en_secondary", var_7 );
-    var_8 = int( _func_0222( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutEquipmentPrimary"], 1 ) );
+    var_8 = int( tablelookup( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutEquipmentPrimary"], 1 ) );
     self setclientomnvar( "ui_arena_en_lethal", var_8 );
-    var_9 = int( _func_0222( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutEquipmentSecondary"], 1 ) );
+    var_9 = int( tablelookup( var_5, 0, var_0.pers["gamemodeLoadout"]["loadoutEquipmentSecondary"], 1 ) );
     self setclientomnvar( "ui_arena_en_tactical", var_9 );
 }
 
@@ -2757,13 +2757,13 @@ _id_D53F( var_0 )
         var_2 setclientomnvar( "ui_arena_en_secondary", -1 );
         var_2 setclientomnvar( "ui_arena_en_lethal", -1 );
         var_2 setclientomnvar( "ui_arena_en_tactical", -1 );
-        var_9 = int( _func_0222( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutPrimary"], 1 ) );
+        var_9 = int( tablelookup( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutPrimary"], 1 ) );
         var_2 setclientomnvar( "ui_arena_en_primary", var_9 );
-        var_10 = int( _func_0222( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutSecondary"], 1 ) );
+        var_10 = int( tablelookup( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutSecondary"], 1 ) );
         var_2 setclientomnvar( "ui_arena_en_secondary", var_10 );
-        var_11 = int( _func_0222( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutEquipmentPrimary"], 1 ) );
+        var_11 = int( tablelookup( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutEquipmentPrimary"], 1 ) );
         var_2 setclientomnvar( "ui_arena_en_lethal", var_11 );
-        var_12 = int( _func_0222( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutEquipmentSecondary"], 1 ) );
+        var_12 = int( tablelookup( var_8, 0, var_3.pers["gamemodeLoadout"]["loadoutEquipmentSecondary"], 1 ) );
         var_2 setclientomnvar( "ui_arena_en_tactical", var_12 );
     }
 }
@@ -3293,7 +3293,7 @@ _id_E707()
         {
             if ( isalive( var_4 ) )
             {
-                var_5 = var_4 scripts\mp\equipment::_id_69A4( "primary" );
+                var_5 = var_4 scripts\mp\equipment::getcurrentequipment( "primary" );
 
                 if ( isdefined( var_5 ) && var_5 == "equip_snowball" )
                     var_4 scripts\mp\equipment::incrementequipmentammo( "equip_snowball", 10 );
@@ -3886,7 +3886,7 @@ _id_10BFE( var_0, var_1 )
     if ( var_5 && !var_4 )
         var_2 scripts\mp\equipment::incrementequipmentammo( self.equipment, var_9 );
     else if ( var_8 && !var_5 && !isplayer( var_0 ) )
-        var_2 _id_5040( var_2 scripts\mp\equipment::_id_69A4( self._id_5596 ) );
+        var_2 _id_5040( var_2 scripts\mp\equipment::getcurrentequipment( self._id_5596 ) );
 
     if ( !var_5 )
     {

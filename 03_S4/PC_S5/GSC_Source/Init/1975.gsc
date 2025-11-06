@@ -480,8 +480,8 @@ _id_E684( var_0 )
 
     foreach ( var_3 in level.players )
     {
-        var_3 _meth_867F( "mp_broshot" );
-        var_3 _meth_852B( 0 );
+        var_3 setsoundsubmix( "mp_broshot" );
+        var_3 setsolid( 0 );
         var_3 dontinterpolate();
 
         if ( isbot( var_3 ) )
@@ -565,8 +565,8 @@ _id_401A( var_0, var_1, var_2, var_3, var_4 )
 
     if ( isbot( var_1 ) || isdefined( var_1._id_8F8C ) )
     {
-        var_7 = var_1 _meth_8128();
-        var_8 = var_1 _meth_8129();
+        var_7 = var_1 getcustomizationbody();
+        var_8 = var_1 getcustomizationhead();
         var_9 = tablelookuprownum( "mp/cac/heads.csv", 1, var_8 );
         var_10 = tablelookuprownum( "mp/cac/bodies.csv", 1, var_7 );
 
@@ -575,8 +575,8 @@ _id_401A( var_0, var_1, var_2, var_3, var_4 )
     }
     else
     {
-        var_7 = var_1 _meth_8128();
-        var_8 = var_1 _meth_8129();
+        var_7 = var_1 getcustomizationbody();
+        var_8 = var_1 getcustomizationhead();
         var_9 = tablelookuprownum( "mp/cac/heads.csv", 1, var_8 );
         var_10 = tablelookuprownum( "mp/cac/bodies.csv", 1, var_7 );
     }
@@ -1847,19 +1847,19 @@ _id_4E82( var_0, var_1 )
         var_0 = level._id_AD48 - 1;
 
     if ( isdefined( level._id_AD60 ) )
-        var_3 = _func_0222( "mp/cac/taunts.csv", 0, level._id_AD60, 1 );
+        var_3 = tablelookup( "mp/cac/taunts.csv", 0, level._id_AD60, 1 );
 
     var_4 = tablelookuprownum( "mp/cac/taunts.csv", 1, var_3 );
-    var_5 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 5 );
+    var_5 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 5 );
 
     if ( var_5 == "" )
         return;
 
-    var_6 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 19 );
-    var_7 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 20 );
-    var_8 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 21 );
-    var_9 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 12 ) == "Y";
-    var_10 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 9 );
+    var_6 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 19 );
+    var_7 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 20 );
+    var_8 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 21 );
+    var_9 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 12 ) == "Y";
+    var_10 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 9 );
     var_11 = "ui_broshot_anim_" + var_0;
 
     if ( isdefined( level._id_841A[var_0] ) && level._id_841A[var_0] == var_10 )
@@ -1889,8 +1889,8 @@ _id_4E82( var_0, var_1 )
         level._id_EB2C[var_11] = 1;
     }
 
-    var_13 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 17 );
-    var_14 = _func_0222( "mp/cac/taunts.csv", 0, var_4, 18 );
+    var_13 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 17 );
+    var_14 = tablelookup( "mp/cac/taunts.csv", 0, var_4, 18 );
 
     if ( var_0 > 0 && var_13 != "" && var_14 != "" )
     {

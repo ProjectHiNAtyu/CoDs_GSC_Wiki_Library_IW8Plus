@@ -389,7 +389,7 @@ _id_2A47( var_0, var_1, var_2, var_3, var_4, var_5 )
         return 0;
     }
 
-    var_6 = var_1 _meth_8624( "maxammo", 1 );
+    var_6 = var_1 hasattachment( "maxammo", 1 );
     var_7 = spawnstruct();
     var_7._id_04F6 = var_1;
     var_7._id_9688 = var_2;
@@ -522,7 +522,7 @@ _id_2A03()
             if ( var_5 < var_6 )
                 return 0;
 
-            if ( var_3 _meth_8624( "akimbo", 1 ) )
+            if ( var_3 hasattachment( "akimbo", 1 ) )
             {
                 var_7 = var_0 getweaponammoclip( var_3, "left" );
 

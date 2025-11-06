@@ -704,22 +704,22 @@ _id_7EC3( var_0 )
 
     for ( var_14 = var_12; var_14 <= var_13; var_14++ )
     {
-        var_15 = _func_0222( var_0, var_1, var_14, var_4 );
+        var_15 = tablelookup( var_0, var_1, var_14, var_4 );
 
         if ( var_15 == "" )
             continue;
 
-        var_16 = _func_0222( var_0, var_1, var_14, var_5 );
+        var_16 = tablelookup( var_0, var_1, var_14, var_5 );
 
         if ( var_16 != "" )
             level._id_2534[var_15] = var_16;
 
-        var_17 = _func_0222( var_0, var_1, var_14, var_6 );
+        var_17 = tablelookup( var_0, var_1, var_14, var_6 );
 
         if ( var_17 != "" )
             level._id_9BAE[var_15] = var_17;
 
-        var_18 = _func_0222( var_0, var_1, var_14, var_7 );
+        var_18 = tablelookup( var_0, var_1, var_14, var_7 );
 
         if ( var_18 != "" )
         {
@@ -727,12 +727,12 @@ _id_7EC3( var_0 )
             level._id_9BAB[var_15] = [];
         }
 
-        var_19 = _func_0222( var_0, var_1, var_14, var_8 );
+        var_19 = tablelookup( var_0, var_1, var_14, var_8 );
 
         if ( var_19 != "" )
             level._id_399F[var_15] = var_19;
 
-        var_20 = _func_0222( var_0, var_1, var_14, var_9 );
+        var_20 = tablelookup( var_0, var_1, var_14, var_9 );
 
         if ( var_20 != "" )
         {
@@ -745,12 +745,12 @@ _id_7EC3( var_0 )
 
     for ( var_14 = var_10; var_14 <= var_11; var_14++ )
     {
-        var_21 = _func_0222( var_0, var_1, var_14, var_2 );
+        var_21 = tablelookup( var_0, var_1, var_14, var_2 );
 
         if ( var_21 == "" )
             break;
 
-        var_22 = _func_0222( var_0, var_1, var_14, var_3 );
+        var_22 = tablelookup( var_0, var_1, var_14, var_3 );
         level._id_1756[var_21] = var_22;
         var_23 = strtok( var_22, " " );
 

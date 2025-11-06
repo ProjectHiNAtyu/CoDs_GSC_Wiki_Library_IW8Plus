@@ -208,7 +208,7 @@ _id_34DE()
     }
 
     if ( var_0 )
-        _id_081A::_id_FD35();
+        scripts\mp\spectating::_id_FD35();
 }
 
 _id_AAA3( var_0 )

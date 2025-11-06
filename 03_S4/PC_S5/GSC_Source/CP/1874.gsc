@@ -117,7 +117,7 @@ _id_A012( var_0, var_1, var_2 )
 
     var_3 = 0;
 
-    if ( var_0 == "kill" && var_2 _meth_8624( "gunperk_xp", 1 ) )
+    if ( var_0 == "kill" && var_2 hasattachment( "gunperk_xp", 1 ) )
         var_3 = var_3 + 20;
 
     var_1 = var_1 + var_3;

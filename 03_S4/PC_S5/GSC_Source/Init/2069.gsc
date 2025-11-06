@@ -243,7 +243,7 @@ _id_E722( var_0, var_1, var_2 )
     self._id_82F0 = 1;
     scripts\mp\utility\player::_id_D51E();
     waitframe();
-    _id_081A::_id_D512();
+    scripts\mp\spectating::_id_D512();
     scripts\mp\utility\player::_id_FD26( "spectator" );
     self setclientomnvar( "ui_in_spawn_camera", 1 );
 
@@ -635,7 +635,7 @@ _id_CA72( var_0 )
     self _meth_8774( 1 );
     self._id_B928 = 1;
     scripts\common\utility::_id_158B( 0 );
-    _id_081A::_id_D512();
+    scripts\mp\spectating::_id_D512();
     scripts\mp\utility\player::_id_FD26( "spectator" );
     self cameralinkto( self._id_E277, "tag_origin", 1 );
     scripts\mp\utility\player::_id_BD21( "spawnCamera::runSlamZoomOnSpawn() CameraLinkTo()" );
@@ -653,7 +653,7 @@ _id_CA72( var_0 )
         scripts\mp\utility\player::_freezecontrols( 0 );
         self _meth_8774( 0 );
         self._id_B928 = 0;
-        thread _id_081A::_id_D6E2();
+        thread scripts\mp\spectating::setspectatepermissions();
         return;
     }
 
@@ -828,7 +828,7 @@ _id_58B2( var_0 )
 
     if ( istrue( self._id_E309 ) )
     {
-        self _meth_867F( "iw8_mp_vehicle_spawn", 0.1 );
+        self setsoundsubmix( "iw8_mp_vehicle_spawn", 0.1 );
         thread _id_38F6();
     }
 
@@ -980,7 +980,7 @@ _id_E705()
 
     self._id_AC43 = spawn( "script_origin", ( 0, 0, 0 ) );
     self._id_AC43 _meth_83CA( self );
-    self _meth_867F( "mp_spawn_camera" );
+    self setsoundsubmix( "mp_spawn_camera" );
     var_0 = scripts\mp\utility\teams::_id_6DDF( self.team );
     var_1 = "dx_mpo_" + var_0 + "op_drone_deathchatter";
 

@@ -968,7 +968,7 @@ _id_4C79()
     if ( getgametype() == "gun" || getgametype() == "infect" )
         return 0;
 
-    var_0 = int( _func_0222( "mp/gametypesTable.csv", 0, getgametype(), 4 ) );
+    var_0 = int( tablelookup( "mp/gametypesTable.csv", 0, getgametype(), 4 ) );
     return var_0 > 0;
 }
 
@@ -991,7 +991,7 @@ _id_159D()
     if ( _id_07D1::_id_60BE( "infil_will_run" ) && isdefined( level._id_2DF4 ) )
         return 0;
 
-    var_1 = int( _func_0222( "mp/gametypesTable.csv", 0, getgametype(), 5 ) );
+    var_1 = int( tablelookup( "mp/gametypesTable.csv", 0, getgametype(), 5 ) );
 
     if ( !isai( self ) && istrue( level._id_47C6 ) )
         return 0;
@@ -1602,7 +1602,7 @@ getarmsraceoutofboundstime()
     return level.outofboundstimearmsrace;
 }
 
-_id_FCD2()
+updateobjectivetext()
 {
     if ( self.pers["team"] == "spectator" )
         self setclientdvar( "#x3bc529cd1392d30f5", "" );

@@ -398,7 +398,7 @@ _id_0CEB( var_0, var_1 )
 
 s4_base_loot_give_perk( var_0 )
 {
-    var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_tracker" );
+    var_0 scripts\mp\utility\perk::giveperk( "specialty_tracker" );
     var_0 thread scripts\mp\hud_message::showsplash( "br_specialty_tracker" );
 }
 
@@ -462,8 +462,8 @@ s4_base_loot_give_player_ammo( var_0 )
     }
 
     var_9 = [];
-    var_9[0] = var_0 scripts\mp\equipment::_id_69A4( "primary" );
-    var_9[1] = var_0 scripts\mp\equipment::_id_69A4( "secondary" );
+    var_9[0] = var_0 scripts\mp\equipment::getcurrentequipment( "primary" );
+    var_9[1] = var_0 scripts\mp\equipment::getcurrentequipment( "secondary" );
 
     foreach ( var_11 in var_9 )
     {
@@ -547,7 +547,7 @@ _setperkuiomnvars()
 s4_base_loot_give_player_perk( var_0, var_1 )
 {
     if ( !var_0 scripts\mp\utility\perk::_hasperk( var_1 ) )
-        var_0 scripts\mp\utility\perk::_id_6FC2( var_1 );
+        var_0 scripts\mp\utility\perk::giveperk( var_1 );
 
     if ( !isdefined( var_0.base_perks ) )
         var_0.base_perks = [ var_1 ];
@@ -709,7 +709,7 @@ _id_38C5()
 _id_6F09( var_0 )
 {
     var_1 = self;
-    var_2 = _func_0222( level._id_CAB4, 2, var_0, 11 );
+    var_2 = tablelookup( level._id_CAB4, 2, var_0, 11 );
     var_3 = makeweaponfromstring( var_2 );
 
     if ( var_1 getweaponslistprimaries().size >= 2 )
@@ -1323,7 +1323,7 @@ _id_AD3D( var_0, var_1, var_2, var_3 )
     if ( var_0._id_9683 != "none" && var_0._id_9685.size <= 0 )
     {
         var_10 = var_0._id_9683 + "_mp";
-        var_11 = _func_0222( "mp/s4baseKioskPurchases.csv", 2, var_10, 11 );
+        var_11 = tablelookup( "mp/s4baseKioskPurchases.csv", 2, var_10, 11 );
 
         if ( var_11 != "" )
             var_0._id_9685 = var_4 _id_656E( var_0._id_9683 );
@@ -1332,7 +1332,7 @@ _id_AD3D( var_0, var_1, var_2, var_3 )
     if ( var_0._id_9692 != "none" && var_0._id_9694.size <= 0 )
     {
         var_10 = var_0._id_9692 + "_mp";
-        var_11 = _func_0222( "mp/s4baseKioskPurchases.csv", 2, var_10, 11 );
+        var_11 = tablelookup( "mp/s4baseKioskPurchases.csv", 2, var_10, 11 );
 
         if ( var_11 != "" )
             var_0._id_9694 = var_4 _id_656E( var_0._id_9692 );
@@ -1393,7 +1393,7 @@ _id_656E( var_0 )
 {
     var_1 = self;
     var_2 = var_0 + "_mp";
-    var_3 = _func_0222( "mp/s4baseKioskPurchases.csv", 2, var_2, 11 );
+    var_3 = tablelookup( "mp/s4baseKioskPurchases.csv", 2, var_2, 11 );
     var_4 = strtok( var_3, "+" );
     var_4 = scripts\engine\utility::array_remove( var_4, "" );
     var_4 = scripts\engine\utility::array_remove( var_4, var_2 );

@@ -56,8 +56,8 @@ _id_C23A( var_0, var_1, var_2, var_3, var_4 )
     }
 
     var_7 = spawnstruct();
-    var_7._id_7C8C = int( _func_0222( "mp/accoladestable.csv", 1, var_0, 0 ) );
-    var_7._id_0E5A = int( _func_0222( "mp/accoladestable.csv", 1, var_0, var_6 ) );
+    var_7._id_7C8C = int( tablelookup( "mp/accoladestable.csv", 1, var_0, 0 ) );
+    var_7._id_0E5A = int( tablelookup( "mp/accoladestable.csv", 1, var_0, var_6 ) );
     var_7._id_4361 = var_3;
     var_7._id_5672 = var_2;
     var_7._id_10E5A = [];

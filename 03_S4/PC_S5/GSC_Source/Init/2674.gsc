@@ -40,7 +40,7 @@ _id_E921()
     {
         var_8 = 0;
 
-        if ( var_7 _meth_8624( "akimbo", 1 ) )
+        if ( var_7 hasattachment( "akimbo", 1 ) )
             var_8 = 1;
 
         if ( issameweapon( var_7, var_0, 0 ) )
@@ -182,7 +182,7 @@ _id_E932()
         {
             if ( !self._id_6280 )
             {
-                self.player scripts\mp\utility\perk::_id_6FC2( "specialty_bulletdamage" );
+                self.player scripts\mp\utility\perk::giveperk( "specialty_bulletdamage" );
                 self._id_6280 = 1;
             }
         }
@@ -324,7 +324,7 @@ _id_E928()
 _id_E929()
 {
     self.player endon( "death_or_disconnect" );
-    self.player scripts\mp\utility\perk::_id_6FC2( "specialty_fastreload" );
+    self.player scripts\mp\utility\perk::giveperk( "specialty_fastreload" );
     self.player scripts\engine\utility::waittill_any_3( "weapon_fired", "weapon_change", "stoppingPower_removeHCR" );
     self.player scripts\mp\utility\perk::removeperk( "specialty_fastreload" );
 }

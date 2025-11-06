@@ -371,7 +371,7 @@ _id_6F96()
     var_0 = [ "specialty_blindeye", "specialty_gpsjammer", "specialty_falldamage", "specialty_sharp_focus", "specialty_stalker" ];
 
     foreach ( var_2 in var_0 )
-        scripts\mp\utility\perk::_id_6FC2( var_2 );
+        scripts\mp\utility\perk::giveperk( var_2 );
 }
 
 _id_6D22( var_0 )

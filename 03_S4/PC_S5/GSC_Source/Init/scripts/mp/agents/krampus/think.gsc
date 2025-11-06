@@ -37,8 +37,8 @@ init()
     self.height = 40;
     self.perks = [];
     self._id_AFF8 = [];
-    scripts\mp\utility\perk::_id_6FC2( "specialty_melee_resist_damage" );
-    scripts\mp\utility\perk::_id_6FC2( "specialty_melee_resist_finisher" );
+    scripts\mp\utility\perk::giveperk( "specialty_melee_resist_damage" );
+    scripts\mp\utility\perk::giveperk( "specialty_melee_resist_finisher" );
     self.lastenemykilled = undefined;
     self.lastenemytargeted = undefined;
     self._id_0281 = 1;
@@ -299,7 +299,7 @@ krampusgotosleep( var_0 )
 
     self.krampusisawake = 0;
     self.krampussleeptimestamp = var_0;
-    self _meth_852B( 0 );
+    self setsolid( 0 );
     self hide();
     self.candamage = 0;
     self.ballowexecutions = 0;
@@ -318,7 +318,7 @@ krampuswakeup( var_0 )
     self.krampusisawake = 1;
     self.krampuswaketimestamp = var_0;
     self show();
-    self _meth_852B( 1 );
+    self setsolid( 1 );
     self.candamage = 1;
     self.ballowexecutions = 1;
     self.ignoreme = 0;

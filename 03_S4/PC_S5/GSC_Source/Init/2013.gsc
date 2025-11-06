@@ -60,7 +60,7 @@ _id_AAC8()
             self playlocalsound( "sys_deaths_door_breath_lp_mp" );
         }
 
-        self _meth_867F( "deaths_door_mp", 0.2, 1 );
+        self setsoundsubmix( "deaths_door_mp", 0.2, 1 );
         _func_02E3( "deaths_door", "on", 0.05 );
         self enableplayerbreathsystem( 0 );
         thread _id_B669();

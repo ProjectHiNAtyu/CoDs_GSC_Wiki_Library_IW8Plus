@@ -87,7 +87,7 @@ _id_7003( var_0, var_1, var_2, var_3, var_4, var_5, var_6 )
     {
         var_18 = var_8;
 
-        if ( var_0 == "kill" && var_1 _meth_8624( "gunperk_xp", 1 ) )
+        if ( var_0 == "kill" && var_1 hasattachment( "gunperk_xp", 1 ) )
             var_18 = var_18 + 20;
 
         thread scripts\mp\rank::giverankxp( var_0, var_18, var_1 );

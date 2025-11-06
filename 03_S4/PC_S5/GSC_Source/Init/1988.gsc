@@ -140,7 +140,7 @@ setaxefeedbackicon( var_0, var_1 )
     var_2 = undefined;
 
     if ( isdefined( var_1 ) )
-        var_2 = _func_0222( "mp/throwableMeleePickupFeedback.csv", 0, var_1.basename, 1 );
+        var_2 = tablelookup( "mp/throwableMeleePickupFeedback.csv", 0, var_1.basename, 1 );
 
     if ( !isdefined( var_2 ) || var_2 == "" )
         var_2 = var_0;

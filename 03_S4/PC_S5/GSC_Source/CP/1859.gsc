@@ -316,18 +316,18 @@ _id_7F86( var_0 )
 
         var_3 = spawnstruct();
         var_3.index = int( var_2 );
-        var_3._id_5D1E = int( _func_0222( var_0, 0, var_2, 1 ) );
-        var_3._id_7218 = _func_0222( var_0, 0, var_2, 2 );
-        var_3._id_9C24 = int( _func_0222( var_0, 0, var_2, 3 ) );
-        var_3._id_9EA0 = int( _func_0222( var_0, 0, var_2, 4 ) );
-        var_3._id_9C23 = int( _func_0222( var_0, 0, var_2, 5 ) );
-        var_3._id_765A = int( _func_0222( var_0, 0, var_2, 6 ) );
-        var_3._id_15A7 = _func_0222( var_0, 0, var_2, 7 );
-        var_3._id_15A6 = _func_0222( var_0, 0, var_2, 8 );
-        var_3._id_9E9D = int( _func_0222( var_0, 0, var_2, 9 ) );
-        var_3._id_9C18 = int( _func_0222( var_0, 0, var_2, 10 ) );
-        var_3._id_5146 = int( _func_0222( var_0, 0, var_2, 11 ) );
-        var_3._id_15A3 = _func_0222( var_0, 0, var_2, 12 );
+        var_3._id_5D1E = int( tablelookup( var_0, 0, var_2, 1 ) );
+        var_3._id_7218 = tablelookup( var_0, 0, var_2, 2 );
+        var_3._id_9C24 = int( tablelookup( var_0, 0, var_2, 3 ) );
+        var_3._id_9EA0 = int( tablelookup( var_0, 0, var_2, 4 ) );
+        var_3._id_9C23 = int( tablelookup( var_0, 0, var_2, 5 ) );
+        var_3._id_765A = int( tablelookup( var_0, 0, var_2, 6 ) );
+        var_3._id_15A7 = tablelookup( var_0, 0, var_2, 7 );
+        var_3._id_15A6 = tablelookup( var_0, 0, var_2, 8 );
+        var_3._id_9E9D = int( tablelookup( var_0, 0, var_2, 9 ) );
+        var_3._id_9C18 = int( tablelookup( var_0, 0, var_2, 10 ) );
+        var_3._id_5146 = int( tablelookup( var_0, 0, var_2, 11 ) );
+        var_3._id_15A3 = tablelookup( var_0, 0, var_2, 12 );
         var_4 = strtok( var_3._id_15A7, "," );
         var_3._id_15A7 = var_4;
         var_4 = strtok( var_3._id_15A6, "," );
@@ -8116,7 +8116,7 @@ _id_3F29( var_0, var_1, var_2, var_3, var_4, var_5 )
         var_6._id_F0E8 = var_0;
 
         if ( _func_02B7( var_0 ) )
-            var_6 _meth_83A3( var_0 );
+            var_6 setvalue( var_0 );
         else
             var_6 _meth_8076();
     }
@@ -9248,51 +9248,51 @@ _id_D441()
                 var_4 = level._id_E197[var_2][var_3];
                 var_5 = var_4 _id_642D();
                 var_4._id_FF34 = [];
-                var_4._id_FF34["lbravo_carrier"] = int( _func_0222( var_1, 0, var_5, 15 ) );
-                var_4._id_FF34["mindia8"] = int( _func_0222( var_1, 0, var_5, 16 ) );
-                var_4._id_FF34["mindia8_jugg"] = int( _func_0222( var_1, 0, var_5, 17 ) );
-                var_4._id_FF34["attack_heli"] = int( _func_0222( var_1, 0, var_5, 19 ) );
+                var_4._id_FF34["lbravo_carrier"] = int( tablelookup( var_1, 0, var_5, 15 ) );
+                var_4._id_FF34["mindia8"] = int( tablelookup( var_1, 0, var_5, 16 ) );
+                var_4._id_FF34["mindia8_jugg"] = int( tablelookup( var_1, 0, var_5, 17 ) );
+                var_4._id_FF34["attack_heli"] = int( tablelookup( var_1, 0, var_5, 19 ) );
 
                 if ( scripts\engine\utility::_id_1BE1( var_4._id_FF34 ) > 0 )
                     var_4._id_10CB1 = 1;
 
                 var_4._id_E0B6 = [];
-                var_4._id_E0B6["ar"] = int( _func_0222( var_1, 0, var_5, 1 ) );
-                var_4._id_E0B6["ar_heavy"] = int( _func_0222( var_1, 0, var_5, 2 ) );
-                var_4._id_E0B6["ar_heavy_laser"] = int( _func_0222( var_1, 0, var_5, 3 ) );
-                var_4._id_E0B6["smg"] = int( _func_0222( var_1, 0, var_5, 4 ) );
-                var_4._id_E0B6["smg_heavy"] = int( _func_0222( var_1, 0, var_5, 5 ) );
-                var_4._id_E0B6["shotgun"] = int( _func_0222( var_1, 0, var_5, 6 ) );
-                var_4._id_E0B6["shotgun_heavy"] = int( _func_0222( var_1, 0, var_5, 7 ) );
-                var_4._id_E0B6["rpg"] = int( _func_0222( var_1, 0, var_5, 8 ) );
-                var_4._id_E0B6["lmg"] = int( _func_0222( var_1, 0, var_5, 9 ) );
-                var_4._id_E0B6["lmg_heavy"] = int( _func_0222( var_1, 0, var_5, 10 ) );
-                var_4._id_E0B6["sniper"] = int( _func_0222( var_1, 0, var_5, 11 ) );
-                var_4._id_E0B6["goliath"] = int( _func_0222( var_1, 0, var_5, 12 ) );
-                var_4._id_E0B6["suicidebomber"] = int( _func_0222( var_1, 0, var_5, 13 ) );
-                var_4._id_E0B6["juggernaut"] = int( _func_0222( var_1, 0, var_5, 14 ) );
+                var_4._id_E0B6["ar"] = int( tablelookup( var_1, 0, var_5, 1 ) );
+                var_4._id_E0B6["ar_heavy"] = int( tablelookup( var_1, 0, var_5, 2 ) );
+                var_4._id_E0B6["ar_heavy_laser"] = int( tablelookup( var_1, 0, var_5, 3 ) );
+                var_4._id_E0B6["smg"] = int( tablelookup( var_1, 0, var_5, 4 ) );
+                var_4._id_E0B6["smg_heavy"] = int( tablelookup( var_1, 0, var_5, 5 ) );
+                var_4._id_E0B6["shotgun"] = int( tablelookup( var_1, 0, var_5, 6 ) );
+                var_4._id_E0B6["shotgun_heavy"] = int( tablelookup( var_1, 0, var_5, 7 ) );
+                var_4._id_E0B6["rpg"] = int( tablelookup( var_1, 0, var_5, 8 ) );
+                var_4._id_E0B6["lmg"] = int( tablelookup( var_1, 0, var_5, 9 ) );
+                var_4._id_E0B6["lmg_heavy"] = int( tablelookup( var_1, 0, var_5, 10 ) );
+                var_4._id_E0B6["sniper"] = int( tablelookup( var_1, 0, var_5, 11 ) );
+                var_4._id_E0B6["goliath"] = int( tablelookup( var_1, 0, var_5, 12 ) );
+                var_4._id_E0B6["suicidebomber"] = int( tablelookup( var_1, 0, var_5, 13 ) );
+                var_4._id_E0B6["juggernaut"] = int( tablelookup( var_1, 0, var_5, 14 ) );
                 var_4._id_E0B6 = var_4 _id_C3F7();
-                var_4._id_10C93 = int( _func_0222( var_1, 0, var_5, 22 ) );
-                var_4._id_7926 = int( _func_0222( var_1, 0, var_5, 23 ) );
-                var_4._id_9E99 = int( _func_0222( var_1, 0, var_5, 24 ) );
-                var_4._id_A486 = int( _func_0222( var_1, 0, var_5, 25 ) );
-                var_4._id_F226 = int( _func_0222( var_1, 0, var_5, 26 ) );
-                var_4._id_A48E = _func_0222( var_1, 0, var_5, 29 );
-                var_4._id_FDEC = int( _func_0222( var_1, 0, var_5, 32 ) );
-                var_4._id_AE51 = int( _func_0222( var_1, 0, var_5, 20 ) );
-                var_4._id_10C90 = int( _func_0222( var_1, 0, var_5, 21 ) );
-                var_6 = float( _func_0222( var_1, 0, var_5, 30 ) );
+                var_4._id_10C93 = int( tablelookup( var_1, 0, var_5, 22 ) );
+                var_4._id_7926 = int( tablelookup( var_1, 0, var_5, 23 ) );
+                var_4._id_9E99 = int( tablelookup( var_1, 0, var_5, 24 ) );
+                var_4._id_A486 = int( tablelookup( var_1, 0, var_5, 25 ) );
+                var_4._id_F226 = int( tablelookup( var_1, 0, var_5, 26 ) );
+                var_4._id_A48E = tablelookup( var_1, 0, var_5, 29 );
+                var_4._id_FDEC = int( tablelookup( var_1, 0, var_5, 32 ) );
+                var_4._id_AE51 = int( tablelookup( var_1, 0, var_5, 20 ) );
+                var_4._id_10C90 = int( tablelookup( var_1, 0, var_5, 21 ) );
+                var_6 = float( tablelookup( var_1, 0, var_5, 30 ) );
                 var_4._id_10CB0 = scripts\engine\utility::ter_op( var_6 > 0, var_6, 1 );
 
                 if ( scripts\cp\utility::_id_871A() )
-                    var_4._id_4A6A = int( _func_0222( var_1, 0, var_5, 31 ) );
+                    var_4._id_4A6A = int( tablelookup( var_1, 0, var_5, 31 ) );
                 else
                     var_4._id_4A6A = 1;
 
                 var_4._id_E24A = scripts\engine\utility::_id_1BE1( var_4._id_E0B6 ) + var_4._id_AE51 * 8;
                 var_4._id_F364 = 0;
                 var_4._id_C56D = [];
-                var_7 = strtok( _func_0222( var_1, 0, var_5, 27 ), "," );
+                var_7 = strtok( tablelookup( var_1, 0, var_5, 27 ), "," );
 
                 if ( isdefined( var_7 ) && var_7.size > 0 )
                 {
@@ -9301,7 +9301,7 @@ _id_D441()
                 }
 
                 var_4._id_C570 = [];
-                var_7 = strtok( _func_0222( var_1, 0, var_5, 28 ), "," );
+                var_7 = strtok( tablelookup( var_1, 0, var_5, 28 ), "," );
 
                 if ( isdefined( var_7 ) && var_7.size > 0 )
                 {

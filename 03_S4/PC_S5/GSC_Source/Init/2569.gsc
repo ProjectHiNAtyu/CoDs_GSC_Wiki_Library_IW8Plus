@@ -254,12 +254,12 @@ _id_557A( var_0 )
 
 _id_5578( var_0 )
 {
-    var_1 = var_0 scripts\mp\equipment::_id_69A4( "primary" );
+    var_1 = var_0 scripts\mp\equipment::getcurrentequipment( "primary" );
 
     if ( isdefined( var_1 ) )
         var_0 scripts\mp\equipment::incrementequipmentammo( var_1 );
 
-    var_2 = var_0 scripts\mp\equipment::_id_69A4( "secondary" );
+    var_2 = var_0 scripts\mp\equipment::getcurrentequipment( "secondary" );
 
     if ( isdefined( var_2 ) )
         var_0 scripts\mp\equipment::incrementequipmentammo( var_2 );

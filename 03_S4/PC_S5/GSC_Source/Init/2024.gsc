@@ -92,7 +92,7 @@ _id_AAC4()
 
     self.health = var_0;
     thread _id_99F9();
-    scripts\mp\utility\perk::_id_6FC2( "specialty_block_health_regen" );
+    scripts\mp\utility\perk::giveperk( "specialty_block_health_regen" );
     self.inlaststand = 1;
     self._id_B6BF = undefined;
     self._id_75B0 = 0;
@@ -196,7 +196,7 @@ _id_8F66()
         self._id_4409 = 1;
         self _meth_83EF( "sys_deaths_door_exit" );
         self playlocalsound( "sys_deaths_door_intro_impact" );
-        self _meth_867F( "deaths_door_mp", 0.2, 1 );
+        self setsoundsubmix( "deaths_door_mp", 0.2, 1 );
         self enableplayerbreathsystem( 0 );
         thread scripts\mp\healthoverlay::_id_B669();
     }

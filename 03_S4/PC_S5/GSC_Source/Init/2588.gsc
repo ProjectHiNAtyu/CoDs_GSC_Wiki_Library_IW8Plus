@@ -11,7 +11,7 @@ _id_F1A8()
 
 _id_F1A9( var_0, var_1 )
 {
-    scripts\mp\utility\perk::_id_6FC2( "specialty_equip_throwingKnife" );
+    scripts\mp\utility\perk::giveperk( "specialty_equip_throwingKnife" );
     thread _id_F1C8();
 }
 

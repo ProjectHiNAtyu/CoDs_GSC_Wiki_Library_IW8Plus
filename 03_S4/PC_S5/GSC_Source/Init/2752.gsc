@@ -24,9 +24,9 @@ _id_101DA()
 _id_101DC( var_0, var_1, var_2, var_3 )
 {
     if ( level.gametype != "base" )
-        var_2 scripts\mp\utility\perk::_id_6FC2( "specialty_ghost" );
+        var_2 scripts\mp\utility\perk::giveperk( "specialty_ghost" );
 
-    var_2 scripts\mp\utility\perk::_id_6FC2( "specialty_tracker_jammer" );
+    var_2 scripts\mp\utility\perk::giveperk( "specialty_tracker_jammer" );
     var_4 = level.gametype == "br";
 
     if ( !var_4 || scripts\cp_mp\vehicles\vehicle_occupancy::_id_101BC( var_0, var_1 ) )

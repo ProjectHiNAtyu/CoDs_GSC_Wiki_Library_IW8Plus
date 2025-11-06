@@ -568,7 +568,7 @@ _id_DC64( var_0 )
 {
     var_1 = getdvar( "#x36d16f02578d0ee10" );
     var_2 = "cp/" + var_1 + "_objectives.csv";
-    var_3 = int( _func_0222( var_2, 1, var_0, 0 ) );
+    var_3 = int( tablelookup( var_2, 1, var_0, 0 ) );
     self setclientomnvar( "ui_hide_hud", 0 );
     self setclientomnvar( "ui_chyron_mission_index", var_3 );
     self setclientomnvar( "ui_chyron_on", 1 );

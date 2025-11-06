@@ -364,7 +364,7 @@ _id_0CEB( var_0, var_1 )
 
 _id_1ADD( var_0 )
 {
-    var_0 scripts\mp\utility\perk::_id_6FC2( "specialty_tracker" );
+    var_0 scripts\mp\utility\perk::giveperk( "specialty_tracker" );
     var_0 thread scripts\mp\hud_message::showsplash( "br_specialty_tracker" );
 }
 
@@ -555,7 +555,7 @@ _setperkuiomnvars()
 _id_1AE6( var_0, var_1 )
 {
     if ( !var_0 scripts\mp\utility\perk::_hasperk( var_1 ) )
-        var_0 scripts\mp\utility\perk::_id_6FC2( var_1 );
+        var_0 scripts\mp\utility\perk::giveperk( var_1 );
 
     if ( !isdefined( var_0.arena_evo_perks ) )
         var_0.arena_evo_perks = [ var_1 ];

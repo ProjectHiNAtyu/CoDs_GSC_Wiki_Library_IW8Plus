@@ -36,32 +36,32 @@ _id_E5D6( var_0 )
     var_1 = 1;
     level._id_56AE = var_0;
 
-    for ( var_2 = int( _func_0222( var_0, 0, "maxid", 1 ) ); var_1 <= var_2; var_1++ )
+    for ( var_2 = int( tablelookup( var_0, 0, "maxid", 1 ) ); var_1 <= var_2; var_1++ )
     {
-        var_3 = _func_0222( var_0, 0, var_1 + "", 5 );
-        var_4 = _func_0222( var_0, 0, var_1 + "", 2 );
+        var_3 = tablelookup( var_0, 0, var_1 + "", 5 );
+        var_4 = tablelookup( var_0, 0, var_1 + "", 2 );
         var_5 = spawnstruct();
         var_5.index = int( 0 );
         var_5._id_C958 = var_1;
-        var_5._id_C189 = _func_0222( var_0, 0, var_1 + "", 2 );
-        var_5._id_0F01 = _func_0222( var_0, 0, var_1 + "", 7 );
-        var_5._id_A902 = _func_0222( var_0, 0, var_1 + "", 8 );
-        var_5.label = _func_0222( var_0, 0, var_1 + "", 9 );
+        var_5._id_C189 = tablelookup( var_0, 0, var_1 + "", 2 );
+        var_5._id_0F01 = tablelookup( var_0, 0, var_1 + "", 7 );
+        var_5._id_A902 = tablelookup( var_0, 0, var_1 + "", 8 );
+        var_5.label = tablelookup( var_0, 0, var_1 + "", 9 );
 
         if ( isdefined( level._id_A8F6[var_5._id_C189] ) && isdefined( level._id_A8F6[var_5._id_C189]._id_BEBD ) )
             var_5._id_BEBD = level._id_A8F6[var_5._id_C189]._id_BEBD;
         else
             var_5._id_BEBD = "global";
 
-        var_5._id_F246 = int( _func_0222( var_0, 0, var_1 + "", 11 ) );
-        var_5._id_F247 = int( _func_0222( var_0, 0, var_1 + "", 12 ) );
-        var_5._id_F248 = int( _func_0222( var_0, 0, var_1 + "", 13 ) );
-        var_5._id_DCCF = int( _func_0222( var_0, 0, var_1 + "", 14 ) );
-        var_5._id_B9BE = int( _func_0222( var_0, 0, var_1 + "", 15 ) );
-        var_5._id_F1F9 = _func_0222( var_0, 0, var_1 + "", 1 );
+        var_5._id_F246 = int( tablelookup( var_0, 0, var_1 + "", 11 ) );
+        var_5._id_F247 = int( tablelookup( var_0, 0, var_1 + "", 12 ) );
+        var_5._id_F248 = int( tablelookup( var_0, 0, var_1 + "", 13 ) );
+        var_5._id_DCCF = int( tablelookup( var_0, 0, var_1 + "", 14 ) );
+        var_5._id_B9BE = int( tablelookup( var_0, 0, var_1 + "", 15 ) );
+        var_5._id_F1F9 = tablelookup( var_0, 0, var_1 + "", 1 );
         var_5._id_1D32 = var_0;
         var_5._id_56AF = var_3;
-        var_6 = _func_0222( var_0, 0, var_1 + "", 3 );
+        var_6 = tablelookup( var_0, 0, var_1 + "", 3 );
         var_5._id_C550 = var_6;
         _id_1CFD( var_5 );
         var_5._id_DCD0 = var_5._id_DCCF;
@@ -85,7 +85,7 @@ _id_E5D6( var_0 )
 
 _id_1CFD( var_0 )
 {
-    var_1 = _func_0222( var_0._id_1D32, 0, var_0._id_C958 + "", 10 );
+    var_1 = tablelookup( var_0._id_1D32, 0, var_0._id_C958 + "", 10 );
 
     if ( !isdefined( var_1 ) )
         return;
@@ -204,7 +204,7 @@ _id_F722( var_0, var_1, var_2 )
 
     _id_9B14( var_0, 1 );
     _id_F71C( var_0 );
-    var_5 = _func_0222( var_1, 0, var_2 + "", 4 );
+    var_5 = tablelookup( var_1, 0, var_2 + "", 4 );
 
     if ( var_5 != "" )
         level thread _id_34B0( var_0, var_5, var_4 );

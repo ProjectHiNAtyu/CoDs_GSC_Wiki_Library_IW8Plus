@@ -438,7 +438,7 @@ _id_A6F9( var_0, var_1 )
             {
                 if ( isplayer( var_4 ) )
                 {
-                    var_4 _meth_867F( "mp_killstreak_nuke" );
+                    var_4 setsoundsubmix( "mp_killstreak_nuke" );
 
                     if ( scripts\mp\utility\player::isreallyalive( var_4 ) )
                         var_4 thread _id_A71C();
@@ -453,7 +453,7 @@ _id_A6F9( var_0, var_1 )
             if ( isplayer( var_4 ) && scripts\mp\utility\player::isreallyalive( var_4 ) )
             {
                 var_4 thread _id_A71D();
-                var_4 _meth_867F( "mp_killstreak_nuke" );
+                var_4 setsoundsubmix( "mp_killstreak_nuke" );
             }
         }
     }

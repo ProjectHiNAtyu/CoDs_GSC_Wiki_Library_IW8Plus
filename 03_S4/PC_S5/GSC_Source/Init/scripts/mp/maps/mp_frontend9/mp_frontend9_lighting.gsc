@@ -268,7 +268,7 @@ spot_lerp_origin( var_0, var_1, var_2 )
 
     while ( var_4 < var_1 )
     {
-        var_0.origin = _func_025E( var_3, var_2, var_4 / var_1 );
+        var_0.origin = vectorlerp( var_3, var_2, var_4 / var_1 );
         var_4 = var_4 + 0.05;
         wait 0.05;
     }

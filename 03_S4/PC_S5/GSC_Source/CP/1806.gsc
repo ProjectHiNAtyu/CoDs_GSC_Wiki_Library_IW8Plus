@@ -223,7 +223,7 @@ _id_2E50()
         }
     }
 
-    var_3 = _id_0728::_id_69A4( "primary" );
+    var_3 = _id_0728::getcurrentequipment( "primary" );
     var_4 = _id_0728::_id_6A15( "primary" );
 
     if ( isdefined( var_3 ) && var_3 == "equip_c4" && isdefined( var_4 ) && var_4 == 0 )
