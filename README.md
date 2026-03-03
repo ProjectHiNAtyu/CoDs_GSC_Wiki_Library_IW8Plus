@@ -1,5 +1,8 @@
 # CoDs_GSC_Wiki_Library_IW8Plus
 
+# This repository was created for academic research and educational purposes.
+# I do not distribute any software such as Injector that can be used directly in the game.
+# If you wish to use these works, you must create your own software and use it at your own risk.
 
 [ About ]
 
@@ -91,7 +94,7 @@ This repository contains the following data:
 [ Video ]
 
 
-If you’d like to learn more about this GSC Mod Menu, please check out the YouTube video below.
+None.
 
 
 ----------
@@ -155,13 +158,6 @@ Please figure it out on your own.
 
 
 [ Promotion ]
-
-
-- Discord : hinatapoko
-- Twitter 1 (Main) : https://x.com/KonataGIF
-- Twitter 2 (Sub) : https://x.com/H1NAtyu
-- YouTube : HiNAtyu Studio ( https://www.youtube.com/@hinatyuproject/featured )
-
 
 I’d be very happy if you could follow, subscribe, like, or comment on my various SNS accounts. 
 
