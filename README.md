@@ -153,6 +153,14 @@ However, I will not provide explanations on how to modify GSC, coding methods, o
 
 Please figure it out on your own.
 
+-----
+
+[ Contact ]
+ 
+- HiNAtyu
+- YouTube : https://www.youtube.com/@HiNAtyuRoom
+- Twitter : @hinatyu ( https://x.com/hinatyu )
+- Discord : hinatapoko ( https://discordapp.com/users/239453096026046464 )
 
 ----------
 
