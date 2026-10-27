@@ -1,0 +1,1518 @@
+// script_414d7197e279f5fe  (hash_414d7197e279f5fe.gscc) (size: 46050 Bytes / 0xb3e2 / GSC)
+// magic .... 0xa0d4353471a vm: Call of Duty: Black Ops 7 (Black Ops 7)
+// crc: 0xd523fdb4 (3575905716)
+// size ...... 46050 (0xb3e2)
+// includes .. 4   (offset: 0x989e)
+// strings ... 173 (offset: 0x98be)
+// dev strs .. 0   (offset: 0xb3e2)
+// exports ... 15  (offset: 0x932a)
+// cseg ...... 0x1392 + 0x7f98 (0x932a)
+// imports ... 28  (offset: 0x9582)
+// animtree1 . 0   (offset: 0xb3e2)
+// animtree2 . 0   (offset: 0xb3e2)
+#using scripts\common\activity_nexus\activity_common;
+#using scripts\common\create_script_utility;
+#using scripts\common\system;
+#using scripts\common\utility;
+
+#namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs;
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0, eflags: 0x5
+// Checksum 0x5272387a, Offset: 0x13b0
+// Size: 0x21
+function private autoexec __init__system__()
+{
+    system::register( #"mp_sat_avalon_q4_ob_activity_crash_sites_cs", #"activity_common", &function_b39ecd3d51489472, undefined );
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0, eflags: 0x4
+// Checksum 0x636cc866, Offset: 0x13d9
+// Size: 0x9
+function private function_b39ecd3d51489472()
+{
+    thread structs_init();
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0, eflags: 0x4
+// Checksum 0xe6571b8a, Offset: 0x13ea
+// Size: 0x9
+function private structs_init()
+{
+    main();
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 2
+// Checksum 0x20620f8b, Offset: 0x13fb
+// Size: 0x8c
+function main( unused, unused2 )
+{
+    if ( utility::flag_exist( "mp_sat_avalon_q4_ob_activity_crash_sites_cs" ) )
+    {
+        return;
+    }
+    
+    if ( !create_script_utility::filter( "mp_sat_avalon_q4_ob_activity_crash_sites_cs" ) )
+    {
+        return;
+    }
+    
+    activity_common::function_e1df676808c1d1e3( &function_4cd78e661617f3 );
+    us = create_script_utility::function_4579dd5df27ceeca();
+    utility::flag_init( "mp_sat_avalon_q4_ob_activity_crash_sites_cs" );
+    s = {};
+    level thread cs_return_and_wait_for_flag( us, s, "mp_sat_avalon_q4_ob_activity_crash_sites_cs" );
+    
+    if ( !create_script_utility::cs_is_starttime() )
+    {
+        create_script_utility::endcreatescript( s );
+    }
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 3, eflags: 0x4
+// Checksum 0x65d5af45, Offset: 0x148f
+// Size: 0x72
+function private cs_return_and_wait_for_flag( us, s, cf )
+{
+    level endon( #"game_ended" );
+    create_script_utility::wait_for_cs_flag( cf );
+    
+    if ( !isdefined( us ) )
+    {
+        us = "pfx";
+    }
+    
+    s create_script_utility::cs_setup_arrays( us, "mp_sat_avalon_q4_ob_activity_crash_sites_cs" );
+    create_script_utility::cs_flags_init( s );
+    level thread createstructs( s, us, cf );
+    level thread create_script_utility::wait_for_flags( s, "mp_sat_avalon_q4_ob_activity_crash_sites_cs" );
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 3, eflags: 0x4
+// Checksum 0xf52bc624, Offset: 0x1509
+// Size: 0x4476
+function private createstructs( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 58960.5, -16211, 2387.06 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Ambient_AI_Exclusion_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 2500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_grunt_long";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59133, -17685, 2313.96 ), ( 0, 86.73, 0 ), undefined, "cspf_1_auto9265469504344515988", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 57939.7, -16334.8, 2159.97 ), ( 0, 20.17, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59416.8, -17010.1, 2340.99 ), ( 0, 105.17, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.activity_bundle = "sat_activity_definition_crash_sites";
+    s.name = "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59602.5, -15118.5, 2336.02 ), ( 0, 0, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59329, -15167.5, 2387.06 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 7000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59342.5, -15139, 2387.06 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "OB_Spacer_Spatial_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 3000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_3";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59832.3, -14735.6, 2417.73 ), ( 0, 245.17, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "2";
+    s.max_wait_time = "2";
+    s.min_wait_time = "1";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59082.5, -17602, 2316.64 ), ( 0, 0, 0 ), "cspf_1_auto9265469504344515988", "cspf_1_auto2911891307981205050", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "1";
+    s.min_wait_time = "1";
+    s.move_speed = "2";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59077.5, -16862, 2325.33 ), ( 0, 0, 0 ), "cspf_1_auto2911891307981205050", "cspf_1_auto6038569020294421832", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.info_act_ref = "contact";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "1";
+    s.min_wait_time = "1";
+    s.move_speed = "2";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59017.5, -16320.5, 2320.5 ), ( 0, 0, 0 ), "cspf_1_auto6038569020294421832", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_phone_talk_crouch";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "ai_patrol_path_1";
+    s.repeat_interaction = "1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59006, -16330, 2308.5 ), ( 0, 92.36, 0 ), "contact", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1246.4, -53211.1, 1248.46 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Ambient_AI_Exclusion_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 2500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2192.8, -50457.2, 866.48 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 8000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 879.9, -53333.6, 1248.46 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "OB_Spacer_Spatial_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 2000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.activity_bundle = "sat_activity_definition_crash_sites";
+    s.name = "CRASH_SITES_Q4_BOAT_CHOP_SHOP";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 860, -53714, 1186 ), ( 0, 0, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 699.6, -52806.7, 1148.75 ), ( 0, 233.63, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1429.3, -53623.4, 1100.51 ), ( 0, 162.88, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_3";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2503.4, -52481.5, 673 ), ( 0, 205.92, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s._size_max = ( 256, 256, 256 );
+    s._size_min = ( 256, 256, 256 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "enc_ob_crash_site_heli_guards_compact";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1386, -53602, 1080 ), ( 0, 24.79, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_1", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s._size_max = ( 256, 256, 256 );
+    s._size_min = ( 256, 256, 256 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "enc_ob_crash_site_heli_guards_compact";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2536.5, -52484.5, 685.5 ), ( 0, 21.37, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_2", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s._size_max = ( 512, 512, 512 );
+    s._size_min = ( 512, 512, 512 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "enc_ob_crash_site_heli_guards_compact";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 678, -53116, 1181.5 ), ( 0, 32.33, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_3", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36721.9, -3112.1, 424.46 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Ambient_AI_Exclusion_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 2500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 20937.3, -12283.7, 1961.48 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36567.9, -2432.1, 670.96 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "OB_Spacer_Spatial_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 3000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 28013.1, 9798.61, 1236.97 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "OB_Spacer_Spatial_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.activity_bundle = "sat_activity_definition_crash_sites";
+    s.name = "CRASH_SITES_Q4_AQUEDUCT";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36465.5, -2912.5, 1263 ), ( 0, 0, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 56978.9, -15889.1, 2222.96 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "OB_Spacer_Spatial_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 300 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 55049.8, -20941.2, 2571.98 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 800 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 19280.8, -4176.2, 3215.98 ), ( 0, 0, 0 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 39108.2, -2705.4, 1233.65 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "crash_site_vtol_reinforcement";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "CRASH_SITES_Q4_AQUEDUCT_crash_site_reinforce_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34756.5, -3044.86, 1252.15 ), ( 0, 1.1, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38857.2, -2720.9, 1232.15 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 39379.2, -2866.9, 1265.15 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s._size_max = ( 332.5, 256, 256 );
+    s._size_min = ( 904.5, 378, 256 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.name = "encounter_2";
+    s.script_stealthgroup = "-1";
+    s.script_string = "enc_ob_crash_site_parachute_raid";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 39215.5, -2828, 1389 ), ( 0, 4.02, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38752.2, -3098.9, 1231.65 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s._size_max = ( 512, 512, 512 );
+    s._size_min = ( 512, 290.5, 512 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.name = "encounter_1";
+    s.script_stealthgroup = "-1";
+    s.script_string = "enc_ob_crash_site_heli_guards";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34329.5, -3030.5, 1181.5 ), ( 0, 2.66, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 39102.7, -3148.9, 1233.65 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38684.2, -2715.9, 1232.15 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38954.2, -3110.4, 1232.15 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_2";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38598.3, -3124.57, 1232 ), ( 0, 162.88, 0 ), "cspf_3_auto14972724649885498906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s._size_max = ( 332.5, 256, 256 );
+    s._size_min = ( 513.5, 378, 256 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.name = "encounter_3";
+    s.script_stealthgroup = "-1";
+    s.script_string = "enc_ob_crash_site_parachute_assault";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33842, -2845, 1387 ), ( 0, 4.02, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33659.7, -2697.4, 1238.15 ), ( 0, 346.51, 0 ), "cspf_3_auto9047317522710275399", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33449.2, -2698.9, 1238.15 ), ( 0, 346.51, 0 ), "cspf_3_auto9047317522710275399", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34063.2, -2667.9, 1238.15 ), ( 0, 346.51, 0 ), "cspf_3_auto9047317522710275399", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33691.2, -3135.9, 1233.65 ), ( 0, 346.51, 0 ), "cspf_3_auto4300872816430565958", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_grunt_long";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37052.5, -2891, 1232 ), ( 0, 199.12, 0 ), undefined, "cspf_3_auto10155971522730698075", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_sniper";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37066, -2972.5, 1232 ), ( 0, 199.12, 0 ), undefined, "cspf_3_auto8604359063077973553", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37050.5, -3072, 1232 ), ( 0, 0, 0 ), "cspf_3_auto8604359063077973553", "cspf_3_auto10432364609512262432", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_radio";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_2";
+    s.repeat_interaction = "1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36451, -3058, 1232 ), ( 0, 180.95, 0 ), "cspf_3_auto14166609826779738052", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_staring";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_1";
+    s.repeat_interaction = "0";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35367, -3027.5, 1232 ), ( 0, 3.14, 0 ), "cspf_3_auto443315751565856166", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_staring";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_2";
+    s.repeat_interaction = "0";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36156, -2861.5, 1243 ), ( 0, 270.16, 0 ), "cspf_3_auto9640449111090206010", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37017.5, -2817, 1232 ), ( 0, 0, 0 ), "cspf_3_auto10155971522730698075", "cspf_3_auto15278526069926819374", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_sniper";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34930.5, -2901, 1232 ), ( 0, 0, 0 ), undefined, "cspf_3_auto4775195515379557921", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_grunt_long";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35012, -2886, 1232 ), ( 0, 0, 0 ), undefined, "cspf_3_auto10419286665474653045", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34970, -2817, 1232 ), ( 0, 0, 0 ), "cspf_3_auto4775195515379557921", "cspf_3_auto4455982176635211543", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34950, -2963, 1232 ), ( 0, 0, 0 ), "cspf_3_auto10419286665474653045", "cspf_3_auto12997802706176116090", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_radio";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_1";
+    s.repeat_interaction = "1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35365, -3095, 1232 ), ( 0, 345.16, 0 ), "cspf_3_auto10614100170280753503", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33532.2, -3137.4, 1233.65 ), ( 0, 346.51, 0 ), "cspf_3_auto4300872816430565958", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "spawn_3";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.script_stealthgroup = "-1";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34070.2, -3084.4, 1233.65 ), ( 0, 346.51, 0 ), "cspf_3_auto4300872816430565958", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_any";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37150.5, -2962.5, 1232 ), ( 0, 7.47, 0 ), undefined, "cspf_3_auto545387325266322106", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37105.5, -2754.5, 1232 ), ( 0, 357.59, 0 ), "cspf_3_auto545387325266322106", "cspf_3_auto9586880181308490310", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36494.5, -2779.5, 1241 ), ( 0, 355.59, 0 ), "cspf_3_auto9586880181308490310", "cspf_3_auto11171635657843202144", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36542, -3061.5, 1232 ), ( 0, 0, 0 ), "cspf_3_auto10432364609512262432", "cspf_3_auto14166609826779738052", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36514.5, -2850.5, 1232 ), ( 0, 0, 0 ), "cspf_3_auto15278526069926819374", "cspf_3_auto9640449111090206010", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35121, -3073.5, 1232 ), ( 0, 0, 0 ), "cspf_3_auto12997802706176116090", "cspf_3_auto10614100170280753503", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35238.5, -2764.5, 1232 ), ( 0, 0, 0 ), "cspf_3_auto4455982176635211543", "cspf_3_auto443315751565856166", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_any4";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 32015, -2909, 1232 ), ( 0, 100.68, 0 ), undefined, "cspf_3_auto1911755729814103624", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_any";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31913, -2971.5, 1639.5 ), ( 0, 284.75, 0 ), undefined, "cspf_3_auto7242315782257246483", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_any3";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31982.5, -2979.5, 1617.5 ), ( 0, 0, 0 ), undefined, "cspf_3_auto6249882017046519552", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_any2";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31859.5, -2918.5, 1232 ), ( 0, 287.11, 0 ), undefined, "cspf_3_auto14292555769646154188", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "nearby_any5";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31942, -2892.5, 1626 ), ( 0, 98.78, 0 ), undefined, "cspf_3_auto1536146057119199750", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 32057.5, -3089.5, 1633 ), ( 0, 0, 0 ), "cspf_3_auto6249882017046519552", "cspf_3_auto1740993972273411773", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31928.5, -3098.5, 1633 ), ( 0, 0, 0 ), "cspf_3_auto7242315782257246483", "cspf_3_auto3338747810501729928", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31983, -2724.5, 1633 ), ( 0, 0, 0 ), "cspf_3_auto1536146057119199750", "cspf_3_auto14386749805823481406", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31866.5, -3044, 1232 ), ( 0, 0, 0 ), "cspf_3_auto14292555769646154188", "cspf_3_auto5342364782694058327", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 32018.5, -2735.5, 1232 ), ( 0, 0, 0 ), "cspf_3_auto1911755729814103624", "cspf_3_auto3641615662699514431", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33721, -2901, 1633 ), ( 0, 0, 0 ), "cspf_3_auto1740993972273411773", "cspf_3_auto14201896409122237167", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31955, -2777.5, 1633 ), ( 0, 0, 0 ), "cspf_3_auto14201896409122237167", "cspf_3_auto6249882017046519552", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 29642.5, -2689.5, 1633 ), ( 0, 0, 0 ), "cspf_3_auto14386749805823481406", "cspf_3_auto13023916386728263532", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 29670.5, -3070.5, 1633 ), ( 0, 0, 0 ), "cspf_3_auto13023916386728263532", "cspf_3_auto8117197201273179994", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 30982, -3116, 2014 ), ( 0, 0, 0 ), "cspf_3_auto8117197201273179994", "cspf_3_auto1942886131695782279", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31959.5, -3085, 1643.5 ), ( 0, 0, 0 ), "cspf_3_auto1942886131695782279", "cspf_3_auto1536146057119199750", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 28828, -2750, 1232 ), ( 0, 0, 0 ), "cspf_3_auto3641615662699514431", "cspf_3_auto12888736942686278387", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_staring";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_4";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31981.5, -3154, 1633 ), ( 0, 0, 0 ), "cspf_3_auto3338747810501729928", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_staring";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_4";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31841.5, -3160, 1232 ), ( 0, 0, 0 ), "cspf_3_auto5342364782694058327", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_staring";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_2";
+    s.repeat_interaction = "0";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36423.5, -2803.5, 1232 ), ( 0, 1.93, 0 ), "cspf_3_auto11171635657843202144", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.ai_interaction = "idle_staring";
+    s.var_9a1a6bc9877cfff7 = "-1";
+    s.groupid = "guard_4";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 28788.5, -2938.5, 1232 ), ( 0, 173.62, 0 ), "cspf_3_auto12888736942686278387", undefined, "info_act", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 30619.5, -5177.5, 4830 ), ( 0, 0, 0 ), undefined, "cspf_3_auto4300872816430565958", "ai_encounter_parachute_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31057, -933.5, 4830 ), ( 0, 0, 0 ), undefined, "cspf_3_auto9047317522710275399", "ai_encounter_parachute_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.name = "ai_encounter_parachute_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 41290, -4890.5, 5018 ), ( 0, 0, 0 ), undefined, "cspf_3_auto14972724649885498906", "ai_encounter_parachute_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    fe utility::ent_flag_set( "cs_objects_created" );
+    function_75f4a755dfd427b6();
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0, eflags: 0x4
+// Checksum 0x37e6bbc6, Offset: 0x5987
+// Size: 0x2
+function private function_75f4a755dfd427b6()
+{
+    
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0
+// Checksum 0xa7867208, Offset: 0x5991
+// Size: 0xe
+function cleanup()
+{
+    create_script_utility::cleanup_cs_file_structs( "mp_sat_avalon_q4_ob_activity_crash_sites_cs" );
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0
+// Checksum 0x521ababf, Offset: 0x59a7
+// Size: 0x66
+function function_4cd78e661617f3()
+{
+    activityinfostruct = {};
+    activityinfostruct.name = "REV_OB_CRASH_SITES";
+    activityinfostruct.scriptbundle = "sat_activity_definition_crash_sites";
+    activityinfostruct.mainfunction = &main;
+    activityinfostruct.var_934f068483ae4ddb = &function_d4323822d7042e5a;
+    activityinfostruct.metadatafunction = &function_d9dd7965c51c95d1;
+    return activityinfostruct;
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 4
+// Checksum 0x27d97516, Offset: 0x5a16
+// Size: 0x8b
+function function_d4323822d7042e5a( var_4312b79c960726b6, fe, us, cf = "mp_sat_avalon_q4_ob_activity_crash_sites_cs" )
+{
+    switch ( var_4312b79c960726b6 )
+    {
+        case #"hash_54a68cf0e1721471":
+            function_e5efff8d78c6fd39( fe, us, cf );
+            break;
+        case #"hash_b3c9c6750e50c5a":
+            function_4fa9ea8a06c6d802( fe, us, cf );
+            break;
+        case #"hash_56836be64b3178da":
+            function_b92fa17e481ef8f2( fe, us, cf );
+            break;
+    }
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 3
+// Checksum 0x1152af1f, Offset: 0x5aa9
+// Size: 0xd78
+function function_e5efff8d78c6fd39( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59428.3, -17075.7, 2995.1 ), ( 0, 179.79, 0 ), "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_2", "cspf_4_auto14059806740265918601", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.name = "black_box";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 58884.5, -16051, 2301.72 ), ( 353, 359.73, 3.8 ), "cspf_4_auto869477739016309505", "cspf_4_auto8195893214295031350", "black_box", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 49631.1, -20603.6, 10569.5 ), ( 359.47, 204.72, 0.49 ), "cspf_4_auto12617976545171932046", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.name = "agent_rally_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 57952.5, -16310.6, 2161.03 ), ( 0, 0, 0 ), "cspf_4_auto8195893214295031350", undefined, "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.name = "agent_rally_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59269.5, -17029, 2341.26 ), ( 0, 0, 0 ), "cspf_4_auto8195893214295031350", undefined, "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_stall_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 38704.6, -5629.13, 27136.8 ), ( 0, 332.64, 0 ), "cspf_4_auto2761054103035727751", "cspf_4_auto10802568113865877285", "aircraft_crashing_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_crash";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59130, -16189.5, 2341.07 ), ( 43.93, 334.54, 0 ), "cspf_4_auto10802568113865877285", "cspf_4_auto869477739016309505", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 4500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_debris";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59068, -16160.5, 2336.78 ), ( 0, 0, 0 ), "cspf_4_auto869477739016309505", undefined, "uav_debris", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_path_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 32142.4, -2383.79, 28125.5 ), ( 0, 333.77, 0 ), "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", "cspf_4_auto2761054103035727751", "aircraft_spawn", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "abandoned_village_ruins_soldier";
+    s.name = "preexisting_guard_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 58994, -17904, 2363.87 ), ( 0, 0, 0 ), "cspf_4_auto8195893214295031350", undefined, "preexisting_guard_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.name = "agent_rally_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59856.1, -15063.8, 2323.94 ), ( 0, 0, 0 ), "cspf_4_auto8195893214295031350", undefined, "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 62745.6, -29046.1, 9423.34 ), ( 0, 96.34, 0 ), undefined, "cspf_4_auto12000072573179150406", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s.height = 450;
+    s.name = "black_box_hack_trigger";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 58884.5, -16051, 2151.49 ), ( 0, 0, 0 ), "cspf_4_auto8195893214295031350", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 53380.9, -19061.8, 7455.55 ), ( 359.47, 204.72, 0.49 ), "cspf_4_auto14059806740265918601", "cspf_4_auto12617976545171932046", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 62230.9, -23502.9, 8345.8 ), ( 0, 99.46, 0 ), "cspf_4_auto12000072573179150406", "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_2", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 59931.3, -14681.2, 3075.1 ), ( 0, 349.79, 0 ), "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_3", "cspf_4_auto4885753046802908157", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 62547.1, -5418.34, 10497.5 ), ( 359.47, 79.72, 0.49 ), "cspf_4_auto6094233747662669433", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 46439, -16671.7, 9351.34 ), ( 0, 11.34, 0 ), undefined, "cspf_4_auto4912086630663028137", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 61565.6, -9374.7, 7383.55 ), ( 359.47, 74.72, 0.49 ), "cspf_4_auto4885753046802908157", "cspf_4_auto6094233747662669433", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 51916.2, -15675.9, 8273.8 ), ( 0, 14.46, 0 ), "cspf_4_auto4912086630663028137", "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_3", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 57682.6, -16326.1, 2723.1 ), ( 0, 94.79, 0 ), "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_1", "cspf_4_auto8650359623920502349", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 53578.3, -6633.63, 10569.5 ), ( 359.47, 119.72, 0.49 ), "cspf_4_auto17362004430485856379", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 58010.4, -30201.8, 9423.34 ), ( 0, 86.34, 0 ), undefined, "cspf_4_auto15478716226467089564", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 55441, -10234.8, 7455.55 ), ( 359.47, 119.72, 0.49 ), "cspf_4_auto8650359623920502349", "cspf_4_auto17362004430485856379", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS", cf, ( 58466.1, -24653.5, 8345.8 ), ( 0, 89.46, 0 ), "cspf_4_auto15478716226467089564", "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS_crash_site_reinforce_1", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 3
+// Checksum 0xd9fbefa0, Offset: 0x6829
+// Size: 0x1462
+function function_4fa9ea8a06c6d802( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "ground_defence";
+    s.name = "blackbox";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 825.5, -53926.5, 1104.5 ), ( 24, 270, 0 ), "cspf_5_auto13312210101989124962", "cspf_5_auto15075622858678509370", "black_box", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_stall_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( -10634, -11310, 24368.8 ), ( 0, 285.16, 0 ), "cspf_5_auto17120053602806599362", "cspf_5_auto14400503375105410843", "aircraft_crashing_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_crash";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 830.3, -53784.5, 1155.48 ), ( 30.45, 284.82, 0 ), "cspf_5_auto14400503375105410843", "cspf_5_auto13312210101989124962", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 6000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_debris";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 747.9, -53443.4, 1227.21 ), ( 0, 0, 0 ), "cspf_5_auto13312210101989124962", undefined, "uav_debris", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_path_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( -18807.2, 25333.2, 25357.5 ), ( 0, 282.61, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP", "cspf_5_auto17120053602806599362", "aircraft_spawn", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.name = "agent_rally_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 617.9, -52984.6, 1197.75 ), ( 355.2, 357.19, 4.21 ), "cspf_5_auto15075622858678509370", "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_3", "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.name = "agent_rally_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1414.7, -53611.2, 1099.91 ), ( 3.62, 118.34, -0.04 ), "cspf_5_auto15075622858678509370", "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_1", "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.name = "agent_rally_point";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2487.2, -52483.4, 725.15 ), ( 352, 134.64, 1.27 ), "cspf_5_auto15075622858678509370", "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_2", "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 128 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1460.29, -53728.3, 1748.42 ), ( 0, 179.79, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_1", "cspf_5_auto14059806740265918601", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( -9920.42, -54927.8, 9358.85 ), ( 359.47, 199.72, 0.49 ), "cspf_5_auto12617976545171932046", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 14083.9, -55414.9, 8212.65 ), ( 0, 171.34, 0 ), undefined, "cspf_5_auto12000072573179150406", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s.groupid = "ground_defence";
+    s.height = 450;
+    s.name = "black_box_trigger";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 836.5, -53891, 1012.5 ), ( 0, 0, 0 ), "cspf_5_auto15075622858678509370", undefined, "black_box_trigger", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 500 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1285, -53790, 1080 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_1", "cspf_5_auto1363196908174125018", "patrol_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1255, -53666.5, 1085.5 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_1", "cspf_5_auto3876796453596476374", "patrol_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1347, -54007, 1116.5 ), ( 0, 0, 0 ), "cspf_5_auto1363196908174125018", "cspf_5_auto18115004311632453298", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_cellphone";
+    s.name = "patrol";
+    s.repeat_interaction = "1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1545, -53910.5, 1096 ), ( 0, 94.68, 0 ), "cspf_5_auto18115004311632453298", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1104.5, -53746.5, 1163.5 ), ( 0, 0, 0 ), "cspf_5_auto3876796453596476374", "cspf_5_auto7033506677221733155", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_staring";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 907, -53291.5, 1223 ), ( 0, 169.22, 0 ), "cspf_5_auto7033506677221733155", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 500.5, -53134.5, 1183.5 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_3", "cspf_5_auto17956589401453081442", "patrol_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_radio";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 361.5, -53343, 1185.5 ), ( 0, 17.1, 0 ), "cspf_5_auto17956589401453081442", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 850.5, -53009.5, 1150 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_3", "cspf_5_auto2929964601599584310", "patrol_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_staring";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 1162.5, -53063, 1111 ), ( 0, 5.1, 0 ), "cspf_5_auto2929964601599584310", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_staring";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2080, -52667.5, 685 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_2", "cspf_5_auto12337152108888151122", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_staring";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2941.5, -52290.5, 685 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol";
+    s.interaction = "idle_staring";
+    s.name = "patrol";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 686, -53440.5, 1253.5 ), ( 0, 85.38, 0 ), "cspf_5_auto12337152108888151122", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( -5173.92, -54078.4, 6244.86 ), ( 359.47, 194.72, 0.49 ), "cspf_5_auto14059806740265918601", "cspf_5_auto12617976545171932046", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_1";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 8596.38, -54477.4, 7135.11 ), ( 0, 174.46, 0 ), "cspf_5_auto12000072573179150406", "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_1", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 2620.41, -52361.1, 1316.42 ), ( 0, 289.79, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_3", "cspf_5_auto4313173298291022033", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 5911.56, -62939.9, 8950.85 ), ( 359.47, 289.72, 0.49 ), "cspf_5_auto11534275408105821906", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 7631.9, -37658.9, 7804.65 ), ( 0, 256.91, 0 ), undefined, "cspf_5_auto920453900958799151", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 4617.78, -58954.1, 5836.86 ), ( 359.47, 289.72, 0.49 ), "cspf_5_auto4313173298291022033", "cspf_5_auto11534275408105821906", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_3";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 6035.78, -43921.6, 6727.11 ), ( 0, 258.17, 0 ), "cspf_5_auto920453900958799151", "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_3", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 658.14, -53027.9, 1788.42 ), ( 0, 198.21, 0 ), "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_2", "cspf_5_auto8646499290226779332", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( -5990.88, -58546.3, 9438.85 ), ( 359.47, 218.14, 0.49 ), "cspf_5_auto2406064689693020683", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 14184.1, -41147.7, 8292.65 ), ( 0, 218.3, 0 ), undefined, "cspf_5_auto3008426111943817833", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( -3078.64, -55639.1, 6324.86 ), ( 359.47, 218.14, 0.49 ), "cspf_5_auto8646499290226779332", "cspf_5_auto2406064689693020683", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point_2";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_BOAT_CHOP_SHOP", cf, ( 9692.35, -44913.5, 7215.11 ), ( 0, 227.17, 0 ), "cspf_5_auto3008426111943817833", "CRASH_SITES_Q4_BOAT_CHOP_SHOP_crash_site_reinforce_2", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 3
+// Checksum 0x6926caa, Offset: 0x7c93
+// Size: 0x14b6
+function function_b92fa17e481ef8f2( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_stall_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37369.5, -26626.5, 20744.8 ), ( 22.11, 91.91, -0 ), "cspf_6_auto17120053602806599362", "cspf_6_auto14400503375105410843", "aircraft_crashing_start", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_crash";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36610.3, -3124, 1232 ), ( 38.49, 92.26, 0 ), "cspf_6_auto14400503375105410843", "cspf_6_auto4320266748744775717", "fixed_path", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "ground_defence";
+    s.name = "blackbox";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36554.5, -3046, 1235.5 ), ( 2.78, 63.26, 85.79 ), "cspf_6_auto4320266748744775717", "cspf_6_auto15075622858678509370", "black_box", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "uav_path";
+    s.name = "uav_path_start";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38815.3, -49551.8, 25357.5 ), ( 0, 93.65, 0 ), "CRASH_SITES_Q4_AQUEDUCT", "cspf_6_auto17120053602806599362", "aircraft_spawn", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "ground_defence";
+    s.name = "agent_rally_point_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34862.3, -2931.01, 1232 ), ( 355.2, 357.19, 4.21 ), "cspf_6_auto15075622858678509370", "CRASH_SITES_Q4_AQUEDUCT_enc_1", "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 256 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "ground_defence";
+    s.name = "agent_rally_point_2";
+    s.script_label = "parachute_reinforcement";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 38943.2, -2827.4, 1232 ), ( 352, 134.64, 1.27 ), "cspf_6_auto15075622858678509370", "CRASH_SITES_Q4_AQUEDUCT_enc_2", "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s._size_max = ( 485, 386, 592 );
+    s._size_min = ( 501, 438, 39 );
+    s.groupid = "ground_defence";
+    s.height = 128;
+    s.length = "128";
+    s.width = "128";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36618, -2934.5, 1249.5 ), ( 0, 0, 0 ), "cspf_6_auto15075622858678509370", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "ground_defence";
+    s.name = "agent_rally_point_3";
+    s.script_label = "parachute_reinforcement";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 33797.7, -2852.9, 1232 ), ( 352, 134.64, 1.27 ), "cspf_6_auto15075622858678509370", "CRASH_SITES_Q4_AQUEDUCT_enc_3", "agent_rally_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36486.5, -2976, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36482, -2825.5, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37379, -2690, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37142.5, -3120.5, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35738, -2841.5, 1278.5 ), ( 0, 316.46, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35346.5, -3056, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36249, -2846.5, 1270.5 ), ( 0, 266.71, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35357, -3146.5, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "guard_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36741.5, -2936.5, 1232 ), ( 0, 0, 0 ), "cspf_6_auto15075622858678509370", undefined, "preexisting_guard_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "guard_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34859.5, -2801.5, 1232 ), ( 0, 0, 0 ), "cspf_6_auto15075622858678509370", undefined, "preexisting_guard_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 256 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35192.7, -2655.4, 1296.65 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35310.7, -2913.4, 1296.65 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36503.2, -2823.9, 1256.15 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36650.2, -2695.4, 1256.15 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36785.2, -2684.4, 1256.15 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "guard_4";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 31939, -2918.5, 1232 ), ( 0, 0, 0 ), "cspf_6_auto15075622858678509370", undefined, "preexisting_guard_point", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), 512 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36588.5, -2858, 1247 ), ( 0, 316.46, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36547.5, -2936.5, 1247 ), ( 0, 316.46, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37159.5, -2774, 1247 ), ( 0, 316.46, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37129.5, -3090, 1247 ), ( 0, 316.46, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_1";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37516.5, -2753.5, 1247 ), ( 0, 316.46, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_1", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 37660.7, -2810.4, 1256.15 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36659.2, -2901.9, 1256.15 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_3";
+    s.interaction = "idle_staring";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36419.2, -2704.9, 1256.15 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_3", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36845.5, -2726, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36544, -2763, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "patrol_2";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36733, -2878.5, 1232 ), ( 0, 0, 0 ), "CRASH_SITES_Q4_AQUEDUCT_enc_2", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "ground_defence";
+    s.name = "dawg_spawn";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 36580.7, -2743.4, 1299.15 ), ( 0, 0, 0 ), "cspf_6_auto15075622858678509370", undefined, "dawg_spawn", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 34640.8, -3148.02, 1949.42 ), ( 0, 90, 0 ), "CRASH_SITES_Q4_AQUEDUCT_crash_site_reinforce_1", "cspf_6_auto11248929620292874554", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35554.2, 7571.81, 9661.37 ), ( 0, 90, 0 ), "cspf_6_auto8636807974739456789", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35415.5, -16189, 8515.15 ), ( 0, 91.34, 0 ), undefined, "cspf_6_auto4725294674241269596", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35238.2, 3588.12, 6987.36 ), ( 0, 90, 0 ), "cspf_6_auto11248929620292874554", "cspf_6_auto8636807974739456789", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "CRASH_SITES_Q4_AQUEDUCT", cf, ( 35181.9, -10602, 7437.61 ), ( 0, 94.46, 0 ), "cspf_6_auto4725294674241269596", "CRASH_SITES_Q4_AQUEDUCT_crash_site_reinforce_1", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+}
+
+// Namespace mp_sat_avalon_q4_ob_activity_crash_sites_cs
+// Params 0
+// Checksum 0x74cf4562, Offset: 0x9151
+// Size: 0x1d8
+function function_d9dd7965c51c95d1()
+{
+    activityinstances = [];
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.scriptbundle = "sat_activity_definition_crash_sites";
+    var_881289d7987bc770.cf = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    var_881289d7987bc770.scriptstructorigin = ( 59602.5, -15118.5, 2336.02 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "CRASH_SITES_Q4_ABANDONED_VILLAGE_RUINS" ] = var_881289d7987bc770;
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.scriptbundle = "sat_activity_definition_crash_sites";
+    var_881289d7987bc770.cf = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    var_881289d7987bc770.scriptstructorigin = ( 860, -53714, 1186 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "CRASH_SITES_Q4_BOAT_CHOP_SHOP" ] = var_881289d7987bc770;
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.scriptbundle = "sat_activity_definition_crash_sites";
+    var_881289d7987bc770.cf = "mp_sat_avalon_q4_ob_activity_crash_sites_cs";
+    var_881289d7987bc770.scriptstructorigin = ( 36465.5, -2912.5, 1263 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "CRASH_SITES_Q4_AQUEDUCT" ] = var_881289d7987bc770;
+    return activityinstances;
+}
+

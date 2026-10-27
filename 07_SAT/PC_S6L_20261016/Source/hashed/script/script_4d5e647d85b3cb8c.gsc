@@ -1,0 +1,1691 @@
+// script_4d5e647d85b3cb8c  (hash_4d5e647d85b3cb8c.gscc) (size: 42808 Bytes / 0xa738 / GSC)
+// magic .... 0xa0d4353471a vm: Call of Duty: Black Ops 7 (Black Ops 7)
+// crc: 0x1d22f3a8 (488829864)
+// size ...... 42808 (0xa738)
+// includes .. 4   (offset: 0x8f10)
+// strings ... 74  (offset: 0x8f30)
+// dev strs .. 0   (offset: 0xa738)
+// exports ... 17  (offset: 0x890c)
+// cseg ...... 0x89b + 0x8071 (0x890c)
+// imports ... 30  (offset: 0x8bb4)
+// animtree1 . 0   (offset: 0xa738)
+// animtree2 . 0   (offset: 0xa738)
+#using scripts\common\activity_nexus\activity_common;
+#using scripts\common\create_script_utility;
+#using scripts\common\system;
+#using scripts\common\utility;
+
+#namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs;
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0, eflags: 0x5
+// Checksum 0x8926e42b, Offset: 0x8b9
+// Size: 0x21
+function private autoexec __init__system__()
+{
+    system::register( #"mp_sat_avalon_quad_03_ob_activity_safecrack_cs", #"activity_common", &function_b39ecd3d51489472, undefined );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0, eflags: 0x4
+// Checksum 0x7e9c5418, Offset: 0x8e2
+// Size: 0x9
+function private function_b39ecd3d51489472()
+{
+    thread structs_init();
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0, eflags: 0x4
+// Checksum 0xfba787f4, Offset: 0x8f3
+// Size: 0x9
+function private structs_init()
+{
+    main();
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 2
+// Checksum 0x4b0ab48a, Offset: 0x904
+// Size: 0x8c
+function main( unused, unused2 )
+{
+    if ( utility::flag_exist( "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" ) )
+    {
+        return;
+    }
+    
+    if ( !create_script_utility::filter( "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" ) )
+    {
+        return;
+    }
+    
+    activity_common::function_e1df676808c1d1e3( &function_4cd78e661617f3 );
+    us = create_script_utility::function_4579dd5df27ceeca();
+    utility::flag_init( "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" );
+    s = {};
+    level thread cs_return_and_wait_for_flag( us, s, "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" );
+    
+    if ( !create_script_utility::cs_is_starttime() )
+    {
+        create_script_utility::endcreatescript( s );
+    }
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3, eflags: 0x4
+// Checksum 0x7825333b, Offset: 0x998
+// Size: 0x72
+function private cs_return_and_wait_for_flag( us, s, cf )
+{
+    level endon( #"game_ended" );
+    create_script_utility::wait_for_cs_flag( cf );
+    
+    if ( !isdefined( us ) )
+    {
+        us = "pfx";
+    }
+    
+    s create_script_utility::cs_setup_arrays( us, "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" );
+    create_script_utility::cs_flags_init( s );
+    level thread createstructs( s, us, cf );
+    level thread create_script_utility::wait_for_flags( s, "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3, eflags: 0x4
+// Checksum 0x6eb9dcf7, Offset: 0xa12
+// Size: 0x62ca
+function private createstructs( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 600, 600, 600 );
+    s._size_min = ( 600, 600, 400 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_guard_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31659.1, -56935.7, 457.5 ), ( 0, 345, 0 ), "guard_enc_Q3_ISLAND_SOUTH_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31663, -56809.9, 597.07 ), ( 0, 45.34, 0 ), "activity_nexus_spatial_zone", undefined, "Ambient_AI_Exclusion_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 347, 450, 600 );
+    s._size_min = ( 363, 344, 50 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31640.3, -56920.8, 440 ), ( 0, 345, 0 ), "Q3_ISLAND_SOUTH_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safecrack_heli";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "Q3_ISLAND_SOUTH_SAFECRACK_VTOL";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31772.2, -57143.7, 592 ), ( 0, 129, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31849.7, -56755.4, 728 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31617.7, -56947.4, 728 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31544.6, -56869.2, 592 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31844.6, -56893.2, 592 ), ( 0, 5.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31761.5, -56804.9, 440 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31419.4, -57045.4, 592 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.name = "Q3_ISLAND_SOUTH_SAFECRACK";
+    s.var_265c4f33e2a6daa7 = "1";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31673.9, -56816.8, 594.07 ), ( 0, 180.34, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31492.9, -56572.9, 439.65 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31648.9, -57184.9, 439.65 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31570.8, -56988.5, 728 ), ( 0, 345.86, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31881.8, -56944.5, 728 ), ( 0, 287.86, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31403.8, -57048.2, 592 ), ( 0, 165.66, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31901.4, -57055.5, 592 ), ( 0, 344.76, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31738.8, -57145.2, 592 ), ( 0, 117.46, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31720.3, -56986.6, 728 ), ( 0, 254.36, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31663, -56809.9, 597.07 ), ( 359.46, 96.53, -2.3 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15262.9, -23451.4, 224.11 ), ( 0, 80.1, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15261.6, -22534.8, 379.25 ), ( 0, 226.44, 0 ), "activity_nexus_spatial_zone", undefined, "Ambient_AI_Exclusion_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.name = "SAFECRACK_Q3_FIRINGRANGE_OUTPOST";
+    s.var_265c4f33e2a6daa7 = "1";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15267.5, -22536.8, 379.25 ), ( 0, 1.44, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 1184.43, 1089, 390 );
+    s._size_min = ( 334, -50, 50 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_guard_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15856.7, -22375.2, 138.52 ), ( 0, 270.09, 0 ), "guard_enc_SAFECRACK_Q3_FIRINGRANGE_OUTPOST", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safecrack_heli";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "SAFECRACK_Q3_FIRINGRANGE_OUTPOST_VTOL";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15198.9, -22143.7, 251.25 ), ( 0, 284, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 1088.43, 1256, 390 );
+    s._size_min = ( 454, 255, 50 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15782.5, -22299.6, 147.72 ), ( 0, 270.09, 0 ), "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15399.2, -23066.9, 515.25 ), ( 0, 239.4, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15558.6, -23185.3, 228.6 ), ( 0, 327.9, 0 ), undefined, "cspf_2_auto12009400279137400145", "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15586.3, -22383, 226.1 ), ( 0, 327.9, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15214.1, -22885.9, 235.25 ), ( 0, 327.9, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15407.5, -22785.2, 235.25 ), ( 0, 39.6, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15170.4, -22631.7, 235.25 ), ( 0, 39.6, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15199.6, -22429.7, 227.25 ), ( 0, 39.6, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15513.3, -22484.5, 227.25 ), ( 0, 139.28, 0 ), undefined, "cspf_2_auto3771897559653932012", "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15076.2, -22597.3, 227.25 ), ( 0, 217.9, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -14916.3, -22891.9, 224.31 ), ( 0, 195, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -14933.4, -23075.7, 227.25 ), ( 0, 155, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15131.1, -22997.4, 379 ), ( 0, 182.8, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15657.4, -22428, 227.42 ), ( 0, 330, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15692.8, -22682.8, 227.25 ), ( 0, 2.95, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -14940.4, -22560, 226.11 ), ( 0, 177.18, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15155.7, -22732.8, 222.22 ), ( 1.17, 103.69, 0.51 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15505.2, -23203.1, 227.27 ), ( 0, 0, 0 ), "cspf_2_auto12009400279137400145", "cspf_2_auto6729848849263205485", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -14995.9, -23188.1, 222.13 ), ( 0, 0, 0 ), "cspf_2_auto6729848849263205485", "cspf_2_auto7294758268782565702", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -14994.9, -23223.8, 221.97 ), ( 0, 0, 0 ), "cspf_2_auto7294758268782565702", "cspf_2_auto14459542469202786005", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15499.2, -23234.3, 225.92 ), ( 0, 0, 0 ), "cspf_2_auto14459542469202786005", "cspf_2_auto12009400279137400145", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.loop_route = "1";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.start_point = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15579.2, -22454.4, 227.42 ), ( 0, 0, 0 ), "cspf_2_auto3771897559653932012", "cspf_2_auto5469972609375418377", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15611.9, -22453.2, 227.16 ), ( 0, 0, 0 ), "cspf_2_auto3527136312994744343", "cspf_2_auto3771897559653932012", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15593.5, -23071.9, 227.3 ), ( 0, 0, 0 ), "cspf_2_auto5469972609375418377", "cspf_2_auto11824630269880179938", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e8fdcbf62408dcde = "1";
+    s.max_wait_time = "10";
+    s.min_wait_time = "2";
+    s.move_speed = "1";
+    s.variantname = "ai_encounter_patrol_point";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15632, -23071.6, 225.01 ), ( 0, 0, 0 ), "cspf_2_auto11824630269880179938", "cspf_2_auto3527136312994744343", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safecrack_heli";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "Q3_FIRING_RANGE_GAS_SAFECRACK_VTOL";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25234.3, -21037.9, 964.83 ), ( 0, 60.85, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26155.2, -20448.9, 976 ), ( 0, 45.34, 0 ), "activity_nexus_spatial_zone", undefined, "Ambient_AI_Exclusion_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 1400, 1400, 600 );
+    s._size_min = ( 1400, 1400, 100 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_guard_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26042.1, -20976.6, 975.41 ), ( 0, 345.72, 0 ), "guard_enc_Q3_FIRING_RANGE_GAS_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 1028, 959, 600 );
+    s._size_min = ( 971, 575, 50 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26082, -21097.7, 958.66 ), ( 0, 345, 0 ), "Q3_FIRING_RANGE_GAS_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26302, -20284.3, 976 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26320, -20377.8, 976 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26163.7, -21341.4, 1112 ), ( 0, 300.28, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26332.1, -21440.5, 1112 ), ( 0, 178.4, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26277.9, -21416.6, 976 ), ( 0, 349.56, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26127.2, -21212.7, 976 ), ( 0, 203.25, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26232.7, -21129.1, 976 ), ( 0, 358.4, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26075.8, -20539.4, 976 ), ( 0, 351.29, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.name = "Q3_FIRING_RANGE_GAS_SAFECRACK";
+    s.var_265c4f33e2a6daa7 = "1";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26192.6, -20533.5, 992.2 ), ( 0, 180.34, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25624.3, -20627.4, 976 ), ( 0, 168.06, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25592.3, -20478.7, 976 ), ( 0, 190.36, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25489.8, -21109.5, 964.84 ), ( 0, 165.43, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25715.2, -20916.4, 976 ), ( 0, 125.23, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26735.6, -20993.8, 976 ), ( 0, 80.23, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26751, -20741.7, 976 ), ( 0, 347.33, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26169.7, -20365.3, 974.8 ), ( 358.05, 74.35, 0.42 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32012.5, -23948.6, 745.34 ), ( 0, 84.94, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32291.8, -22623.1, 749.49 ), ( 0, 92.99, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.name = "FIRING_RANGE_NORTH_SAFECRACK";
+    s.var_265c4f33e2a6daa7 = "1";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32118.3, -23463.6, 343.68 ), ( 0, 177.73, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 690.93, 742, 390 );
+    s._size_min = ( 1279, 1001, 59 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_guard_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32450.3, -23386.2, 580.44 ), ( 0, 269.48, 0 ), "guard_enc_FIRING_RANGE_NORTH_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safecrack_heli";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "FIRING_RANGE_NORTH_SAFECRACK_VTOL";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31584.8, -22661.3, 719.02 ), ( 0, 218.26, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 704.93, 1095.5, 390 );
+    s._size_min = ( 1072, 130, 70 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32450.3, -23386.2, 661.44 ), ( 0, 269.48, 0 ), "FIRING_RANGE_NORTH_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32412.8, -23172.1, 745.85 ), ( 0, 192.5, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -33360.3, -22230.1, 725 ), ( 0, 330.62, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31899.3, -23250.1, 771 ), ( 0, 214.48, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32168.8, -23048.6, 771 ), ( 0, 269.05, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32201.3, -23323.1, 771 ), ( 0, 74.95, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31806.3, -23919.1, 749.49 ), ( 0, 214.48, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31707.5, -23810.6, 751.97 ), ( 0, 108.44, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31927, -22500.3, 705.14 ), ( 0, 265.36, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32137.9, -22501.8, 723.02 ), ( 0, 265.36, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31598.5, -23393.6, 753.27 ), ( 0, 187.15, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31567, -23082.6, 756.12 ), ( 0, 187.15, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31872.5, -23533.7, 771.25 ), ( 0, 34.48, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -32224.5, -23380.2, 745.86 ), ( 359.56, 77.24, -0.26 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 3000 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51265.6, -17246.9, 464.18 ), ( 0, 88.95, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50977.8, -17622.6, 353 ), ( 0, 236.84, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.name = "COAST_GUARD_LIGHT_HOUSE_SAFECRACK";
+    s.var_265c4f33e2a6daa7 = "1";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51824.3, -17390.6, 4.68 ), ( 0, 177.73, 0 ), "activity_nexus_variant", undefined, undefined, "activity_link", undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 690.93, 1819, 1148 );
+    s._size_min = ( 1279, 129.5, 59 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_guard_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -52156.3, -17313.2, 241.44 ), ( 0, 269.48, 0 ), "guard_enc_COAST_GUARD_LIGHT_HOUSE_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safecrack_heli";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.var_4501e0172e168ddf = "COAST_GUARD_LIGHT_HOUSE_SAFECRACK_VTOL";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50823, -16982.2, 362.14 ), ( 0, 182.31, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s._size_max = ( 704.93, 1480, 1183.5 );
+    s._size_min = ( 1072, 130, 70 );
+    s.var_5afd49978f924648 = "1";
+    s.var_a8568d8e0b0b6076 = "1";
+    s.var_3f3960eb7318312d = "1";
+    s.default_goal_radius = "-1";
+    s.height = 128;
+    s.length = "128";
+    s.script_stealthgroup = "-1";
+    s.script_string = "sat_ob_safecrack_encounter";
+    s.var_95e2cee7aca5aaae = "1";
+    s.width = "128";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -52156.3, -17313.2, 322.44 ), ( 0, 269.48, 0 ), "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", undefined, "noent_volume_ai_encounter_cs", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51710.8, -16752.6, 465.5 ), ( 0, 24.61, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51593.8, -17054.1, 1312.5 ), ( 0, 24.61, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51673.8, -17058.1, 697.5 ), ( 0, 160.15, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51975.8, -17041.6, 1200.5 ), ( 0, 303.57, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51256.8, -16888.5, 464.58 ), ( 0, 270.01, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50524.8, -16800.6, 368 ), ( 0, 328.91, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51654.5, -17248.1, 1352 ), ( 0, 55.15, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51567, -17058.1, 1352 ), ( 0, 165.15, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51652, -16863.1, 1352 ), ( 0, 305.15, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.parachute_landing_point = "1";
+    s.reinforcement_spawn = "1";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_backup";
+    s.variantname = "ai_encounter_spawnpoint";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50908.5, -17033.1, 409.93 ), ( 0, 183.62, 0 ), undefined, undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51650.8, -17367.3, 463.94 ), ( 0, 303.57, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.location_spawnpoint = "0";
+    s.maxspawns = "1";
+    s.minspawns = "1";
+    s.var_6324368dbfa7058a = "3000";
+    s.script_stealthgroup = "-1";
+    s.spawn_filter = "custom";
+    s.spawn_filter_custom = "safe_guard";
+    s.variantname = "ai_encounter_spawnpoint";
+    s.zombie_spawn_anim = "none";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51660.2, -16745.8, 463.94 ), ( 0, 33.57, 0 ), undefined, undefined, "ai_encounter_spawnpoint", undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51889.1, -16995.8, 464 ), ( 358.88, 322.41, 1.7 ), "activity_nexus_spatial_zone", undefined, "Awareness_Zone", undefined, "activity_link", ( 0, 0, 0 ), ( 0, 0, 0 ), 1000 );
+    fe utility::ent_flag_set( "cs_objects_created" );
+    function_75f4a755dfd427b6();
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0, eflags: 0x4
+// Checksum 0x5c8e00c7, Offset: 0x6ce4
+// Size: 0x2
+function private function_75f4a755dfd427b6()
+{
+    
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0
+// Checksum 0xba76ee76, Offset: 0x6cee
+// Size: 0xe
+function cleanup()
+{
+    create_script_utility::cleanup_cs_file_structs( "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0
+// Checksum 0xd0cb0c8b, Offset: 0x6d04
+// Size: 0x66
+function function_4cd78e661617f3()
+{
+    activityinfostruct = {};
+    activityinfostruct.name = "REV_OB_SAFECRACK";
+    activityinfostruct.scriptbundle = "sat_activitydefinition_safecrack";
+    activityinfostruct.mainfunction = &main;
+    activityinfostruct.var_934f068483ae4ddb = &function_d4323822d7042e5a;
+    activityinfostruct.metadatafunction = &function_d9dd7965c51c95d1;
+    return activityinfostruct;
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 4
+// Checksum 0x12a78944, Offset: 0x6d73
+// Size: 0xbf
+function function_d4323822d7042e5a( var_4312b79c960726b6, fe, us, cf = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs" )
+{
+    switch ( var_4312b79c960726b6 )
+    {
+        case #"hash_dfc496790d0050e3":
+            function_d8c75b6eda25dc5b( fe, us, cf );
+            break;
+        case #"hash_e71c5cd21febde15":
+            function_1bef032de19565ad( fe, us, cf );
+            break;
+        case #"hash_cc3cce2338c53187":
+            function_209c684ba9fa347f( fe, us, cf );
+            break;
+        case #"hash_3c498f2239f24246":
+            function_e4e896456dc0cc2e( fe, us, cf );
+            break;
+        case #"hash_8b6231629a1622c9":
+            function_d984ef863cd87a01( fe, us, cf );
+            break;
+    }
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3
+// Checksum 0xfa755eb9, Offset: 0x6e3a
+// Size: 0x4be
+function function_d8c75b6eda25dc5b( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e05fe85000437d0c = "1";
+    s.name = "safecrack_safe";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31729, -56722, 592 ), ( 0, 255, 0 ), undefined, "Q3_ISLAND_SOUTH_SAFECRACK", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s._size_max = ( 133, 254, 32 );
+    s._size_min = ( 193, 246, 6 );
+    s.height = 128;
+    s.length = "128";
+    s.width = "128";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31739.5, -56891.9, 592 ), ( 0, 255, 0 ), "Q3_ISLAND_SOUTH_SAFECRACK", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -21964.1, -47508.1, 6701.5 ), ( 0, 108.6, 0 ), "cspf_6_auto5859859488027061814", "cspf_6_auto7372697024231013342", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -31618, -57064.7, 1230 ), ( 0, 198.46, 0 ), "Q3_ISLAND_SOUTH_SAFECRACK_VTOL", "cspf_6_auto17002353501035713959", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -36446.4, -59038.8, 6428.5 ), ( 0, 108.6, 0 ), "cspf_6_auto17002353501035713959", "cspf_6_auto16359027912747347378", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -27010.2, -52680.1, 3333 ), ( 0, 108.6, 0 ), "cspf_6_auto7372697024231013342", "Q3_ISLAND_SOUTH_SAFECRACK_VTOL", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -20206.2, -38370.7, 8972.5 ), ( 0, 276.8, 0 ), undefined, "cspf_6_auto5859859488027061814", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_ISLAND_SOUTH_SAFECRACK", cf, ( -50329.5, -64118.1, 10295.5 ), ( 0, 108.6, 0 ), "cspf_6_auto16359027912747347378", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3
+// Checksum 0x644e5e56, Offset: 0x7300
+// Size: 0x4be
+function function_1bef032de19565ad( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e05fe85000437d0c = "1";
+    s.name = "safecrack_safe";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15160.1, -22750.9, 235.25 ), ( 0, 179.82, 0 ), undefined, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s._size_max = ( 151, 344, 32 );
+    s._size_min = ( 219, 282, 32 );
+    s.height = 128;
+    s.length = "128";
+    s.width = "128";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15346.5, -22752.6, 235.25 ), ( 0, 180, 0 ), "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -28828.2, -23432.2, 6331.5 ), ( 0, 249.33, 0 ), "cspf_7_auto13237326384045781143", "cspf_7_auto8002876514170429567", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -15305.4, -22144.4, 860 ), ( 0, 339.19, 0 ), "SAFECRACK_Q3_FIRINGRANGE_OUTPOST_VTOL", "cspf_7_auto2921170075289028497", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -10317.8, -23672.4, 6058.5 ), ( 0, 249.33, 0 ), "cspf_7_auto2921170075289028497", "cspf_7_auto15795862020222202386", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -21648, -22622.3, 2963 ), ( 0, 249.33, 0 ), "cspf_7_auto8002876514170429567", "SAFECRACK_Q3_FIRINGRANGE_OUTPOST_VTOL", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( -35972.9, -29393.4, 8602.5 ), ( 0, 57.53, 0 ), undefined, "cspf_7_auto13237326384045781143", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "SAFECRACK_Q3_FIRINGRANGE_OUTPOST", cf, ( 3645.19, -28527.8, 9925.5 ), ( 0, 249.33, 0 ), "cspf_7_auto15795862020222202386", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3
+// Checksum 0x9142b80a, Offset: 0x77c6
+// Size: 0x4be
+function function_209c684ba9fa347f( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e05fe85000437d0c = "1";
+    s.name = "safecrack_safe";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26182.3, -20341.7, 976 ), ( 0, 346, 0 ), undefined, "Q3_FIRING_RANGE_GAS_SAFECRACK", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s._size_max = ( 249, 304, 32 );
+    s._size_min = ( 261, 198, 32 );
+    s.height = 128;
+    s.length = "128";
+    s.width = "128";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -26008.3, -20616.6, 976 ), ( 0, 346.5, 0 ), "Q3_FIRING_RANGE_GAS_SAFECRACK", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -24944.1, -34722.3, 7096 ), ( 0, 335.04, 0 ), "cspf_8_auto2817619275298351800", "cspf_8_auto5870111836581508396", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25218.2, -21141.1, 1624.5 ), ( 0, 64.9, 0 ), "Q3_FIRING_RANGE_GAS_SAFECRACK_VTOL", "cspf_8_auto10248882105631295536", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -23322, -16281.5, 6823 ), ( 0, 335.04, 0 ), "cspf_8_auto10248882105631295536", "cspf_8_auto4986360882638588192", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -25215.4, -27501.6, 3727.5 ), ( 0, 335.04, 0 ), "cspf_8_auto5870111836581508396", "Q3_FIRING_RANGE_GAS_SAFECRACK_VTOL", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -19533.2, -42292.3, 9367 ), ( 0, 143.25, 0 ), undefined, "cspf_8_auto2817619275298351800", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "Q3_FIRING_RANGE_GAS_SAFECRACK", cf, ( -17437.2, -2720.2, 10690 ), ( 0, 335.04, 0 ), "cspf_8_auto4986360882638588192", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3
+// Checksum 0x45b59441, Offset: 0x7c8c
+// Size: 0x4be
+function function_e4e896456dc0cc2e( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e05fe85000437d0c = "1";
+    s.name = "safecrack_safe";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31830.6, -23341.8, 771 ), ( 0, 176.29, 0 ), undefined, "FIRING_RANGE_NORTH_SAFECRACK", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s._size_max = ( 277, 182, 32 );
+    s._size_min = ( 193, 168, 32 );
+    s.height = 128;
+    s.length = "128";
+    s.width = "128";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31981.3, -23202.6, 771.5 ), ( 0, 176, 0 ), "FIRING_RANGE_NORTH_SAFECRACK", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31629.6, -36151.8, 6812.5 ), ( 0, 335.04, 0 ), "cspf_9_auto8867019415470838505", "cspf_9_auto5122534036446389439", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31903.7, -22570.6, 1341 ), ( 0, 64.9, 0 ), "FIRING_RANGE_NORTH_SAFECRACK_VTOL", "cspf_9_auto12121597330427646355", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -30007.5, -17711, 6539.5 ), ( 0, 335.04, 0 ), "cspf_9_auto12121597330427646355", "cspf_9_auto8721863814412371103", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -31900.9, -28931.1, 3444 ), ( 0, 335.04, 0 ), "cspf_9_auto5122534036446389439", "FIRING_RANGE_NORTH_SAFECRACK_VTOL", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -26218.7, -43721.8, 9083.5 ), ( 0, 143.25, 0 ), undefined, "cspf_9_auto8867019415470838505", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "FIRING_RANGE_NORTH_SAFECRACK", cf, ( -24122.7, -4149.7, 10406.5 ), ( 0, 335.04, 0 ), "cspf_9_auto8721863814412371103", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 3
+// Checksum 0xfe448053, Offset: 0x8152
+// Size: 0x4be
+function function_d984ef863cd87a01( fe, us, cf )
+{
+    f = &create_script_utility::strike_additem;
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.var_e05fe85000437d0c = "1";
+    s.name = "safecrack_safe";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51889.1, -16995.8, 464 ), ( 0, 340, 0 ), undefined, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.is_cs_trigger = 1;
+    s.is_cs_noent_volume = 1;
+    s._size_max = ( 305, 126, 32 );
+    s._size_min = ( 329, 128, 32 );
+    s.height = 128;
+    s.length = "128";
+    s.width = "128";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -51643.2, -17055.2, 464 ), ( 0, 359.9, 0 ), "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ) );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50477.6, -30689.8, 6473 ), ( 0, 335.04, 0 ), "cspf_10_auto15589061048694827715", "cspf_10_auto2711164538987576775", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    s.script_accel = "350";
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50751.7, -17108.6, 1001.5 ), ( 0, 64.9, 0 ), "COAST_GUARD_LIGHT_HOUSE_SAFECRACK_VTOL", "cspf_10_auto10662781882932655959", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -48855.5, -12249, 6200 ), ( 0, 335.04, 0 ), "cspf_10_auto10662781882932655959", "cspf_10_auto10521455873984353333", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -50748.9, -23469.1, 3104.5 ), ( 0, 335.04, 0 ), "cspf_10_auto2711164538987576775", "COAST_GUARD_LIGHT_HOUSE_SAFECRACK_VTOL", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -45066.7, -38259.8, 8744 ), ( 0, 143.25, 0 ), undefined, "cspf_10_auto15589061048694827715", undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 150, 1 );
+    s = {};
+    s.script_cs_flag = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    s.groupid = "reinforcement_spawn_point";
+    s.ishelistruct = 1;
+    fe [[ f ]]( s, "COAST_GUARD_LIGHT_HOUSE_SAFECRACK", cf, ( -42970.7, 1312.3, 10067 ), ( 0, 335.04, 0 ), "cspf_10_auto10521455873984353333", undefined, undefined, undefined, undefined, ( 0, 0, 0 ), ( 0, 0, 0 ), undefined, 200 );
+}
+
+// Namespace mp_sat_avalon_quad_03_ob_activity_safecrack_cs
+// Params 0
+// Checksum 0x20d4a984, Offset: 0x8618
+// Size: 0x2f3
+function function_d9dd7965c51c95d1()
+{
+    activityinstances = [];
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.var_265c4f33e2a6daa7 = 1;
+    var_881289d7987bc770.cf = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    var_881289d7987bc770.scriptstructorigin = ( -31673.9, -56816.8, 594.07 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "Q3_ISLAND_SOUTH_SAFECRACK" ] = var_881289d7987bc770;
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.var_265c4f33e2a6daa7 = 1;
+    var_881289d7987bc770.cf = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    var_881289d7987bc770.scriptstructorigin = ( -15267.5, -22536.8, 379.25 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "SAFECRACK_Q3_FIRINGRANGE_OUTPOST" ] = var_881289d7987bc770;
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.var_265c4f33e2a6daa7 = 1;
+    var_881289d7987bc770.cf = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    var_881289d7987bc770.scriptstructorigin = ( -26192.6, -20533.5, 992.2 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "Q3_FIRING_RANGE_GAS_SAFECRACK" ] = var_881289d7987bc770;
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.var_265c4f33e2a6daa7 = 1;
+    var_881289d7987bc770.cf = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    var_881289d7987bc770.scriptstructorigin = ( -32118.3, -23463.6, 343.68 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "FIRING_RANGE_NORTH_SAFECRACK" ] = var_881289d7987bc770;
+    var_881289d7987bc770 = {};
+    var_881289d7987bc770.var_265c4f33e2a6daa7 = 1;
+    var_881289d7987bc770.cf = "mp_sat_avalon_quad_03_ob_activity_safecrack_cs";
+    var_881289d7987bc770.scriptstructorigin = ( -51824.3, -17390.6, 4.68 );
+    var_881289d7987bc770.scriptstructoriginoffset = ( 0, 0, 0 );
+    var_881289d7987bc770.locationorigin = [];
+    var_881289d7987bc770.var_31ce4477e3543d24 = [];
+    var_881289d7987bc770.var_ccd7cc494eeab31b = [];
+    var_881289d7987bc770.locationradius = [];
+    activityinstances[ "COAST_GUARD_LIGHT_HOUSE_SAFECRACK" ] = var_881289d7987bc770;
+    return activityinstances;
+}
+
